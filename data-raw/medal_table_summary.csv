@@ -1,0 +1,274 @@
+games,year,season,noc,country,gold,silver,bronze,total
+2018 Winter,2018,Winter,NOR,Norway,14,14,11,39
+2018 Winter,2018,Winter,GER,Germany,14,10,7,31
+2018 Winter,2018,Winter,CAN,Canada,11,8,10,29
+2018 Winter,2018,Winter,USA,United States,9,8,6,23
+2018 Winter,2018,Winter,NED,Netherlands,8,6,6,20
+2018 Winter,2018,Winter,SWE,Sweden,7,6,1,14
+2018 Winter,2018,Winter,KOR,Republic of Korea,5,8,4,17
+2018 Winter,2018,Winter,SUI,Switzerland,5,6,4,15
+2018 Winter,2018,Winter,FRA,France,5,4,6,15
+2018 Winter,2018,Winter,AUT,Austria,5,3,6,14
+2018 Winter,2018,Winter,JPN,Japan,4,5,4,13
+2018 Winter,2018,Winter,ITA,Italy,3,2,5,10
+2018 Winter,2018,Winter,OAR,Olympic Athletes from Russia,2,6,9,17
+2018 Winter,2018,Winter,CZE,Czechia,2,2,3,7
+2018 Winter,2018,Winter,BLR,Belarus,2,1,0,3
+2018 Winter,2018,Winter,CHN,People's Republic of China,1,6,2,9
+2018 Winter,2018,Winter,SVK,Slovakia,1,2,0,3
+2018 Winter,2018,Winter,FIN,Finland,1,1,4,6
+2018 Winter,2018,Winter,GBR,Great Britain,1,0,4,5
+2018 Winter,2018,Winter,POL,Poland,1,0,1,2
+2018 Winter,2018,Winter,HUN,Hungary,1,0,0,1
+2018 Winter,2018,Winter,UKR,Ukraine,1,0,0,1
+2018 Winter,2018,Winter,AUS,Australia,0,2,1,3
+2018 Winter,2018,Winter,SLO,Slovenia,0,1,1,2
+2018 Winter,2018,Winter,BEL,Belgium,0,1,0,1
+2018 Winter,2018,Winter,NZL,New Zealand,0,0,2,2
+2018 Winter,2018,Winter,ESP,Spain,0,0,2,2
+2018 Winter,2018,Winter,KAZ,Kazakhstan,0,0,1,1
+2018 Winter,2018,Winter,LAT,Latvia,0,0,1,1
+2018 Winter,2018,Winter,LIE,Liechtenstein,0,0,1,1
+2020 Summer,2020,Summer,USA,United States,39,41,33,113
+2020 Summer,2020,Summer,CHN,People's Republic of China,38,32,19,89
+2020 Summer,2020,Summer,JPN,Japan,27,14,17,58
+2020 Summer,2020,Summer,GBR,Great Britain,22,20,22,64
+2020 Summer,2020,Summer,ROC,Russian Olympic Committee,20,28,23,71
+2020 Summer,2020,Summer,AUS,Australia,17,7,22,46
+2020 Summer,2020,Summer,NED,Netherlands,10,12,14,36
+2020 Summer,2020,Summer,FRA,France,10,12,11,33
+2020 Summer,2020,Summer,GER,Germany,10,11,16,37
+2020 Summer,2020,Summer,ITA,Italy,10,10,20,40
+2020 Summer,2020,Summer,CAN,Canada,7,7,10,24
+2020 Summer,2020,Summer,BRA,Brazil,7,6,8,21
+2020 Summer,2020,Summer,NZL,New Zealand,7,6,7,20
+2020 Summer,2020,Summer,CUB,Cuba,7,3,5,15
+2020 Summer,2020,Summer,HUN,Hungary,6,7,7,20
+2020 Summer,2020,Summer,KOR,Republic of Korea,6,4,10,20
+2020 Summer,2020,Summer,POL,Poland,4,5,5,14
+2020 Summer,2020,Summer,CZE,Czechia,4,4,3,11
+2020 Summer,2020,Summer,KEN,Kenya,4,4,2,10
+2020 Summer,2020,Summer,NOR,Norway,4,2,2,8
+2020 Summer,2020,Summer,JAM,Jamaica,4,1,4,9
+2020 Summer,2020,Summer,ESP,Spain,3,8,6,17
+2020 Summer,2020,Summer,SWE,Sweden,3,6,0,9
+2020 Summer,2020,Summer,SUI,Switzerland,3,4,6,13
+2020 Summer,2020,Summer,DEN,Denmark,3,4,4,11
+2020 Summer,2020,Summer,CRO,Croatia,3,3,2,8
+2020 Summer,2020,Summer,IRI,Islamic Republic of Iran,3,2,2,7
+2020 Summer,2020,Summer,SRB,Serbia,3,1,5,9
+2020 Summer,2020,Summer,BEL,Belgium,3,1,3,7
+2020 Summer,2020,Summer,BUL,Bulgaria,3,1,2,6
+2020 Summer,2020,Summer,SLO,Slovenia,3,1,1,5
+2020 Summer,2020,Summer,UZB,Uzbekistan,3,0,2,5
+2020 Summer,2020,Summer,GEO,Georgia,2,5,1,8
+2020 Summer,2020,Summer,TPE,Chinese Taipei,2,4,6,12
+2020 Summer,2020,Summer,TUR,Turkiye,2,2,9,13
+2020 Summer,2020,Summer,GRE,Greece,2,1,1,4
+2020 Summer,2020,Summer,UGA,Uganda,2,1,1,4
+2020 Summer,2020,Summer,ECU,Ecuador,2,1,0,3
+2020 Summer,2020,Summer,IRL,Ireland,2,0,2,4
+2020 Summer,2020,Summer,ISR,Israel,2,0,2,4
+2020 Summer,2020,Summer,QAT,Qatar,2,0,1,3
+2020 Summer,2020,Summer,KOS,Kosovo,2,0,0,2
+2020 Summer,2020,Summer,BAH,The Bahamas,2,0,0,2
+2020 Summer,2020,Summer,UKR,Ukraine,1,6,12,19
+2020 Summer,2020,Summer,BLR,Belarus,1,3,3,7
+2020 Summer,2020,Summer,ROU,Romania,1,3,0,4
+2020 Summer,2020,Summer,VEN,Venezuela,1,3,0,4
+2020 Summer,2020,Summer,IND,India,1,2,4,7
+2020 Summer,2020,Summer,HKG,"Hong Kong, China",1,2,3,6
+2020 Summer,2020,Summer,PHI,Philippines,1,2,1,4
+2020 Summer,2020,Summer,SVK,Slovakia,1,2,1,4
+2020 Summer,2020,Summer,RSA,South Africa,1,2,0,3
+2020 Summer,2020,Summer,AUT,Austria,1,1,5,7
+2020 Summer,2020,Summer,EGY,Egypt,1,1,4,6
+2020 Summer,2020,Summer,INA,Indonesia,1,1,3,5
+2020 Summer,2020,Summer,ETH,Ethiopia,1,1,2,4
+2020 Summer,2020,Summer,POR,Portugal,1,1,2,4
+2020 Summer,2020,Summer,TUN,Tunisia,1,1,0,2
+2020 Summer,2020,Summer,EST,Estonia,1,0,1,2
+2020 Summer,2020,Summer,FIJ,Fiji,1,0,1,2
+2020 Summer,2020,Summer,LAT,Latvia,1,0,1,2
+2020 Summer,2020,Summer,THA,Thailand,1,0,1,2
+2020 Summer,2020,Summer,BER,Bermuda,1,0,0,1
+2020 Summer,2020,Summer,MAR,Morocco,1,0,0,1
+2020 Summer,2020,Summer,PUR,Puerto Rico,1,0,0,1
+2020 Summer,2020,Summer,COL,Colombia,0,4,1,5
+2020 Summer,2020,Summer,AZE,Azerbaijan,0,3,4,7
+2020 Summer,2020,Summer,DOM,Dominican Republic,0,3,2,5
+2020 Summer,2020,Summer,ARM,Armenia,0,2,2,4
+2020 Summer,2020,Summer,KGZ,Kyrgyzstan,0,2,1,3
+2020 Summer,2020,Summer,MGL,Mongolia,0,1,3,4
+2020 Summer,2020,Summer,ARG,Argentina,0,1,2,3
+2020 Summer,2020,Summer,SMR,San Marino,0,1,2,3
+2020 Summer,2020,Summer,JOR,Jordan,0,1,1,2
+2020 Summer,2020,Summer,MAS,Malaysia,0,1,1,2
+2020 Summer,2020,Summer,NGR,Nigeria,0,1,1,2
+2020 Summer,2020,Summer,BRN,Bahrain,0,1,0,1
+2020 Summer,2020,Summer,KSA,Kingdom of Saudi Arabia,0,1,0,1
+2020 Summer,2020,Summer,LTU,Lithuania,0,1,0,1
+2020 Summer,2020,Summer,NAM,Namibia,0,1,0,1
+2020 Summer,2020,Summer,MKD,North Macedonia,0,1,0,1
+2020 Summer,2020,Summer,TKM,Turkmenistan,0,1,0,1
+2020 Summer,2020,Summer,KAZ,Kazakhstan,0,0,8,8
+2020 Summer,2020,Summer,MEX,Mexico,0,0,4,4
+2020 Summer,2020,Summer,FIN,Finland,0,0,2,2
+2020 Summer,2020,Summer,BOT,Botswana,0,0,1,1
+2020 Summer,2020,Summer,BUR,Burkina Faso,0,0,1,1
+2020 Summer,2020,Summer,CIV,Cote d'Ivoire,0,0,1,1
+2020 Summer,2020,Summer,GHA,Ghana,0,0,1,1
+2020 Summer,2020,Summer,GRN,Grenada,0,0,1,1
+2020 Summer,2020,Summer,KUW,Kuwait,0,0,1,1
+2020 Summer,2020,Summer,MDA,Republic of Moldova,0,0,1,1
+2020 Summer,2020,Summer,SYR,Syrian Arab Republic,0,0,1,1
+2022 Winter,2022,Winter,NOR,Norway,16,8,13,37
+2022 Winter,2022,Winter,GER,Germany,12,10,5,27
+2022 Winter,2022,Winter,USA,United States,9,9,7,25
+2022 Winter,2022,Winter,CHN,People's Republic of China,9,4,2,15
+2022 Winter,2022,Winter,SWE,Sweden,8,5,5,18
+2022 Winter,2022,Winter,NED,Netherlands,8,5,4,17
+2022 Winter,2022,Winter,AUT,Austria,7,7,4,18
+2022 Winter,2022,Winter,SUI,Switzerland,7,2,6,15
+2022 Winter,2022,Winter,ROC,Russian Olympic Committee,5,12,15,32
+2022 Winter,2022,Winter,FRA,France,5,7,2,14
+2022 Winter,2022,Winter,CAN,Canada,4,8,14,26
+2022 Winter,2022,Winter,JPN,Japan,3,7,8,18
+2022 Winter,2022,Winter,ITA,Italy,2,7,8,17
+2022 Winter,2022,Winter,KOR,Republic of Korea,2,5,2,9
+2022 Winter,2022,Winter,SLO,Slovenia,2,3,2,7
+2022 Winter,2022,Winter,FIN,Finland,2,2,4,8
+2022 Winter,2022,Winter,NZL,New Zealand,2,1,0,3
+2022 Winter,2022,Winter,AUS,Australia,1,2,1,4
+2022 Winter,2022,Winter,GBR,Great Britain,1,1,0,2
+2022 Winter,2022,Winter,HUN,Hungary,1,0,2,3
+2022 Winter,2022,Winter,BEL,Belgium,1,0,1,2
+2022 Winter,2022,Winter,CZE,Czechia,1,0,1,2
+2022 Winter,2022,Winter,SVK,Slovakia,1,0,1,2
+2022 Winter,2022,Winter,BLR,Belarus,0,2,0,2
+2022 Winter,2022,Winter,ESP,Spain,0,1,0,1
+2022 Winter,2022,Winter,UKR,Ukraine,0,1,0,1
+2022 Winter,2022,Winter,EST,Estonia,0,0,1,1
+2022 Winter,2022,Winter,LAT,Latvia,0,0,1,1
+2022 Winter,2022,Winter,POL,Poland,0,0,1,1
+2024 Summer,2024,Summer,USA,United States,40,44,42,126
+2024 Summer,2024,Summer,CHN,People's Republic of China,40,27,24,91
+2024 Summer,2024,Summer,JPN,Japan,20,12,13,45
+2024 Summer,2024,Summer,AUS,Australia,18,19,16,53
+2024 Summer,2024,Summer,FRA,France,16,26,22,64
+2024 Summer,2024,Summer,NED,Netherlands,15,7,12,34
+2024 Summer,2024,Summer,GBR,Great Britain,14,22,29,65
+2024 Summer,2024,Summer,KOR,Republic of Korea,13,9,10,32
+2024 Summer,2024,Summer,ITA,Italy,12,13,15,40
+2024 Summer,2024,Summer,GER,Germany,12,13,8,33
+2024 Summer,2024,Summer,NZL,New Zealand,10,7,3,20
+2024 Summer,2024,Summer,CAN,Canada,9,7,11,27
+2024 Summer,2024,Summer,UZB,Uzbekistan,8,2,3,13
+2024 Summer,2024,Summer,HUN,Hungary,6,7,6,19
+2024 Summer,2024,Summer,ESP,Spain,5,4,9,18
+2024 Summer,2024,Summer,SWE,Sweden,4,4,3,11
+2024 Summer,2024,Summer,KEN,Kenya,4,2,5,11
+2024 Summer,2024,Summer,NOR,Norway,4,1,3,8
+2024 Summer,2024,Summer,IRL,Ireland,4,0,3,7
+2024 Summer,2024,Summer,BRA,Brazil,3,7,10,20
+2024 Summer,2024,Summer,IRI,Islamic Republic of Iran,3,6,3,12
+2024 Summer,2024,Summer,UKR,Ukraine,3,5,4,12
+2024 Summer,2024,Summer,ROU,Romania,3,4,2,9
+2024 Summer,2024,Summer,GEO,Georgia,3,3,1,7
+2024 Summer,2024,Summer,BEL,Belgium,3,1,6,10
+2024 Summer,2024,Summer,BUL,Bulgaria,3,1,3,7
+2024 Summer,2024,Summer,SRB,Serbia,3,1,1,5
+2024 Summer,2024,Summer,CZE,Czechia,3,0,2,5
+2024 Summer,2024,Summer,DEN,Denmark,2,2,5,9
+2024 Summer,2024,Summer,AZE,Azerbaijan,2,2,3,7
+2024 Summer,2024,Summer,CRO,Croatia,2,2,3,7
+2024 Summer,2024,Summer,CUB,Cuba,2,1,6,9
+2024 Summer,2024,Summer,BRN,Bahrain,2,1,1,4
+2024 Summer,2024,Summer,SLO,Slovenia,2,1,0,3
+2024 Summer,2024,Summer,TPE,Chinese Taipei,2,0,4,6
+2024 Summer,2024,Summer,AUT,Austria,2,0,3,5
+2024 Summer,2024,Summer,HKG,"Hong Kong, China",2,0,2,4
+2024 Summer,2024,Summer,PHI,Philippines,2,0,2,4
+2024 Summer,2024,Summer,ALG,Algeria,2,0,1,3
+2024 Summer,2024,Summer,INA,Indonesia,2,0,1,3
+2024 Summer,2024,Summer,ISR,Israel,1,5,1,7
+2024 Summer,2024,Summer,POL,Poland,1,4,5,10
+2024 Summer,2024,Summer,KAZ,Kazakhstan,1,3,3,7
+2024 Summer,2024,Summer,JAM,Jamaica,1,3,2,6
+2024 Summer,2024,Summer,RSA,South Africa,1,3,2,6
+2024 Summer,2024,Summer,THA,Thailand,1,3,2,6
+2024 Summer,2024,Summer,AIN,Individual Neutral Athletes,1,3,1,5
+2024 Summer,2024,Summer,ETH,Ethiopia,1,3,0,4
+2024 Summer,2024,Summer,SUI,Switzerland,1,2,5,8
+2024 Summer,2024,Summer,ECU,Ecuador,1,2,2,5
+2024 Summer,2024,Summer,POR,Portugal,1,2,1,4
+2024 Summer,2024,Summer,GRE,Greece,1,1,6,8
+2024 Summer,2024,Summer,ARG,Argentina,1,1,1,3
+2024 Summer,2024,Summer,EGY,Egypt,1,1,1,3
+2024 Summer,2024,Summer,TUN,Tunisia,1,1,1,3
+2024 Summer,2024,Summer,BOT,Botswana,1,1,0,2
+2024 Summer,2024,Summer,CHI,Chile,1,1,0,2
+2024 Summer,2024,Summer,LCA,Saint Lucia,1,1,0,2
+2024 Summer,2024,Summer,UGA,Uganda,1,1,0,2
+2024 Summer,2024,Summer,DOM,Dominican Republic,1,0,2,3
+2024 Summer,2024,Summer,GUA,Guatemala,1,0,1,2
+2024 Summer,2024,Summer,MAR,Morocco,1,0,1,2
+2024 Summer,2024,Summer,DMA,Dominica,1,0,0,1
+2024 Summer,2024,Summer,PAK,Pakistan,1,0,0,1
+2024 Summer,2024,Summer,TUR,Turkiye,0,3,5,8
+2024 Summer,2024,Summer,MEX,Mexico,0,3,2,5
+2024 Summer,2024,Summer,ARM,Armenia,0,3,1,4
+2024 Summer,2024,Summer,COL,Colombia,0,3,1,4
+2024 Summer,2024,Summer,PRK,Democratic People's Republic of Korea,0,2,4,6
+2024 Summer,2024,Summer,KGZ,Kyrgyzstan,0,2,4,6
+2024 Summer,2024,Summer,LTU,Lithuania,0,2,2,4
+2024 Summer,2024,Summer,IND,India,0,1,5,6
+2024 Summer,2024,Summer,MDA,Republic of Moldova,0,1,3,4
+2024 Summer,2024,Summer,KOS,Kosovo,0,1,1,2
+2024 Summer,2024,Summer,CYP,Cyprus,0,1,0,1
+2024 Summer,2024,Summer,FIJ,Fiji,0,1,0,1
+2024 Summer,2024,Summer,JOR,Jordan,0,1,0,1
+2024 Summer,2024,Summer,MGL,Mongolia,0,1,0,1
+2024 Summer,2024,Summer,PAN,Panama,0,1,0,1
+2024 Summer,2024,Summer,TJK,Tajikistan,0,0,3,3
+2024 Summer,2024,Summer,ALB,Albania,0,0,2,2
+2024 Summer,2024,Summer,GRN,Grenada,0,0,2,2
+2024 Summer,2024,Summer,MAS,Malaysia,0,0,2,2
+2024 Summer,2024,Summer,PUR,Puerto Rico,0,0,2,2
+2024 Summer,2024,Summer,CPV,Cabo Verde,0,0,1,1
+2024 Summer,2024,Summer,CIV,Cote d'Ivoire,0,0,1,1
+2024 Summer,2024,Summer,PER,Peru,0,0,1,1
+2024 Summer,2024,Summer,QAT,Qatar,0,0,1,1
+2024 Summer,2024,Summer,SGP,Singapore,0,0,1,1
+2024 Summer,2024,Summer,SVK,Slovakia,0,0,1,1
+2024 Summer,2024,Summer,ZAM,Zambia,0,0,1,1
+2024 Summer,2024,Summer,EOR,Refugee Olympic Team,0,0,1,1
+2026 Winter,2026,Winter,NOR,Norway,18,12,11,41
+2026 Winter,2026,Winter,USA,United States,10,12,9,31
+2026 Winter,2026,Winter,NED,Netherlands,10,7,3,20
+2026 Winter,2026,Winter,ITA,Italy,10,6,14,30
+2026 Winter,2026,Winter,GER,Germany,8,10,8,26
+2026 Winter,2026,Winter,FRA,France,8,9,6,23
+2026 Winter,2026,Winter,SWE,Sweden,7,6,4,17
+2026 Winter,2026,Winter,SUI,Switzerland,6,8,7,21
+2026 Winter,2026,Winter,AUT,Austria,5,8,5,18
+2026 Winter,2026,Winter,CHN,People's Republic of China,5,4,6,15
+2026 Winter,2026,Winter,JPN,Japan,4,7,11,22
+2026 Winter,2026,Winter,CAN,Canada,3,6,7,16
+2026 Winter,2026,Winter,KOR,Republic of Korea,3,4,3,10
+2026 Winter,2026,Winter,AUS,Australia,3,2,1,6
+2026 Winter,2026,Winter,GBR,Great Britain,3,0,1,4
+2026 Winter,2026,Winter,CZE,Czechia,2,2,1,5
+2026 Winter,2026,Winter,SLO,Slovenia,2,1,1,4
+2026 Winter,2026,Winter,ESP,Spain,1,0,2,3
+2026 Winter,2026,Winter,BRA,Brazil,1,0,0,1
+2026 Winter,2026,Winter,KAZ,Kazakhstan,1,0,0,1
+2026 Winter,2026,Winter,POL,Poland,0,3,1,4
+2026 Winter,2026,Winter,FIN,Finland,0,1,4,5
+2026 Winter,2026,Winter,LAT,Latvia,0,1,1,2
+2026 Winter,2026,Winter,NZL,New Zealand,0,1,1,2
+2026 Winter,2026,Winter,DEN,Denmark,0,1,0,1
+2026 Winter,2026,Winter,GEO,Georgia,0,1,0,1
+2026 Winter,2026,Winter,AIN,Individual Neutral Athletes,0,1,0,1
+2026 Winter,2026,Winter,BUL,Bulgaria,0,0,2,2
+2026 Winter,2026,Winter,BEL,Belgium,0,0,1,1
