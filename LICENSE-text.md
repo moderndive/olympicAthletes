@@ -1,0 +1,17 @@
+# License
+
+    YEAR: 2026
+    COPYRIGHT HOLDER: Chester Ismay
+
+    This dataset is released under the Creative Commons Attribution 4.0
+    International License (CC BY 4.0). See https://creativecommons.org/licenses/by/4.0/
+    for the full license text.
+
+    The dataset is derived from two sources:
+
+      1. The rgriff23 'Olympic_history' dataset (1896-2016), originally scraped
+         from sports-reference.com. https://github.com/rgriff23/Olympic_history
+      2. Olympedia (https://www.olympedia.org/), maintained by OlyMADMen, for
+         the 2018, 2020, 2022, 2024, and 2026 Games.
+
+    If you use this dataset, please cite both sources alongside this package.
