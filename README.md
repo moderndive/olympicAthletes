@@ -1,4 +1,4 @@
-# olympicAthletes
+# olympicAthletes <img src="man/figures/logo.png" alt="A hexagonal logo for the package. It uses the gold, silver, and bronze podiums as bars in a bar chart to represent potential statistical analysis to be done for this R data package on modern Olympic athletes." align="right" width=280 />
 
 A tidy R data package covering every athlete-event participation in the modern
 Olympic Games, **Athens 1896 through Milano-Cortina 2026** — about 315,000 rows.

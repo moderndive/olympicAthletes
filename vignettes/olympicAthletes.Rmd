@@ -1,0 +1,121 @@
+---
+title: "Getting started with olympicAthletes"
+output: rmarkdown::html_vignette
+description: >
+  A tour of the three datasets in olympicAthletes — what they contain,
+  how they fit together, and a few starter analyses.
+vignette: >
+  %\VignetteIndexEntry{Getting started with olympicAthletes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.align = "center",
+  fig.width = 7,
+  fig.height = 4.2
+)
+```
+
+`olympicAthletes` ships three datasets covering every modern Olympic
+Games from **Athens 1896** through **Milano-Cortina 2026**. This vignette
+walks through each one and shows a few representative analyses.
+
+```{r setup}
+library(olympicAthletes)
+```
+
+## The three datasets at a glance
+
+| Dataset            | Rows    | One row per…                          |
+|--------------------|--------:|----------------------------------------|
+| `olympic_athletes` | 314,749 | (athlete, Games, event) participation  |
+| `medal_table`      |     273 | (Games, NOC) verified medal totals     |
+| `editions`         |       5 | new edition added on top of rgriff23   |
+
+`olympic_athletes` is the headline long-format table. `medal_table` and
+`editions` are companion tables that make per-team-event medal counting
+and edition-level lookups easy without re-aggregating 300k+ rows.
+
+## `olympic_athletes`: athlete-event participations
+
+```{r athletes-glimpse}
+data(olympic_athletes)
+str(olympic_athletes, give.attr = FALSE, vec.len = 2)
+```
+
+A quick sanity check — participations per Games, by season:
+
+```{r athletes-by-year}
+tab <- table(olympic_athletes$Year, olympic_athletes$Season)
+tail(tab, 10)
+```
+
+### A note on team medals
+
+Medals in `olympic_athletes` are **per-player**: every member of a
+gold-winning ice hockey roster has their own `Medal = "Gold"` row. That
+matches the rgriff23 schema and is the right shape for athlete-level
+analysis, but it inflates team counts when you sum naively.
+
+```{r medal-per-player}
+# Every roster member of the men's ice hockey gold medal team
+# at Beijing 2022 gets a Gold row:
+hockey_2022 <- subset(
+  olympic_athletes,
+  Year == 2022 &
+    Event == "Ice Hockey Men's Ice Hockey" &
+    Medal == "Gold"
+)
+nrow(hockey_2022)
+```
+
+For headline medal-table totals, use `medal_table` instead.
+
+## `medal_table`: verified per-edition totals
+
+`medal_table` covers the five new editions (2018-2026) and uses the IOC
+per-team-event convention.
+
+```{r medal-table}
+data(medal_table)
+head(subset(medal_table, year == 2024), 5)
+```
+
+Top five NOCs at Paris 2024 by gold count:
+
+```{r paris-top}
+paris <- subset(medal_table, year == 2024)
+paris <- paris[order(-paris$gold, -paris$total), ]
+head(paris[, c("noc", "country", "gold", "silver", "bronze", "total")], 5)
+```
+
+## `editions`: metadata for the new five Games
+
+```{r editions}
+data(editions)
+editions[, c("games", "city", "country",
+             "opening_ceremony", "closing_ceremony",
+             "participants", "medal_events")]
+```
+
+Use it to enrich `olympic_athletes` with edition-level facts (host
+country, opening date, total medal events) without scraping anything
+yourself.
+
+## Provenance recap
+
+- **1896-2016** rows come from
+  [rgriff23/Olympic_history](https://github.com/rgriff23/Olympic_history),
+  originally scraped from sports-reference.com.
+- **2018-2026** rows were scraped from
+  [olympedia.org](https://www.olympedia.org/) using the pipeline at
+  [ismayc/olympic-moderndive-data](https://github.com/ismayc/olympic-moderndive-data).
+- The build script in `data-raw/DATASET.R` reproduces every `.rda` in
+  `data/` from the CSVs in `data-raw/`.
+
+See `?olympic_athletes`, `?medal_table`, and `?editions` for full
+column-level documentation.

@@ -1,0 +1,157 @@
+// olympicAthletes pkgdown styling
+// ---------------------------------
+// Brand palette: the five Olympic ring colors, plus medal hues.
+
+$olympic-blue:   #0081C8;
+$olympic-yellow: #FCB131;
+$olympic-black:  #000000;
+$olympic-green:  #00A651;
+$olympic-red:    #EE334E;
+
+$medal-gold:     #D4AF37;
+$medal-silver:   #C0C0C0;
+$medal-bronze:   #CD7F32;
+
+// ---- Navbar -----------------------------------------------------------------
+
+.navbar {
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    $olympic-blue 0 20%,
+    $olympic-yellow 20% 40%,
+    $olympic-black 40% 60%,
+    $olympic-green 60% 80%,
+    $olympic-red 80% 100%
+  ) 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-brand {
+  font-family: var(--bs-heading-font-family, "Merriweather"), serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.navbar .nav-link {
+  font-weight: 600;
+}
+
+// ---- Hero / page header -----------------------------------------------------
+
+.template-home .page-header,
+.template-home h1.hasAnchor {
+  background: linear-gradient(135deg, rgba($olympic-blue, 0.08), rgba($olympic-yellow, 0.05));
+  border-radius: 0.75rem;
+  padding: 2rem 2rem 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba($olympic-blue, 0.12);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--bs-heading-font-family, "Merriweather"), serif;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  border-bottom: 2px solid rgba($olympic-blue, 0.15);
+  padding-bottom: 0.35rem;
+  margin-top: 2.25rem;
+}
+
+// ---- Reference index --------------------------------------------------------
+
+.ref-index .ref-arguments,
+.template-reference-index .section {
+  border-left: 3px solid $olympic-blue;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.template-reference-index .section:nth-of-type(2) { border-left-color: $medal-gold; }
+.template-reference-index .section:nth-of-type(3) { border-left-color: $medal-silver; }
+.template-reference-index .section:nth-of-type(4) { border-left-color: $medal-bronze; }
+
+// ---- Code & tables ----------------------------------------------------------
+
+pre, code {
+  border-radius: 0.5rem;
+}
+
+pre {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table thead th {
+  background: rgba($olympic-blue, 0.07);
+  border-bottom: 2px solid $olympic-blue;
+}
+
+table tbody tr:nth-of-type(odd) {
+  background: rgba($olympic-blue, 0.025);
+}
+
+// ---- Sidebar / cards --------------------------------------------------------
+
+.template-home aside .well,
+aside .well {
+  border-radius: 0.75rem;
+  border: 1px solid rgba($olympic-blue, 0.15);
+  background: linear-gradient(180deg, rgba($olympic-yellow, 0.05), transparent);
+}
+
+// ---- Logo glow on hover -----------------------------------------------------
+
+.navbar-brand img {
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.navbar-brand:hover img {
+  transform: rotate(-3deg) scale(1.05);
+  filter: drop-shadow(0 0 6px rgba($olympic-yellow, 0.5));
+}
+
+// ---- Footer -----------------------------------------------------------------
+
+.pkgdown-footer-left,
+.pkgdown-footer-right {
+  font-size: 0.9rem;
+  color: var(--bs-secondary-color);
+}
+
+footer {
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(
+    to right,
+    $olympic-blue 0 20%,
+    $olympic-yellow 20% 40%,
+    $olympic-black 40% 60%,
+    $olympic-green 60% 80%,
+    $olympic-red 80% 100%
+  ) 1;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+// ---- Dark-mode tweaks -------------------------------------------------------
+
+[data-bs-theme="dark"] {
+  .template-home .page-header,
+  .template-home h1.hasAnchor {
+    background: linear-gradient(135deg, rgba($olympic-blue, 0.18), rgba($olympic-yellow, 0.08));
+    border-color: rgba($olympic-blue, 0.35);
+  }
+
+  table thead th {
+    background: rgba($olympic-blue, 0.20);
+  }
+
+  table tbody tr:nth-of-type(odd) {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}

@@ -1,0 +1,127 @@
+url: https://moderndive.github.io/olympicAthletes/
+
+template:
+  bootstrap: 5
+  bootswatch: flatly
+  light-switch: true
+  math-rendering: katex
+  bslib:
+    primary: "#0081C8"      # Olympic blue
+    secondary: "#FCB131"    # Olympic yellow
+    success: "#00A651"      # Olympic green
+    info: "#0081C8"
+    warning: "#FCB131"
+    danger: "#EE334E"       # Olympic red
+    base_font: {google: "Source Sans Pro"}
+    heading_font: {google: "Merriweather"}
+    code_font: {google: "JetBrains Mono"}
+    pkgdown-nav-height: 100px
+  includes:
+    in_header: |
+      <meta property="og:title" content="olympicAthletes" />
+      <meta property="og:description" content="Tidy R data on every Olympic athlete-event participation, Athens 1896 to Milano-Cortina 2026." />
+      <meta property="og:image" content="https://moderndive.github.io/olympicAthletes/logo.png" />
+      <meta name="twitter:card" content="summary" />
+  opengraph:
+    image:
+      src: man/figures/logo.png
+      alt: "olympicAthletes hex logo: gold, silver, and bronze podiums as a bar chart."
+    twitter:
+      creator: "@old_man_chester"
+      card: summary
+
+home:
+  title: olympicAthletes • Athens 1896 to Milano-Cortina 2026
+  description: >
+    A tidy, long-format dataset of every athlete-event participation in the
+    modern Olympic Games — about 315,000 rows spanning 33 editions.
+  links:
+  - text: Browse the source data
+    href: https://www.olympedia.org/
+  - text: rgriff23 Olympic_history (1896-2016 source)
+    href: https://github.com/rgriff23/Olympic_history
+  - text: Reproducible build pipeline
+    href: https://github.com/ismayc/olympic-moderndive-data
+  sidebar:
+    structure: [links, license, community, citation, authors, dev]
+
+authors:
+  Chester Ismay:
+    href: https://chesterismay.rbind.io
+
+navbar:
+  bg: primary
+  type: light
+  structure:
+    left:  [intro, reference, articles, news]
+    right: [search, github, lightswitch]
+  components:
+    intro:
+      text: Get started
+      href: articles/olympicAthletes.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Getting started
+        href: articles/olympicAthletes.html
+    news:
+      text: Changelog
+      href: news/index.html
+    github:
+      icon: fa-github
+      href: https://github.com/moderndive/olympicAthletes
+      aria-label: GitHub repository
+
+footer:
+  structure:
+    left: [developed_by, built_with]
+    right: [package]
+  components:
+    package: |
+      Data &copy; their respective sources
+      (<a href="https://github.com/rgriff23/Olympic_history">rgriff23</a> &middot;
+      <a href="https://www.olympedia.org/">Olympedia</a>) under CC&nbsp;BY&nbsp;4.0.
+
+reference:
+- title: Package overview
+  desc: Top-level entry point and shared documentation.
+  contents:
+  - olympicAthletes-package
+
+- title: Athlete-event data
+  desc: >
+    The headline long-format dataset — one row per (athlete, Games, event)
+    across every modern Olympic Games from 1896 to 2026.
+  contents:
+  - olympic_athletes
+
+- title: Medal tables
+  desc: >
+    Verified per-team-event medal totals for the five new editions
+    (PyeongChang 2018 through Milano-Cortina 2026).
+  contents:
+  - medal_table
+
+- title: Edition metadata
+  desc: >
+    Host city, dates, participant counts, and discipline counts for
+    each of the new editions added on top of the rgriff23 source.
+  contents:
+  - editions
+
+articles:
+- title: Articles
+  navbar: ~
+  contents:
+  - olympicAthletes
+
+news:
+  releases:
+  - text: "Version 0.1.0"
+    href: https://github.com/moderndive/olympicAthletes/releases/tag/v0.1.0
+
+development:
+  mode: auto
