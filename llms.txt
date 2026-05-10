@@ -20,21 +20,26 @@ remotes::install_github("moderndive/olympicAthletes")
 library(olympicAthletes)
 
 data(olympic_athletes)   # ~315,000 athlete-event rows, 1896-2026
-data(medal_table)        # verified medal table for 2018-2026
-data(editions)           # metadata for the five new editions
+data(medal_table)        # verified medal table for every edition, 1896-2026
+data(editions)           # metadata for every Games, 1896-2026
 
 ?olympic_athletes
 ```
 
 | Dataset | Rows | Description |
 |----|---:|----|
-| `olympic_athletes` | 315,090 | One row per (athlete, Games, event). 15 columns. |
-| `medal_table` | 273 | One row per (Games, NOC) with Gold/Silver/Bronze counts. |
-| `editions` | 5 | Year, season, host city, dates, participant counts. |
+| `olympic_athletes` | 315,090 | One row per (athlete, Games, event). 16 columns. |
+| `medal_table` | 1,929 | One row per (Games, NOC) with Gold/Silver/Bronze counts. |
+| `editions` | 62 | Year, season, host city, dates, participant counts. Includes cancelled Games. |
 
-The schema of `olympic_athletes` matches the original
+`olympic_athletes` extends the original
 [rgriff23/Olympic_history](https://github.com/rgriff23/Olympic_history)
-dataset, so existing notebooks and analyses keep working.
+dataset. Column names are lowercase snake_case (e.g. `noc`, `medal`)
+rather than the upstream TitleCase, and the host-city column has been
+split into `city_local_latin` and `city_english`. `city_local_latin`
+always uses the Latin alphabet — non-Latin-script cities are romanized
+(`"Moskva"`, `"Tokyo"`, `"Beijing"`, `"PyeongChang"`), not rendered in
+their native script.
 
 ## Provenance
 
@@ -47,11 +52,11 @@ repository. See `data-raw/DATASET.R` for the reproducible build.
 ## Caveats
 
 - **Medal counts are per-player, not per-team-event.** A team gold
-  (e.g. Ice Hockey Men) produces one `Medal = "Gold"` row per roster
-  member. Group by `Medal` and `NOC` and divide team-event medals by
+  (e.g. Ice Hockey Men) produces one `medal = "Gold"` row per roster
+  member. Group by `medal` and `noc` and divide team-event medals by
   team size to reproduce the IOC medal table — or use the `medal_table`
   companion dataset which uses the IOC convention.
-- **Bio coverage** (Height/Weight) ranges from ~80% for older Winter
+- **Bio coverage** (`height`/`weight`) ranges from ~80% for older Winter
   Games to ~25% for Paris 2024 / Milano-Cortina 2026. Olympedia bios for
   newer or less-prominent athletes are sparse — same pattern as in the
   original 1896-2016 source.
@@ -63,7 +68,7 @@ CC BY 4.0. Please cite this package, the rgriff23 source, and Olympedia.
 ## Citation
 
     Ismay, C. (2026). olympicAthletes: Olympic Athlete Event Data,
-    Athens 1896 to Milano-Cortina 2026. R package version 0.1.0.
+    Athens 1896 to Milano-Cortina 2026. R package version 0.3.0.
 
     Griffin, R. (2018). Olympic history: longitudinal data scraped from
     www.sports-reference.com. https://github.com/rgriff23/Olympic_history
@@ -95,7 +100,7 @@ Verified per-team-event medal totals for the five new editions
 (PyeongChang 2018 through Milano-Cortina 2026).
 
 - [`medal_table`](https://moderndive.github.io/olympicAthletes/reference/medal_table.md)
-  : Verified medal tables for the 2018-2026 editions
+  : Verified medal tables for every Olympic edition, 1896-2026
 
 ## Edition metadata
 
@@ -103,7 +108,7 @@ Host city, dates, participant counts, and discipline counts for each of
 the new editions added on top of the rgriff23 source.
 
 - [`editions`](https://moderndive.github.io/olympicAthletes/reference/editions.md)
-  : Edition-level metadata for the five new Games (2018-2026)
+  : Edition-level metadata for every Olympic Games, 1896-2026
 
 # Articles
 

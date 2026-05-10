@@ -14,71 +14,83 @@ olympic_athletes
 
 ## Format
 
-A data frame with 314,749 rows and 15 variables:
+A data frame with 315,090 rows and 16 variables:
 
-- ID:
+- id:
 
   Integer. Unique athlete ID. Original IDs are 1..135571; athletes new
   to the 2018-2026 editions get IDs starting at 1,000,000 to avoid
   collision.
 
-- Name:
+- name:
 
   Character. ASCII-folded athlete name.
 
-- Sex:
+- sex:
 
   Character. `"M"` or `"F"`.
 
-- Age:
+- age:
 
   Integer or `NA`. Approximate age at the start of the Games, computed
   from date of birth (Feb 1 reference for Winter, Jul 15 for Summer).
 
-- Height:
+- height:
 
   Numeric or `NA`. Height in centimetres.
 
-- Weight:
+- weight:
 
   Numeric or `NA`. Weight in kilograms.
 
-- Team:
+- team:
 
   Character. Country/team name as displayed on the source.
 
-- NOC:
+- noc:
 
   Character. Three-letter IOC code (e.g. `"USA"`, `"NOR"`, `"ROC"`).
 
-- Games:
+- games:
 
   Character. `"<year> <Summer/Winter>"`, e.g. `"2026 Winter"`.
 
-- Year:
+- year:
 
   Integer. Calendar year of the Games. Tokyo 2020 is coded as 2020 even
   though it was held in 2021 (IOC convention).
 
-- Season:
+- season:
 
   Character. `"Summer"` or `"Winter"`.
 
-- City:
+- city_local_latin:
 
-  Character. Host city.
+  Character. Host city in the local-language form rendered in the Latin
+  alphabet — i.e. native Latin-script names retain their diacritics
+  (`"Athína"`, `"München"`, `"Montréal"`, `"Ciudad de México"`), and
+  non-Latin-script names use a standard romanization rather than the
+  city's native script (`"Moskva"` not `"Москва"`, `"Tokyo"` not
+  `"東京"`, `"Beijing"` not `"北京"`, `"PyeongChang"` not `"평창"`). The
+  column is therefore *always* ASCII-or-Latin-1 and never contains the
+  city's native non-Latin alphabet.
 
-- Sport:
+- city_english:
+
+  Character. Common English name of the host city (e.g. `"Athens"`,
+  `"Munich"`, `"Moscow"`, `"Mexico City"`).
+
+- sport:
 
   Character. Sport name. The 2018-2026 rows are normalised to the
   original sport names where possible (e.g. `"Cycling Track"` and
   `"Cycling Road"` both collapse to `"Cycling"`).
 
-- Event:
+- event:
 
   Character. Event name including the sport prefix.
 
-- Medal:
+- medal:
 
   Character or `NA`. `"Gold"`, `"Silver"`, `"Bronze"`, or `NA`.
   **Per-player**: every member of a medal-winning team roster gets a row
@@ -96,21 +108,28 @@ A data frame with 314,749 rows and 15 variables:
 ``` r
 data(olympic_athletes)
 head(olympic_athletes)
-#>      ID                       Name Sex Age Height Weight          Team NOC
+#>      id                       name sex age height weight          team noc
 #> 1 12068       Arthur Charles Blake   M  24     NA     NA United States USA
 #> 2 35094             Angelos Fetsis   M  NA     NA     NA        Greece GRE
 #> 3 35698 Edwin Harold "Teddy" Flack   M  22     NA     NA     Australia AUS
 #> 4 38123                 Carl Galle   M  23    154     45       Germany GER
 #> 5 41160       Dimitrios P. Golemis   M  21     NA     NA        Greece GRE
 #> 6 57441  Konstantinos Karakatsanis   M  NA     NA     NA        Greece GRE
-#>         Games Year Season   City     Sport                        Event  Medal
-#> 1 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres Silver
-#> 2 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   <NA>
-#> 3 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   Gold
-#> 4 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   <NA>
-#> 5 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   <NA>
-#> 6 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   <NA>
-table(olympic_athletes$Year, olympic_athletes$Season)
+#>         games year season city_local_latin city_english     sport
+#> 1 1896 Summer 1896 Summer           Athína       Athens Athletics
+#> 2 1896 Summer 1896 Summer           Athína       Athens Athletics
+#> 3 1896 Summer 1896 Summer           Athína       Athens Athletics
+#> 4 1896 Summer 1896 Summer           Athína       Athens Athletics
+#> 5 1896 Summer 1896 Summer           Athína       Athens Athletics
+#> 6 1896 Summer 1896 Summer           Athína       Athens Athletics
+#>                          event  medal
+#> 1 Athletics Men's 1,500 metres Silver
+#> 2 Athletics Men's 1,500 metres   <NA>
+#> 3 Athletics Men's 1,500 metres   Gold
+#> 4 Athletics Men's 1,500 metres   <NA>
+#> 5 Athletics Men's 1,500 metres   <NA>
+#> 6 Athletics Men's 1,500 metres   <NA>
+table(olympic_athletes$year, olympic_athletes$season)
 #>       
 #>        Summer Winter
 #>   1896    380      0
@@ -158,9 +177,9 @@ if (FALSE) { # \dontrun{
   # Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)
   library(dplyr)
   olympic_athletes |>
-    filter(Year == 2024, !is.na(Medal)) |>
-    count(NOC, Medal) |>
-    tidyr::pivot_wider(names_from = Medal, values_from = n, values_fill = 0) |>
+    filter(year == 2024, !is.na(medal)) |>
+    count(noc, medal) |>
+    tidyr::pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
     arrange(desc(Gold + Silver + Bronze))
 } # }
 ```

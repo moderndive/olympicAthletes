@@ -20,9 +20,9 @@
 <link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="olympicAthletes • Athens 1896 to Milano-Cortina 2026">
-<meta name="description" content="A tidy, long-format dataset of every athlete-event participation in the modern Olympic Games — about 315,000 rows spanning 33 editions.
+<meta name="description" content="A tidy, long-format dataset of every athlete-event participation in the modern Olympic Games — about 315,000 rows spanning 56 editions.
 ">
-<meta property="og:description" content="A tidy, long-format dataset of every athlete-event participation in the modern Olympic Games — about 315,000 rows spanning 33 editions.
+<meta property="og:description" content="A tidy, long-format dataset of every athlete-event participation in the modern Olympic Games — about 315,000 rows spanning 56 editions.
 ">
 <meta property="og:image" content="https://moderndive.github.io/olympicAthletes/reference/figures/logo.png">
 <meta property="og:image:alt" content="olympicAthletes hex logo: gold, silver, and bronze podiums as a bar chart.">
@@ -42,7 +42,7 @@
 
     <a class="navbar-brand me-2" href="index.html">olympicAthletes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,8 +102,8 @@
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/moderndive/olympicAthletes" class="external-link">olympicAthletes</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">)</span>   <span class="co"># ~315,000 athlete-event rows, 1896-2026</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">medal_table</span><span class="op">)</span>        <span class="co"># verified medal table for 2018-2026</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">editions</span><span class="op">)</span>           <span class="co"># metadata for the five new editions</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">medal_table</span><span class="op">)</span>        <span class="co"># verified medal table for every edition, 1896-2026</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">editions</span><span class="op">)</span>           <span class="co"># metadata for every Games, 1896-2026</span></span>
 <span></span>
 <span><span class="op">?</span><span class="va">olympic_athletes</span></span></code></pre></div>
 <table class="table">
@@ -121,21 +121,21 @@
 <tr>
 <td><code>olympic_athletes</code></td>
 <td align="right">315,090</td>
-<td>One row per (athlete, Games, event). 15 columns.</td>
+<td>One row per (athlete, Games, event). 16 columns.</td>
 </tr>
 <tr>
 <td><code>medal_table</code></td>
-<td align="right">273</td>
+<td align="right">1,929</td>
 <td>One row per (Games, NOC) with Gold/Silver/Bronze counts.</td>
 </tr>
 <tr>
 <td><code>editions</code></td>
-<td align="right">5</td>
-<td>Year, season, host city, dates, participant counts.</td>
+<td align="right">62</td>
+<td>Year, season, host city, dates, participant counts. Includes cancelled Games.</td>
 </tr>
 </tbody>
 </table>
-<p>The schema of <code>olympic_athletes</code> matches the original <a href="https://github.com/rgriff23/Olympic_history" class="external-link">rgriff23/Olympic_history</a> dataset, so existing notebooks and analyses keep working.</p>
+<p><code>olympic_athletes</code> extends the original <a href="https://github.com/rgriff23/Olympic_history" class="external-link">rgriff23/Olympic_history</a> dataset. Column names are lowercase snake_case (e.g. <code>noc</code>, <code>medal</code>) rather than the upstream TitleCase, and the host-city column has been split into <code>city_local_latin</code> and <code>city_english</code>. <code>city_local_latin</code> always uses the Latin alphabet — non-Latin-script cities are romanized (<code>"Moskva"</code>, <code>"Tokyo"</code>, <code>"Beijing"</code>, <code>"PyeongChang"</code>), not rendered in their native script.</p>
 </div>
 <div class="section level2">
 <h2 id="provenance">Provenance<a class="anchor" aria-label="anchor" href="#provenance"></a>
@@ -147,9 +147,9 @@
 </h2>
 <ul>
 <li>
-<strong>Medal counts are per-player, not per-team-event.</strong> A team gold (e.g. Ice Hockey Men) produces one <code>Medal = "Gold"</code> row per roster member. Group by <code>Medal</code> and <code>NOC</code> and divide team-event medals by team size to reproduce the IOC medal table — or use the <code>medal_table</code> companion dataset which uses the IOC convention.</li>
+<strong>Medal counts are per-player, not per-team-event.</strong> A team gold (e.g. Ice Hockey Men) produces one <code>medal = "Gold"</code> row per roster member. Group by <code>medal</code> and <code>noc</code> and divide team-event medals by team size to reproduce the IOC medal table — or use the <code>medal_table</code> companion dataset which uses the IOC convention.</li>
 <li>
-<strong>Bio coverage</strong> (Height/Weight) ranges from ~80% for older Winter Games to ~25% for Paris 2024 / Milano-Cortina 2026. Olympedia bios for newer or less-prominent athletes are sparse — same pattern as in the original 1896-2016 source.</li>
+<strong>Bio coverage</strong> (<code>height</code>/<code>weight</code>) ranges from ~80% for older Winter Games to ~25% for Paris 2024 / Milano-Cortina 2026. Olympedia bios for newer or less-prominent athletes are sparse — same pattern as in the original 1896-2016 source.</li>
 </ul>
 </div>
 <div class="section level2">
@@ -161,7 +161,7 @@
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
 <pre><code>Ismay, C. (2026). olympicAthletes: Olympic Athlete Event Data,
-Athens 1896 to Milano-Cortina 2026. R package version 0.1.0.
+Athens 1896 to Milano-Cortina 2026. R package version 0.3.0.
 
 Griffin, R. (2018). Olympic history: longitudinal data scraped from
 www.sports-reference.com. https://github.com/rgriff23/Olympic_history

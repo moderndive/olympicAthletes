@@ -15,7 +15,7 @@ dataset (originally scraped from sports-reference.com); rows for
 
     <a class="navbar-brand me-2" href="../index.html">olympicAthletes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,58 +66,72 @@ dataset (originally scraped from sports-reference.com); rows for
 
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
-    <p>A data frame with 314,749 rows and 15 variables:</p><dl><dt>ID</dt>
+    <p>A data frame with 315,090 rows and 16 variables:</p><dl><dt>id</dt>
 <dd><p>Integer. Unique athlete ID. Original IDs are 1..135571;
     athletes new to the 2018-2026 editions get IDs starting at
     1,000,000 to avoid collision.</p></dd>
 
-  <dt>Name</dt>
+  <dt>name</dt>
 <dd><p>Character. ASCII-folded athlete name.</p></dd>
 
-  <dt>Sex</dt>
+  <dt>sex</dt>
 <dd><p>Character. <code>"M"</code> or <code>"F"</code>.</p></dd>
 
-  <dt>Age</dt>
+  <dt>age</dt>
 <dd><p>Integer or <code>NA</code>. Approximate age at the start of the
     Games, computed from date of birth (Feb 1 reference for Winter,
     Jul 15 for Summer).</p></dd>
 
-  <dt>Height</dt>
+  <dt>height</dt>
 <dd><p>Numeric or <code>NA</code>. Height in centimetres.</p></dd>
 
-  <dt>Weight</dt>
+  <dt>weight</dt>
 <dd><p>Numeric or <code>NA</code>. Weight in kilograms.</p></dd>
 
-  <dt>Team</dt>
+  <dt>team</dt>
 <dd><p>Character. Country/team name as displayed on the source.</p></dd>
 
-  <dt>NOC</dt>
+  <dt>noc</dt>
 <dd><p>Character. Three-letter IOC code (e.g. <code>"USA"</code>,
     <code>"NOR"</code>, <code>"ROC"</code>).</p></dd>
 
-  <dt>Games</dt>
+  <dt>games</dt>
 <dd><p>Character. <code>"&lt;year&gt; &lt;Summer/Winter&gt;"</code>, e.g.
     <code>"2026 Winter"</code>.</p></dd>
 
-  <dt>Year</dt>
+  <dt>year</dt>
 <dd><p>Integer. Calendar year of the Games. Tokyo 2020 is
     coded as 2020 even though it was held in 2021 (IOC convention).</p></dd>
 
-  <dt>Season</dt>
+  <dt>season</dt>
 <dd><p>Character. <code>"Summer"</code> or <code>"Winter"</code>.</p></dd>
 
-  <dt>City</dt>
-<dd><p>Character. Host city.</p></dd>
+  <dt>city_local_latin</dt>
+<dd><p>Character. Host city in the local-language
+    form rendered in the Latin alphabet — i.e. native Latin-script
+    names retain their diacritics (<code>"Athína"</code>, <code>"München"</code>,
+    <code>"Montréal"</code>, <code>"Ciudad de México"</code>), and non-Latin-script
+    names use a standard romanization rather than the city's native
+    script (<code>"Moskva"</code> not <code>"Москва"</code>, <code>"Tokyo"</code> not
+    <code>"東京"</code>, <code>"Beijing"</code> not <code>"北京"</code>,
+    <code>"PyeongChang"</code> not <code>"평창"</code>). The column is therefore
+    <em>always</em> ASCII-or-Latin-1 and never contains the city's
+    native non-Latin alphabet.</p></dd>
 
-  <dt>Sport</dt>
+  <dt>city_english</dt>
+<dd><p>Character. Common English name of the host city
+    (e.g. <code>"Athens"</code>, <code>"Munich"</code>, <code>"Moscow"</code>,
+    <code>"Mexico City"</code>).</p></dd>
+
+  <dt>sport</dt>
 <dd><p>Character. Sport name. The 2018-2026 rows are normalised
     to the original sport names where possible (e.g. <code>"Cycling Track"</code>
     and <code>"Cycling Road"</code> both collapse to <code>"Cycling"</code>).</p></dd>
 
-  <dt>Event</dt>
+  <dt>event</dt>
 <dd><p>Character. Event name including the sport prefix.</p></dd>
 
-  <dt>Medal</dt>
+  <dt>medal</dt>
 <dd><p>Character or <code>NA</code>. <code>"Gold"</code>, <code>"Silver"</code>,
     <code>"Bronze"</code>, or <code>NA</code>. <strong>Per-player</strong>: every member of
     a medal-winning team roster gets a row with the team's medal.</p></dd>
@@ -136,21 +150,28 @@ dataset (originally scraped from sports-reference.com); rows for
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      ID                       Name Sex Age Height Weight          Team NOC</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      id                       name sex age height weight          team noc</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 1 12068       Arthur Charles Blake   M  24     NA     NA United States USA</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 2 35094             Angelos Fetsis   M  NA     NA     NA        Greece GRE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 3 35698 Edwin Harold "Teddy" Flack   M  22     NA     NA     Australia AUS</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 4 38123                 Carl Galle   M  23    154     45       Germany GER</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 5 41160       Dimitrios P. Golemis   M  21     NA     NA        Greece GRE</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> 6 57441  Konstantinos Karakatsanis   M  NA     NA     NA        Greece GRE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         Games Year Season   City     Sport                        Event  Medal</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres Silver</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   Gold</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   &lt;NA&gt;</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6 1896 Summer 1896 Summer Athina Athletics Athletics Men's 1,500 metres   &lt;NA&gt;</span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">$</span><span class="va">Year</span>, <span class="va">olympic_athletes</span><span class="op">$</span><span class="va">Season</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>         games year season city_local_latin city_english     sport</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 1896 Summer 1896 Summer           Athína       Athens Athletics</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 1896 Summer 1896 Summer           Athína       Athens Athletics</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 1896 Summer 1896 Summer           Athína       Athens Athletics</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 1896 Summer 1896 Summer           Athína       Athens Athletics</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 1896 Summer 1896 Summer           Athína       Athens Athletics</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 1896 Summer 1896 Summer           Athína       Athens Athletics</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                          event  medal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Athletics Men's 1,500 metres Silver</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Athletics Men's 1,500 metres   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Athletics Men's 1,500 metres   Gold</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4 Athletics Men's 1,500 metres   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5 Athletics Men's 1,500 metres   &lt;NA&gt;</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6 Athletics Men's 1,500 metres   &lt;NA&gt;</span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">$</span><span class="va">year</span>, <span class="va">olympic_athletes</span><span class="op">$</span><span class="va">season</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>       </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>        Summer Winter</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   1896    380      0</span>
@@ -198,9 +219,9 @@ dataset (originally scraped from sports-reference.com); rows for
 <span class="r-in"><span>  <span class="co"># Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)</span></span></span>
 <span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">olympic_athletes</span> <span class="op">|&gt;</span></span></span>
-<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">Year</span> <span class="op">==</span> <span class="fl">2024</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">Medal</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
-<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">NOC</span>, <span class="va">Medal</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
-<span class="r-in"><span>    <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html" class="external-link">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">Medal</span>, values_from <span class="op">=</span> <span class="va">n</span>, values_fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">year</span> <span class="op">==</span> <span class="fl">2024</span>, <span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="va">medal</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">noc</span>, <span class="va">medal</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
+<span class="r-in"><span>    <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_wider.html" class="external-link">pivot_wider</a></span><span class="op">(</span>names_from <span class="op">=</span> <span class="va">medal</span>, values_from <span class="op">=</span> <span class="va">n</span>, values_fill <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">|&gt;</span></span></span>
 <span class="r-in"><span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html" class="external-link">arrange</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/desc.html" class="external-link">desc</a></span><span class="op">(</span><span class="va">Gold</span> <span class="op">+</span> <span class="va">Silver</span> <span class="op">+</span> <span class="va">Bronze</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>

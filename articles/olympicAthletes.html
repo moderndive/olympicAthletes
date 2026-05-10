@@ -42,7 +42,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">olympicAthletes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,8 +107,8 @@ one and shows a few representative analyses.</p>
 <table class="table">
 <colgroup>
 <col width="28%">
-<col width="13%">
-<col width="57%">
+<col width="12%">
+<col width="59%">
 </colgroup>
 <thead><tr class="header">
 <th>Dataset</th>
@@ -118,18 +118,18 @@ one and shows a few representative analyses.</p>
 <tbody>
 <tr class="odd">
 <td><code>olympic_athletes</code></td>
-<td align="right">314,749</td>
+<td align="right">315,090</td>
 <td>(athlete, Games, event) participation</td>
 </tr>
 <tr class="even">
 <td><code>medal_table</code></td>
-<td align="right">273</td>
+<td align="right">1,929</td>
 <td>(Games, NOC) verified medal totals</td>
 </tr>
 <tr class="odd">
 <td><code>editions</code></td>
-<td align="right">5</td>
-<td>new edition added on top of rgriff23</td>
+<td align="right">62</td>
+<td>Olympic edition (incl. cancelled Games)</td>
 </tr>
 </tbody>
 </table>
@@ -145,25 +145,26 @@ without re-aggregating 300k+ rows.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">olympic_athletes</span>, give.attr <span class="op">=</span> <span class="cn">FALSE</span>, vec.len <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span>
-<span><span class="co">#&gt; 'data.frame':    315090 obs. of  15 variables:</span></span>
-<span><span class="co">#&gt;  $ ID    : int  12068 35094 35698 38123 41160 ...</span></span>
-<span><span class="co">#&gt;  $ Name  : chr  "Arthur Charles Blake" "Angelos Fetsis" ...</span></span>
-<span><span class="co">#&gt;  $ Sex   : chr  "M" "M" ...</span></span>
-<span><span class="co">#&gt;  $ Age   : int  24 NA 22 23 21 ...</span></span>
-<span><span class="co">#&gt;  $ Height: num  NA NA NA 154 NA ...</span></span>
-<span><span class="co">#&gt;  $ Weight: num  NA NA NA 45 NA ...</span></span>
-<span><span class="co">#&gt;  $ Team  : chr  "United States" "Greece" ...</span></span>
-<span><span class="co">#&gt;  $ NOC   : chr  "USA" "GRE" ...</span></span>
-<span><span class="co">#&gt;  $ Games : chr  "1896 Summer" "1896 Summer" ...</span></span>
-<span><span class="co">#&gt;  $ Year  : int  1896 1896 1896 1896 1896 ...</span></span>
-<span><span class="co">#&gt;  $ Season: chr  "Summer" "Summer" ...</span></span>
-<span><span class="co">#&gt;  $ City  : chr  "Athina" "Athina" ...</span></span>
-<span><span class="co">#&gt;  $ Sport : chr  "Athletics" "Athletics" ...</span></span>
-<span><span class="co">#&gt;  $ Event : chr  "Athletics Men's 1,500 metres" "Athletics Men's 1,500 metres" ...</span></span>
-<span><span class="co">#&gt;  $ Medal : chr  "Silver" NA ...</span></span></code></pre></div>
+<span><span class="co">#&gt; 'data.frame':    315090 obs. of  16 variables:</span></span>
+<span><span class="co">#&gt;  $ id              : int  12068 35094 35698 38123 41160 ...</span></span>
+<span><span class="co">#&gt;  $ name            : chr  "Arthur Charles Blake" "Angelos Fetsis" ...</span></span>
+<span><span class="co">#&gt;  $ sex             : chr  "M" "M" ...</span></span>
+<span><span class="co">#&gt;  $ age             : int  24 NA 22 23 21 ...</span></span>
+<span><span class="co">#&gt;  $ height          : num  NA NA NA 154 NA ...</span></span>
+<span><span class="co">#&gt;  $ weight          : num  NA NA NA 45 NA ...</span></span>
+<span><span class="co">#&gt;  $ team            : chr  "United States" "Greece" ...</span></span>
+<span><span class="co">#&gt;  $ noc             : chr  "USA" "GRE" ...</span></span>
+<span><span class="co">#&gt;  $ games           : chr  "1896 Summer" "1896 Summer" ...</span></span>
+<span><span class="co">#&gt;  $ year            : int  1896 1896 1896 1896 1896 ...</span></span>
+<span><span class="co">#&gt;  $ season          : chr  "Summer" "Summer" ...</span></span>
+<span><span class="co">#&gt;  $ city_local_latin: chr  "Athína" "Athína" ...</span></span>
+<span><span class="co">#&gt;  $ city_english    : chr  "Athens" "Athens" ...</span></span>
+<span><span class="co">#&gt;  $ sport           : chr  "Athletics" "Athletics" ...</span></span>
+<span><span class="co">#&gt;  $ event           : chr  "Athletics Men's 1,500 metres" "Athletics Men's 1,500 metres" ...</span></span>
+<span><span class="co">#&gt;  $ medal           : chr  "Silver" NA ...</span></span></code></pre></div>
 <p>A quick sanity check — participations per Games, by season:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">tab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">$</span><span class="va">Year</span>, <span class="va">olympic_athletes</span><span class="op">$</span><span class="va">Season</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="va">tab</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">olympic_athletes</span><span class="op">$</span><span class="va">year</span>, <span class="va">olympic_athletes</span><span class="op">$</span><span class="va">season</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="va">tab</span>, <span class="fl">10</span><span class="op">)</span></span>
 <span><span class="co">#&gt;       </span></span>
 <span><span class="co">#&gt;        Summer Winter</span></span>
@@ -182,17 +183,17 @@ without re-aggregating 300k+ rows.</p>
 </h3>
 <p>Medals in <code>olympic_athletes</code> are
 <strong>per-player</strong>: every member of a gold-winning ice hockey
-roster has their own <code>Medal = "Gold"</code> row. That matches the
-rgriff23 schema and is the right shape for athlete-level analysis, but
-it inflates team counts when you sum naively.</p>
+roster has their own <code>medal = "Gold"</code> row. It is the right
+shape for athlete-level analysis, but it inflates team counts when you
+sum naively.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Every roster member of the men's ice hockey gold medal team</span></span>
 <span><span class="co"># at Beijing 2022 gets a Gold row:</span></span>
 <span><span class="va">hockey_2022</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span></span>
 <span>  <span class="va">olympic_athletes</span>,</span>
-<span>  <span class="va">Year</span> <span class="op">==</span> <span class="fl">2022</span> <span class="op">&amp;</span></span>
-<span>    <span class="va">Event</span> <span class="op">==</span> <span class="st">"Ice Hockey Men's Ice Hockey"</span> <span class="op">&amp;</span></span>
-<span>    <span class="va">Medal</span> <span class="op">==</span> <span class="st">"Gold"</span></span>
+<span>  <span class="va">year</span> <span class="op">==</span> <span class="fl">2022</span> <span class="op">&amp;</span></span>
+<span>    <span class="va">event</span> <span class="op">==</span> <span class="st">"Ice Hockey Men's Ice Hockey"</span> <span class="op">&amp;</span></span>
+<span>    <span class="va">medal</span> <span class="op">==</span> <span class="st">"Gold"</span></span>
 <span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">hockey_2022</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 0</span></span></code></pre></div>
@@ -204,56 +205,69 @@ instead.</p>
 <h2 id="medal_table-verified-per-edition-totals">
 <code>medal_table</code>: verified per-edition totals<a class="anchor" aria-label="anchor" href="#medal_table-verified-per-edition-totals"></a>
 </h2>
-<p><code>medal_table</code> covers the five new editions (2018-2026) and
-uses the IOC per-team-event convention.</p>
+<p><code>medal_table</code> covers every Olympic edition from Athens
+1896 through Milano-Cortina 2026 and uses the IOC per-team-event
+convention.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">medal_table</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">medal_table</span>, <span class="va">year</span> <span class="op">==</span> <span class="fl">2024</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span></span>
-<span><span class="co">#&gt;           games year season noc                    country gold silver bronze</span></span>
-<span><span class="co">#&gt; 153 2024 Summer 2024 Summer USA              United States   40     44     42</span></span>
-<span><span class="co">#&gt; 154 2024 Summer 2024 Summer CHN People's Republic of China   40     27     24</span></span>
-<span><span class="co">#&gt; 155 2024 Summer 2024 Summer JPN                      Japan   20     12     13</span></span>
-<span><span class="co">#&gt; 156 2024 Summer 2024 Summer AUS                  Australia   18     19     16</span></span>
-<span><span class="co">#&gt; 157 2024 Summer 2024 Summer FRA                     France   16     26     22</span></span>
-<span><span class="co">#&gt;     total</span></span>
-<span><span class="co">#&gt; 153   126</span></span>
-<span><span class="co">#&gt; 154    91</span></span>
-<span><span class="co">#&gt; 155    45</span></span>
-<span><span class="co">#&gt; 156    53</span></span>
-<span><span class="co">#&gt; 157    64</span></span></code></pre></div>
+<span><span class="co">#&gt;      edition_id       games year season noc                    country gold</span></span>
+<span><span class="co">#&gt; 1808         63 2024 Summer 2024 Summer USA              United States   40</span></span>
+<span><span class="co">#&gt; 1809         63 2024 Summer 2024 Summer CHN People's Republic of China   40</span></span>
+<span><span class="co">#&gt; 1810         63 2024 Summer 2024 Summer JPN                      Japan   20</span></span>
+<span><span class="co">#&gt; 1811         63 2024 Summer 2024 Summer AUS                  Australia   18</span></span>
+<span><span class="co">#&gt; 1812         63 2024 Summer 2024 Summer FRA                     France   16</span></span>
+<span><span class="co">#&gt;      silver bronze total notes</span></span>
+<span><span class="co">#&gt; 1808     44     42   126      </span></span>
+<span><span class="co">#&gt; 1809     27     24    91      </span></span>
+<span><span class="co">#&gt; 1810     12     13    45      </span></span>
+<span><span class="co">#&gt; 1811     19     16    53      </span></span>
+<span><span class="co">#&gt; 1812     26     22    64</span></span></code></pre></div>
 <p>Top five NOCs at Paris 2024 by gold count:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">paris</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">medal_table</span>, <span class="va">year</span> <span class="op">==</span> <span class="fl">2024</span><span class="op">)</span></span>
 <span><span class="va">paris</span> <span class="op">&lt;-</span> <span class="va">paris</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="op">-</span><span class="va">paris</span><span class="op">$</span><span class="va">gold</span>, <span class="op">-</span><span class="va">paris</span><span class="op">$</span><span class="va">total</span><span class="op">)</span>, <span class="op">]</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">paris</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"noc"</span>, <span class="st">"country"</span>, <span class="st">"gold"</span>, <span class="st">"silver"</span>, <span class="st">"bronze"</span>, <span class="st">"total"</span><span class="op">)</span><span class="op">]</span>, <span class="fl">5</span><span class="op">)</span></span>
-<span><span class="co">#&gt;     noc                    country gold silver bronze total</span></span>
-<span><span class="co">#&gt; 153 USA              United States   40     44     42   126</span></span>
-<span><span class="co">#&gt; 154 CHN People's Republic of China   40     27     24    91</span></span>
-<span><span class="co">#&gt; 155 JPN                      Japan   20     12     13    45</span></span>
-<span><span class="co">#&gt; 156 AUS                  Australia   18     19     16    53</span></span>
-<span><span class="co">#&gt; 157 FRA                     France   16     26     22    64</span></span></code></pre></div>
+<span><span class="co">#&gt;      noc                    country gold silver bronze total</span></span>
+<span><span class="co">#&gt; 1808 USA              United States   40     44     42   126</span></span>
+<span><span class="co">#&gt; 1809 CHN People's Republic of China   40     27     24    91</span></span>
+<span><span class="co">#&gt; 1810 JPN                      Japan   20     12     13    45</span></span>
+<span><span class="co">#&gt; 1811 AUS                  Australia   18     19     16    53</span></span>
+<span><span class="co">#&gt; 1812 FRA                     France   16     26     22    64</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="editions-metadata-for-the-new-five-games">
-<code>editions</code>: metadata for the new five Games<a class="anchor" aria-label="anchor" href="#editions-metadata-for-the-new-five-games"></a>
+<h2 id="editions-metadata-for-every-games">
+<code>editions</code>: metadata for every Games<a class="anchor" aria-label="anchor" href="#editions-metadata-for-every-games"></a>
 </h2>
+<p><code>editions</code> includes one row per Olympic edition (62 in
+total), including the handful of Games cancelled by the World Wars.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">editions</span><span class="op">)</span></span>
-<span><span class="va">editions</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"games"</span>, <span class="st">"city"</span>, <span class="st">"country"</span>,</span>
-<span>             <span class="st">"opening_ceremony"</span>, <span class="st">"closing_ceremony"</span>,</span>
-<span>             <span class="st">"participants"</span>, <span class="st">"medal_events"</span><span class="op">)</span><span class="op">]</span></span>
-<span><span class="co">#&gt;         games           city                    country opening_ceremony</span></span>
-<span><span class="co">#&gt; 1 2018 Winter    PyeongChang          Republic of Korea       2018-02-09</span></span>
-<span><span class="co">#&gt; 2 2020 Summer          Tokyo                      Japan       2021-07-23</span></span>
-<span><span class="co">#&gt; 3 2022 Winter        Beijing People's Republic of China       2022-02-04</span></span>
-<span><span class="co">#&gt; 4 2024 Summer          Paris                     France       2024-07-26</span></span>
-<span><span class="co">#&gt; 5 2026 Winter Milano-Cortina                      Italy       2026-02-06</span></span>
-<span><span class="co">#&gt;   closing_ceremony participants medal_events</span></span>
-<span><span class="co">#&gt; 1       2018-02-25         2793          102</span></span>
-<span><span class="co">#&gt; 2       2021-08-08        11319          339</span></span>
-<span><span class="co">#&gt; 3       2022-02-20         2786          109</span></span>
-<span><span class="co">#&gt; 4       2024-08-11        10763          329</span></span>
-<span><span class="co">#&gt; 5       2026-02-22         2932          111</span></span></code></pre></div>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">editions</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"games"</span>, <span class="st">"city_local_latin"</span>, <span class="st">"city_english"</span>, <span class="st">"country"</span>,</span>
+<span>                  <span class="st">"opening_ceremony"</span>, <span class="st">"closing_ceremony"</span>,</span>
+<span>                  <span class="st">"participants"</span>, <span class="st">"medal_events"</span><span class="op">)</span><span class="op">]</span>, <span class="fl">10</span><span class="op">)</span></span>
+<span><span class="co">#&gt;          games city_local_latin city_english       country opening_ceremony</span></span>
+<span><span class="co">#&gt; 1  1896 Summer           Athína       Athens        Greece       1896-04-06</span></span>
+<span><span class="co">#&gt; 2  1900 Summer            Paris        Paris        France             &lt;NA&gt;</span></span>
+<span><span class="co">#&gt; 3  1904 Summer        St. Louis    St. Louis United States       1904-05-14</span></span>
+<span><span class="co">#&gt; 4  1906 Summer           Athína       Athens        Greece       1906-04-22</span></span>
+<span><span class="co">#&gt; 5  1908 Summer           London       London Great Britain       1908-07-13</span></span>
+<span><span class="co">#&gt; 6  1912 Summer        Stockholm    Stockholm        Sweden       1912-07-06</span></span>
+<span><span class="co">#&gt; 7  1916 Summer           Berlin       Berlin       Germany             &lt;NA&gt;</span></span>
+<span><span class="co">#&gt; 8  1920 Summer        Antwerpen      Antwerp       Belgium       1920-08-14</span></span>
+<span><span class="co">#&gt; 9  1924 Summer            Paris        Paris        France       1924-07-05</span></span>
+<span><span class="co">#&gt; 10 1924 Winter         Chamonix     Chamonix        France       1924-01-24</span></span>
+<span><span class="co">#&gt;    closing_ceremony participants medal_events</span></span>
+<span><span class="co">#&gt; 1        1896-04-15          176           43</span></span>
+<span><span class="co">#&gt; 2              &lt;NA&gt;         1241           95</span></span>
+<span><span class="co">#&gt; 3              &lt;NA&gt;          650           95</span></span>
+<span><span class="co">#&gt; 4        1906-05-02          841           74</span></span>
+<span><span class="co">#&gt; 5        1908-07-25         2024          110</span></span>
+<span><span class="co">#&gt; 6        1912-07-15         2409          107</span></span>
+<span><span class="co">#&gt; 7              &lt;NA&gt;           NA           NA</span></span>
+<span><span class="co">#&gt; 8        1920-08-30         2680          162</span></span>
+<span><span class="co">#&gt; 9        1924-07-27         3255          131</span></span>
+<span><span class="co">#&gt; 10       1924-02-05          312           17</span></span></code></pre></div>
 <p>Use it to enrich <code>olympic_athletes</code> with edition-level
 facts (host country, opening date, total medal events) without scraping
 anything yourself.</p>

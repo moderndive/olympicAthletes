@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">olympicAthletes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.3.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,6 +43,19 @@
     </div>
 
     <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.3.0" id="olympicathletes-030">olympicAthletes 0.3.0<a class="anchor" aria-label="anchor" href="#olympicathletes-030"></a></h2>
+<ul><li>
+<strong>Breaking:</strong> all <code>olympic_athletes</code> columns are now lowercase snake_case (<code>id</code>, <code>name</code>, <code>sex</code>, <code>age</code>, <code>height</code>, <code>weight</code>, <code>team</code>, <code>noc</code>, <code>games</code>, <code>year</code>, <code>season</code>, <code>sport</code>, <code>event</code>, <code>medal</code>), matching the convention already used by <code>medal_table</code> and <code>editions</code>. The upstream rgriff23 TitleCase headers (<code>ID</code>, <code>Name</code>, <code>NOC</code>, …) are no longer preserved.</li>
+<li>Host-city columns now come in both local-language and English forms. In <code>olympic_athletes</code>, the <code>City</code> column has been replaced by <code>city_local_latin</code> and <code>city_english</code>. In <code>editions</code>, <code>city</code> has been replaced by <code>city_local_latin</code> and <code>city_english</code>. <code>city_local_latin</code> always uses the Latin alphabet — Latin-script names keep their native diacritics (<code>"Athína"</code>, <code>"München"</code>, <code>"Montréal"</code>, <code>"Ciudad de México"</code>) and non-Latin-script names use a standard romanization (<code>"Moskva"</code>, <code>"Tokyo"</code>, <code>"Beijing"</code>, <code>"PyeongChang"</code>) rather than the city’s native script.</li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.2.0" id="olympicathletes-020">olympicAthletes 0.2.0<a class="anchor" aria-label="anchor" href="#olympicathletes-020"></a></h2>
+<ul><li>
+<code>medal_table</code> now covers every Olympic edition from Athens 1896 through Milano-Cortina 2026 (1,929 rows, up from 273). Two new columns: <code>edition_id</code> (Olympedia’s internal edition number) and <code>notes</code>.</li>
+<li>
+<code>editions</code> now covers every Olympic edition from Athens 1896 through Milano-Cortina 2026, including cancelled Games (62 rows, up from 5).</li>
+</ul></div>
+    <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.1.0" id="olympicathletes-010">olympicAthletes 0.1.0<a class="anchor" aria-label="anchor" href="#olympicathletes-010"></a></h2>
 <p>Initial release.</p>
 <ul><li>
@@ -52,7 +65,8 @@
 <li>
 <code>editions</code> — 5-row metadata table covering opening/closing dates, participants, NOC count, medal events, and disciplines for each new edition.</li>
 </ul></div>
-  </main></div>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside></div>
 
 
     <footer><div class="pkgdown-footer-left">

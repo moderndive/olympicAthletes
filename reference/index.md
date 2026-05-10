@@ -23,7 +23,7 @@ Verified per-team-event medal totals for the five new editions
 (PyeongChang 2018 through Milano-Cortina 2026).
 
 - [`medal_table`](https://moderndive.github.io/olympicAthletes/reference/medal_table.md)
-  : Verified medal tables for the 2018-2026 editions
+  : Verified medal tables for every Olympic edition, 1896-2026
 
 ## Edition metadata
 
@@ -31,4 +31,4 @@ Host city, dates, participant counts, and discipline counts for each of
 the new editions added on top of the rgriff23 source.
 
 - [`editions`](https://moderndive.github.io/olympicAthletes/reference/editions.md)
-  : Edition-level metadata for the five new Games (2018-2026)
+  : Edition-level metadata for every Olympic Games, 1896-2026

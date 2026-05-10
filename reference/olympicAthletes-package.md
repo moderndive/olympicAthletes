@@ -12,18 +12,20 @@ modern Olympic Games. Extends the rgriff23 *Olympic_history* dataset
   ~315,000 athlete-event rows.
 
 - [`medal_table`](https://moderndive.github.io/olympicAthletes/reference/medal_table.md):
-  verified medal table for 2018-2026.
+  verified medal tables for every edition, 1896-2026.
 
 - [`editions`](https://moderndive.github.io/olympicAthletes/reference/editions.md):
-  edition-level metadata for the new five.
+  edition-level metadata for every Games, 1896-2026.
 
 ## See also
 
 Useful links:
 
-- <https://github.com/ismayc/olympicAthletes>
+- <https://github.com/moderndive/olympicAthletes>
 
-- Report bugs at <https://github.com/ismayc/olympicAthletes/issues>
+- <https://moderndive.github.io/olympicAthletes/>
+
+- Report bugs at <https://github.com/moderndive/olympicAthletes/issues>
 
 ## Author
 
