@@ -3,10 +3,11 @@
 \docType{data}
 \name{medal_table}
 \alias{medal_table}
-\title{Verified medal tables for the 2018-2026 editions}
+\title{Verified medal tables for every Olympic edition, 1896-2026}
 \format{
-A data frame with 273 rows and 9 variables:
+A data frame with 1,929 rows and 11 variables:
 \describe{
+  \item{edition_id}{Integer. Olympedia's internal edition number.}
   \item{games}{Character. e.g. \code{"2026 Winter"}.}
   \item{year}{Integer.}
   \item{season}{Character. \code{"Summer"} or \code{"Winter"}.}
@@ -14,6 +15,8 @@ A data frame with 273 rows and 9 variables:
   \item{country}{Character. Full country/team name.}
   \item{gold, silver, bronze}{Integer. Medal counts.}
   \item{total}{Integer. Sum of the three.}
+  \item{notes}{Character. Free-text notes (e.g. shared medals,
+    post-hoc reallocations).}
 }
 }
 \source{

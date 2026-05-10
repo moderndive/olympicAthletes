@@ -16,16 +16,19 @@ Tokyo 2020, Beijing 2022, Paris 2024, and Milano-Cortina 2026.
 
 \itemize{
   \item \code{\link{olympic_athletes}}: ~315,000 athlete-event rows.
-  \item \code{\link{medal_table}}: verified medal table for 2018-2026.
-  \item \code{\link{editions}}: edition-level metadata for the new five.
+  \item \code{\link{medal_table}}: verified medal tables for every
+    edition, 1896-2026.
+  \item \code{\link{editions}}: edition-level metadata for every
+    Games, 1896-2026.
 }
 }
 
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/ismayc/olympicAthletes}
-  \item Report bugs at \url{https://github.com/ismayc/olympicAthletes/issues}
+  \item \url{https://github.com/moderndive/olympicAthletes}
+  \item \url{https://moderndive.github.io/olympicAthletes/}
+  \item Report bugs at \url{https://github.com/moderndive/olympicAthletes/issues}
 }
 
 }

@@ -1,6 +1,63 @@
 edition_id,games,year,season,city,country,opening_ceremony,closing_ceremony,participants,nocs,medal_events,disciplines,notes,source
-60,2018 Winter,2018,Winter,PyeongChang,Republic of Korea,2018-02-09,2018-02-25,2793,93,102,15,"Russian athletes competed as Olympic Athletes from Russia (OAR) due to doping sanctions; unified Korean team marched together","https://www.olympedia.org/editions/60"
-61,2020 Summer,2020,Summer,Tokyo,Japan,2021-07-23,2021-08-08,11319,206,339,49,"Postponed one year due to COVID-19 pandemic; only Olympics held in odd-numbered year; held largely without spectators; Russian athletes competed as ROC","https://www.olympedia.org/editions/61"
-62,2022 Winter,2022,Winter,Beijing,People's Republic of China,2022-02-04,2022-02-20,2786,91,109,15,"First city to host both Summer and Winter Olympics; closed-loop COVID protocols; Russian athletes competed as ROC; Kamila Valieva doping case led to delayed figure skating team medal ceremony","https://www.olympedia.org/editions/62"
-63,2024 Summer,2024,Summer,Paris,France,2024-07-26,2024-08-11,10763,206,329,47,"First Olympics with full gender parity in participants; opening ceremony along the Seine; breaking debuted as Olympic sport; Russian athletes competed as Individual Neutral Athletes (AIN)","https://www.olympedia.org/editions/63"
-72,2026 Winter,2026,Winter,Milano-Cortina,Italy,2026-02-06,2026-02-22,2932,94,111,16,"Most spread-out Winter Olympics ever (Milano, Cortina, Livigno, Predazzo clusters); ski mountaineering debuted; Russian and Belarusian athletes competed as AIN","https://www.olympedia.org/editions/72"
+1,1896 Summer,1896,Summer,Athina,Greece,1896-04-06,1896-04-15,176,13,43,10,,https://www.olympedia.org/editions/1
+2,1900 Summer,1900,Summer,Paris,France,,,1241,26,95,22,,https://www.olympedia.org/editions/2
+3,1904 Summer,1904,Summer,St. Louis,United States,1904-05-14,,650,10,95,18,,https://www.olympedia.org/editions/3
+4,1906 Summer,1906,Summer,Athina,Greece,1906-04-22,1906-05-02,841,21,74,14,"Intercalated Games; not officially recognised by the IOC, but included here to match the original athlete_events.csv",https://www.olympedia.org/editions/4
+5,1908 Summer,1908,Summer,London,Great Britain,1908-07-13,1908-07-25,2024,23,110,24,,https://www.olympedia.org/editions/5
+6,1912 Summer,1912,Summer,Stockholm,Sweden,1912-07-06,1912-07-15,2409,28,107,23,,https://www.olympedia.org/editions/6
+50,1916 Summer,1916,Summer,Berlin,Germany,,,,,,,Cancelled due to World War I,https://www.olympedia.org/editions/50
+7,1920 Summer,1920,Summer,Antwerpen,Belgium,1920-08-14,1920-08-30,2680,29,162,33,,https://www.olympedia.org/editions/7
+8,1924 Summer,1924,Summer,Paris,France,1924-07-05,1924-07-27,3255,45,131,27,,https://www.olympedia.org/editions/8
+29,1924 Winter,1924,Winter,Chamonix,France,1924-01-24,1924-02-05,312,19,17,10,,https://www.olympedia.org/editions/29
+9,1928 Summer,1928,Summer,Amsterdam,Netherlands,1928-07-28,1928-08-12,3296,46,125,24,,https://www.olympedia.org/editions/9
+30,1928 Winter,1928,Winter,Sankt Moritz,Switzerland,1928-02-11,1928-02-17,458,25,14,8,,https://www.olympedia.org/editions/30
+10,1932 Summer,1932,Summer,Los Angeles,United States,1932-07-30,1932-08-14,1924,47,131,26,,https://www.olympedia.org/editions/10
+31,1932 Winter,1932,Winter,Lake Placid,United States,1932-02-04,1932-02-13,241,17,14,7,,https://www.olympedia.org/editions/31
+11,1936 Summer,1936,Summer,Berlin,Germany,1936-08-01,1936-08-16,4483,49,149,31,,https://www.olympedia.org/editions/11
+32,1936 Winter,1936,Winter,Garmisch-Partenkirchen,Germany,1936-02-06,1936-02-16,669,28,17,8,,https://www.olympedia.org/editions/32
+51,1940 Summer,1940,Summer,Helsinki,Finland,,,,,,,Cancelled due to World War II,https://www.olympedia.org/editions/51
+55,1940 Winter,1940,Winter,Garmisch-Partenkirchen,Germany,,,,,,,Cancelled due to World War II,https://www.olympedia.org/editions/55
+52,1944 Summer,1944,Summer,London,Great Britain,,,,,,,Cancelled due to World War II,https://www.olympedia.org/editions/52
+56,1944 Winter,1944,Winter,Cortina d'Ampezzo,Italy,,,,,,,Cancelled due to World War II,https://www.olympedia.org/editions/56
+12,1948 Summer,1948,Summer,London,Great Britain,1948-07-29,1948-08-14,4421,59,153,27,,https://www.olympedia.org/editions/12
+33,1948 Winter,1948,Winter,Sankt Moritz,Switzerland,1948-01-30,1948-02-08,667,28,22,9,,https://www.olympedia.org/editions/33
+13,1952 Summer,1952,Summer,Helsinki,Finland,1952-07-19,1952-08-03,4932,69,149,22,,https://www.olympedia.org/editions/13
+34,1952 Winter,1952,Winter,Oslo,Norway,1952-02-15,1952-02-25,693,30,22,8,,https://www.olympedia.org/editions/34
+14,1956 Summer,1956,Summer,Melbourne,Australia,1956-11-22,1956-12-08,3190,67,145,19,,https://www.olympedia.org/editions/14
+48,1956 Summer,1956,Summer,Stockholm,Sweden,1956-06-10,1956-06-17,158,29,6,3,Equestrian events held in Stockholm due to Australian horse-quarantine law; treated as a separate edition by olympedia but as part of 1956 Summer in athlete_events.csv,https://www.olympedia.org/editions/48
+35,1956 Winter,1956,Winter,Cortina d'Ampezzo,Italy,1956-01-26,1956-02-05,822,32,24,8,,https://www.olympedia.org/editions/35
+15,1960 Summer,1960,Summer,Roma,Italy,1960-08-25,1960-09-11,5348,83,150,22,,https://www.olympedia.org/editions/15
+36,1960 Winter,1960,Winter,Squaw Valley,United States,1960-02-18,1960-02-28,665,30,27,8,,https://www.olympedia.org/editions/36
+16,1964 Summer,1964,Summer,Tokyo,Japan,1964-10-10,1964-10-24,5137,93,163,24,,https://www.olympedia.org/editions/16
+37,1964 Winter,1964,Winter,Innsbruck,Austria,1964-01-29,1964-02-09,1094,36,34,10,,https://www.olympedia.org/editions/37
+17,1968 Summer,1968,Summer,Ciudad de México,Mexico,1968-10-12,1968-10-27,5558,112,172,23,,https://www.olympedia.org/editions/17
+38,1968 Winter,1968,Winter,Grenoble,France,1968-02-06,1968-02-18,1160,37,35,10,,https://www.olympedia.org/editions/38
+18,1972 Summer,1972,Summer,München,West Germany,1972-08-26,1972-09-11,7114,121,195,27,,https://www.olympedia.org/editions/18
+39,1972 Winter,1972,Winter,Sapporo,Japan,1972-02-03,1972-02-13,1005,35,35,10,,https://www.olympedia.org/editions/39
+19,1976 Summer,1976,Summer,Montréal,Canada,1976-07-17,1976-08-01,6073,92,198,26,,https://www.olympedia.org/editions/19
+40,1976 Winter,1976,Winter,Innsbruck,Austria,1976-02-04,1976-02-15,1129,37,37,10,,https://www.olympedia.org/editions/40
+20,1980 Summer,1980,Summer,Moskva,Soviet Union,1980-07-19,1980-08-03,5255,80,203,26,,https://www.olympedia.org/editions/20
+41,1980 Winter,1980,Winter,Lake Placid,United States,1980-02-13,1980-02-24,1072,37,38,10,,https://www.olympedia.org/editions/41
+21,1984 Summer,1984,Summer,Los Angeles,United States,1984-07-28,1984-08-12,6800,140,221,28,,https://www.olympedia.org/editions/21
+42,1984 Winter,1984,Winter,Sarajevo,Yugoslavia,1984-02-08,1984-02-19,1273,49,39,10,,https://www.olympedia.org/editions/42
+22,1988 Summer,1988,Summer,Seoul,Republic of Korea,1988-09-17,1988-10-02,8453,159,237,30,,https://www.olympedia.org/editions/22
+43,1988 Winter,1988,Winter,Calgary,Canada,1988-02-13,1988-02-28,1424,57,46,10,,https://www.olympedia.org/editions/43
+23,1992 Summer,1992,Summer,Barcelona,Spain,1992-07-25,1992-08-09,9385,169,257,33,,https://www.olympedia.org/editions/23
+44,1992 Winter,1992,Winter,Albertville,France,1992-02-08,1992-02-23,1801,64,57,12,,https://www.olympedia.org/editions/44
+45,1994 Winter,1994,Winter,Lillehammer,Norway,1994-02-12,1994-02-27,1738,67,61,12,,https://www.olympedia.org/editions/45
+24,1996 Summer,1996,Summer,Atlanta,United States,1996-07-19,1996-08-04,10340,197,271,36,,https://www.olympedia.org/editions/24
+46,1998 Winter,1998,Winter,Nagano,Japan,1998-02-07,1998-02-22,2180,72,68,14,,https://www.olympedia.org/editions/46
+25,2000 Summer,2000,Summer,Sydney,Australia,2000-09-15,2000-10-01,10647,200,300,39,,https://www.olympedia.org/editions/25
+47,2002 Winter,2002,Winter,Salt Lake City,United States,2002-02-08,2002-02-24,2399,77,78,15,,https://www.olympedia.org/editions/47
+26,2004 Summer,2004,Summer,Athina,Greece,2004-08-13,2004-08-29,10557,201,301,39,,https://www.olympedia.org/editions/26
+49,2006 Winter,2006,Winter,Torino,Italy,2006-02-10,2006-02-26,2494,79,84,15,,https://www.olympedia.org/editions/49
+53,2008 Summer,2008,Summer,Beijing,People's Republic of China,2008-08-08,2008-08-24,10899,204,302,41,,https://www.olympedia.org/editions/53
+57,2010 Winter,2010,Winter,Vancouver,Canada,2010-02-12,2010-02-28,2536,82,86,15,,https://www.olympedia.org/editions/57
+54,2012 Summer,2012,Summer,London,Great Britain,2012-07-27,2012-08-12,10518,205,303,39,,https://www.olympedia.org/editions/54
+58,2014 Winter,2014,Winter,Sochi,Russian Federation,2014-02-07,2014-02-23,2747,89,98,15,,https://www.olympedia.org/editions/58
+59,2016 Summer,2016,Summer,Rio de Janeiro,Brazil,2016-08-05,2016-08-21,11182,207,306,41,,https://www.olympedia.org/editions/59
+60,2018 Winter,2018,Winter,PyeongChang,Republic of Korea,2018-02-09,2018-02-25,2793,93,102,15,Russian athletes competed as Olympic Athletes from Russia (OAR) due to doping sanctions; unified Korean team marched together,https://www.olympedia.org/editions/60
+61,2020 Summer,2020,Summer,Tokyo,Japan,2021-07-23,2021-08-08,11319,206,339,49,Postponed one year due to COVID-19 pandemic; only Olympics held in odd-numbered year; held largely without spectators; Russian athletes competed as ROC,https://www.olympedia.org/editions/61
+62,2022 Winter,2022,Winter,Beijing,People's Republic of China,2022-02-04,2022-02-20,2786,91,109,15,First city to host both Summer and Winter Olympics; closed-loop COVID protocols; Russian athletes competed as ROC; Kamila Valieva doping case led to delayed figure skating team medal ceremony,https://www.olympedia.org/editions/62
+63,2024 Summer,2024,Summer,Paris,France,2024-07-26,2024-08-11,10763,206,329,47,First Olympics with full gender parity in participants; opening ceremony along the Seine; breaking debuted as Olympic sport; Russian athletes competed as Individual Neutral Athletes (AIN),https://www.olympedia.org/editions/63
+72,2026 Winter,2026,Winter,Milano-Cortina d'Ampezzo,Italy,2026-02-06,2026-02-22,2807,93,116,16,"Most spread-out Winter Olympics ever (Milano, Cortina, Livigno, Predazzo clusters); ski mountaineering debuted; Russian and Belarusian athletes competed as AIN",https://www.olympedia.org/editions/72

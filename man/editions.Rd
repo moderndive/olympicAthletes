@@ -3,23 +3,38 @@
 \docType{data}
 \name{editions}
 \alias{editions}
-\title{Edition-level metadata for the five new Games (2018-2026)}
+\title{Edition-level metadata for every Olympic Games, 1896-2026}
 \format{
-A data frame with 5 rows and 14 variables:
+A data frame with 62 rows and 15 variables:
 \describe{
-  \item{edition_id}{Integer. Olympedia's internal edition number
-    (60, 61, 62, 63, 72).}
+  \item{edition_id}{Integer. Olympedia's internal edition number.}
   \item{games}{Character. e.g. \code{"2024 Summer"}.}
   \item{year}{Integer.}
-  \item{season}{Character.}
-  \item{city}{Character. Host city.}
+  \item{season}{Character. \code{"Summer"} or \code{"Winter"}.}
+  \item{city_local_latin}{Character. Host city in the local-language
+    form rendered in the Latin alphabet — i.e. native Latin-script
+    names retain their diacritics (\code{"Athína"}, \code{"München"},
+    \code{"Montréal"}, \code{"Ciudad de México"}), and non-Latin-script
+    names use a standard romanization rather than the city's native
+    script (\code{"Moskva"} not \code{"Москва"}, \code{"Tokyo"} not
+    \code{"東京"}, \code{"Beijing"} not \code{"北京"},
+    \code{"PyeongChang"} not \code{"평창"}). The column is therefore
+    \emph{always} ASCII-or-Latin-1 and never contains the city's
+    native non-Latin alphabet.}
+  \item{city_english}{Character. Common English name of the host city
+    (e.g. \code{"Athens"}, \code{"Munich"}, \code{"Moscow"},
+    \code{"Mexico City"}).}
   \item{country}{Character.}
-  \item{opening_ceremony, closing_ceremony}{Date. ISO-8601.}
-  \item{participants}{Integer. Olympedia's headline participant count.}
-  \item{nocs}{Integer. Number of NOCs represented.}
-  \item{medal_events}{Integer. Number of medal events.}
-  \item{disciplines}{Integer. Number of distinct disciplines.}
-  \item{notes}{Character. Free-text edition notes.}
+  \item{opening_ceremony, closing_ceremony}{Date or \code{NA}. ISO-8601.
+    \code{NA} for cancelled editions and a few early Games where
+    Olympedia does not record exact dates.}
+  \item{participants}{Integer or \code{NA}. Olympedia's headline
+    participant count. \code{NA} for cancelled editions.}
+  \item{nocs}{Integer or \code{NA}. Number of NOCs represented.}
+  \item{medal_events}{Integer or \code{NA}. Number of medal events.}
+  \item{disciplines}{Integer or \code{NA}. Number of distinct disciplines.}
+  \item{notes}{Character. Free-text edition notes (e.g. cancellation
+    reasons, intercalated-Games status).}
   \item{source}{Character. Olympedia URL.}
 }
 }
@@ -30,12 +45,13 @@ A data frame with 5 rows and 14 variables:
 editions
 }
 \description{
-One row per Olympic edition added to extend the original dataset, with
-verified totals for participants, NOCs, medal events, and disciplines,
-plus opening/closing ceremony dates.
+One row per Olympic edition (including cancelled Games) with verified
+totals for participants, NOCs, medal events, and disciplines, plus
+opening/closing ceremony dates.
 }
 \examples{
 data(editions)
-editions[, c("games", "city", "participants", "medal_events")]
+editions[, c("games", "city_local_latin", "city_english",
+             "participants", "medal_events")]
 }
 \keyword{datasets}

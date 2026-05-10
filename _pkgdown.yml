@@ -34,7 +34,7 @@ home:
   title: olympicAthletes • Athens 1896 to Milano-Cortina 2026
   description: >
     A tidy, long-format dataset of every athlete-event participation in the
-    modern Olympic Games — about 315,000 rows spanning 33 editions.
+    modern Olympic Games — about 315,000 rows spanning 56 editions.
   links:
   - text: Browse the source data
     href: https://www.olympedia.org/

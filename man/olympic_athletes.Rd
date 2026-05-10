@@ -5,32 +5,44 @@
 \alias{olympic_athletes}
 \title{Olympic athlete-event participations, 1896-2026}
 \format{
-A data frame with 314,749 rows and 15 variables:
+A data frame with 315,090 rows and 16 variables:
 \describe{
-  \item{ID}{Integer. Unique athlete ID. Original IDs are 1..135571;
+  \item{id}{Integer. Unique athlete ID. Original IDs are 1..135571;
     athletes new to the 2018-2026 editions get IDs starting at
     1,000,000 to avoid collision.}
-  \item{Name}{Character. ASCII-folded athlete name.}
-  \item{Sex}{Character. \code{"M"} or \code{"F"}.}
-  \item{Age}{Integer or \code{NA}. Approximate age at the start of the
+  \item{name}{Character. ASCII-folded athlete name.}
+  \item{sex}{Character. \code{"M"} or \code{"F"}.}
+  \item{age}{Integer or \code{NA}. Approximate age at the start of the
     Games, computed from date of birth (Feb 1 reference for Winter,
     Jul 15 for Summer).}
-  \item{Height}{Numeric or \code{NA}. Height in centimetres.}
-  \item{Weight}{Numeric or \code{NA}. Weight in kilograms.}
-  \item{Team}{Character. Country/team name as displayed on the source.}
-  \item{NOC}{Character. Three-letter IOC code (e.g. \code{"USA"},
+  \item{height}{Numeric or \code{NA}. Height in centimetres.}
+  \item{weight}{Numeric or \code{NA}. Weight in kilograms.}
+  \item{team}{Character. Country/team name as displayed on the source.}
+  \item{noc}{Character. Three-letter IOC code (e.g. \code{"USA"},
     \code{"NOR"}, \code{"ROC"}).}
-  \item{Games}{Character. \code{"<year> <Summer/Winter>"}, e.g.
+  \item{games}{Character. \code{"<year> <Summer/Winter>"}, e.g.
     \code{"2026 Winter"}.}
-  \item{Year}{Integer. Calendar year of the Games. Tokyo 2020 is
+  \item{year}{Integer. Calendar year of the Games. Tokyo 2020 is
     coded as 2020 even though it was held in 2021 (IOC convention).}
-  \item{Season}{Character. \code{"Summer"} or \code{"Winter"}.}
-  \item{City}{Character. Host city.}
-  \item{Sport}{Character. Sport name. The 2018-2026 rows are normalised
+  \item{season}{Character. \code{"Summer"} or \code{"Winter"}.}
+  \item{city_local_latin}{Character. Host city in the local-language
+    form rendered in the Latin alphabet — i.e. native Latin-script
+    names retain their diacritics (\code{"Athína"}, \code{"München"},
+    \code{"Montréal"}, \code{"Ciudad de México"}), and non-Latin-script
+    names use a standard romanization rather than the city's native
+    script (\code{"Moskva"} not \code{"Москва"}, \code{"Tokyo"} not
+    \code{"東京"}, \code{"Beijing"} not \code{"北京"},
+    \code{"PyeongChang"} not \code{"평창"}). The column is therefore
+    \emph{always} ASCII-or-Latin-1 and never contains the city's
+    native non-Latin alphabet.}
+  \item{city_english}{Character. Common English name of the host city
+    (e.g. \code{"Athens"}, \code{"Munich"}, \code{"Moscow"},
+    \code{"Mexico City"}).}
+  \item{sport}{Character. Sport name. The 2018-2026 rows are normalised
     to the original sport names where possible (e.g. \code{"Cycling Track"}
     and \code{"Cycling Road"} both collapse to \code{"Cycling"}).}
-  \item{Event}{Character. Event name including the sport prefix.}
-  \item{Medal}{Character or \code{NA}. \code{"Gold"}, \code{"Silver"},
+  \item{event}{Character. Event name including the sport prefix.}
+  \item{medal}{Character or \code{NA}. \code{"Gold"}, \code{"Silver"},
     \code{"Bronze"}, or \code{NA}. \strong{Per-player}: every member of
     a medal-winning team roster gets a row with the team's medal.}
 }
@@ -55,15 +67,15 @@ dataset (originally scraped from sports-reference.com); rows for
 \examples{
 data(olympic_athletes)
 head(olympic_athletes)
-table(olympic_athletes$Year, olympic_athletes$Season)
+table(olympic_athletes$year, olympic_athletes$season)
 
 \dontrun{
   # Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)
   library(dplyr)
   olympic_athletes |>
-    filter(Year == 2024, !is.na(Medal)) |>
-    count(NOC, Medal) |>
-    tidyr::pivot_wider(names_from = Medal, values_from = n, values_fill = 0) |>
+    filter(year == 2024, !is.na(medal)) |>
+    count(noc, medal) |>
+    tidyr::pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
     arrange(desc(Gold + Silver + Bronze))
 }
 }

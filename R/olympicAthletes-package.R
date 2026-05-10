@@ -9,8 +9,10 @@
 #' @section Datasets:
 #' \itemize{
 #'   \item \code{\link{olympic_athletes}}: ~315,000 athlete-event rows.
-#'   \item \code{\link{medal_table}}: verified medal table for 2018-2026.
-#'   \item \code{\link{editions}}: edition-level metadata for the new five.
+#'   \item \code{\link{medal_table}}: verified medal tables for every
+#'     edition, 1896-2026.
+#'   \item \code{\link{editions}}: edition-level metadata for every
+#'     Games, 1896-2026.
 #' }
 #'
 #' @keywords internal

@@ -30,11 +30,11 @@ library(olympicAthletes)
 
 ## The three datasets at a glance
 
-| Dataset            | Rows    | One row per…                          |
-|--------------------|--------:|----------------------------------------|
-| `olympic_athletes` | 314,749 | (athlete, Games, event) participation  |
-| `medal_table`      |     273 | (Games, NOC) verified medal totals     |
-| `editions`         |       5 | new edition added on top of rgriff23   |
+| Dataset            | Rows    | One row per…                            |
+|--------------------|--------:|------------------------------------------|
+| `olympic_athletes` | 315,090 | (athlete, Games, event) participation    |
+| `medal_table`      |   1,929 | (Games, NOC) verified medal totals       |
+| `editions`         |      62 | Olympic edition (incl. cancelled Games)  |
 
 `olympic_athletes` is the headline long-format table. `medal_table` and
 `editions` are companion tables that make per-team-event medal counting
@@ -50,25 +50,25 @@ str(olympic_athletes, give.attr = FALSE, vec.len = 2)
 A quick sanity check — participations per Games, by season:
 
 ```{r athletes-by-year}
-tab <- table(olympic_athletes$Year, olympic_athletes$Season)
+tab <- table(olympic_athletes$year, olympic_athletes$season)
 tail(tab, 10)
 ```
 
 ### A note on team medals
 
 Medals in `olympic_athletes` are **per-player**: every member of a
-gold-winning ice hockey roster has their own `Medal = "Gold"` row. That
-matches the rgriff23 schema and is the right shape for athlete-level
-analysis, but it inflates team counts when you sum naively.
+gold-winning ice hockey roster has their own `medal = "Gold"` row. It
+is the right shape for athlete-level analysis, but it inflates team
+counts when you sum naively.
 
 ```{r medal-per-player}
 # Every roster member of the men's ice hockey gold medal team
 # at Beijing 2022 gets a Gold row:
 hockey_2022 <- subset(
   olympic_athletes,
-  Year == 2022 &
-    Event == "Ice Hockey Men's Ice Hockey" &
-    Medal == "Gold"
+  year == 2022 &
+    event == "Ice Hockey Men's Ice Hockey" &
+    medal == "Gold"
 )
 nrow(hockey_2022)
 ```
@@ -77,8 +77,8 @@ For headline medal-table totals, use `medal_table` instead.
 
 ## `medal_table`: verified per-edition totals
 
-`medal_table` covers the five new editions (2018-2026) and uses the IOC
-per-team-event convention.
+`medal_table` covers every Olympic edition from Athens 1896 through
+Milano-Cortina 2026 and uses the IOC per-team-event convention.
 
 ```{r medal-table}
 data(medal_table)
@@ -93,13 +93,16 @@ paris <- paris[order(-paris$gold, -paris$total), ]
 head(paris[, c("noc", "country", "gold", "silver", "bronze", "total")], 5)
 ```
 
-## `editions`: metadata for the new five Games
+## `editions`: metadata for every Games
+
+`editions` includes one row per Olympic edition (62 in total), including
+the handful of Games cancelled by the World Wars.
 
 ```{r editions}
 data(editions)
-editions[, c("games", "city", "country",
-             "opening_ceremony", "closing_ceremony",
-             "participants", "medal_events")]
+head(editions[, c("games", "city_local_latin", "city_english", "country",
+                  "opening_ceremony", "closing_ceremony",
+                  "participants", "medal_events")], 10)
 ```
 
 Use it to enrich `olympic_athletes` with edition-level facts (host
