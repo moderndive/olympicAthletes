@@ -147,3 +147,72 @@
 #' editions[, c("games", "city_local_latin", "city_english",
 #'               "participants", "medal_events")]
 "editions"
+
+
+#' Olympic athletics (track and field) athlete-event participations, 1896-2026
+#'
+#' The subset of \code{\link{olympic_athletes}} with \code{sport == "Athletics"}.
+#' A convenience dataset so examples can focus on a single sport without first
+#' filtering. Columns are identical to \code{olympic_athletes}.
+#'
+#' @format A data frame with 43,062 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(athletics_athletes)
+#' head(athletics_athletes)
+"athletics_athletes"
+
+
+#' Olympic gymnastics athlete-event participations, 1896-2026
+#'
+#' The subset of \code{\link{olympic_athletes}} with \code{sport == "Gymnastics"}.
+#' A convenience dataset so examples can focus on a single sport without first
+#' filtering. Columns are identical to \code{olympic_athletes}.
+#'
+#' @format A data frame with 29,413 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(gymnastics_athletes)
+#' head(gymnastics_athletes)
+"gymnastics_athletes"
+
+
+#' Olympic basketball athlete-event participations, 1896-2026
+#'
+#' The subset of \code{\link{olympic_athletes}} with \code{sport == "Basketball"}.
+#' A convenience dataset so examples can focus on a single sport without first
+#' filtering. Columns are identical to \code{olympic_athletes}.
+#'
+#' @format A data frame with 5,159 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(basketball_athletes)
+#' head(basketball_athletes)
+"basketball_athletes"
+
+
+#' Recent Olympic athlete-event participations, 2000-2026
+#'
+#' The subset of \code{\link{olympic_athletes}} with \code{year >= 2000}
+#' (Sydney 2000 onward). Smaller and less over-plotted than the full dataset,
+#' which makes it handy for scatterplot examples. Columns are identical to
+#' \code{olympic_athletes}.
+#'
+#' @format A data frame with 129,236 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(recent_olympic_athletes)
+#' head(recent_olympic_athletes)
+"recent_olympic_athletes"

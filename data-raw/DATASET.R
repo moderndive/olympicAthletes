@@ -158,4 +158,16 @@ save(olympic_athletes, file = out("olympic_athletes.rda"), compress = "xz")
 save(medal_table,      file = out("medal_table.rda"),      compress = "xz")
 save(editions,         file = out("editions.rda"),         compress = "xz")
 
+# Convenience subsets of olympic_athletes, so single-sport / recent-Games
+# examples don't need a filter() the reader may not have learned yet.
+message("Building convenience subsets of olympic_athletes ...")
+athletics_athletes      <- olympic_athletes[olympic_athletes$sport == "Athletics", ]
+gymnastics_athletes     <- olympic_athletes[olympic_athletes$sport == "Gymnastics", ]
+basketball_athletes     <- olympic_athletes[olympic_athletes$sport == "Basketball", ]
+recent_olympic_athletes <- olympic_athletes[olympic_athletes$year >= 2000, ]
+save(athletics_athletes,      file = out("athletics_athletes.rda"),      compress = "xz")
+save(gymnastics_athletes,     file = out("gymnastics_athletes.rda"),     compress = "xz")
+save(basketball_athletes,     file = out("basketball_athletes.rda"),     compress = "xz")
+save(recent_olympic_athletes, file = out("recent_olympic_athletes.rda"), compress = "xz")
+
 message("Done. Run devtools::document() to refresh man/ and devtools::check()")
