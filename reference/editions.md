@@ -90,7 +90,7 @@ A data frame with 62 rows and 15 variables:
 ``` r
 data(editions)
 editions[, c("games", "city_local_latin", "city_english",
-             "participants", "medal_events")]
+              "participants", "medal_events")]
 #>          games         city_local_latin            city_english participants
 #> 1  1896 Summer                   Athína                  Athens          176
 #> 2  1900 Summer                    Paris                   Paris         1241
@@ -150,7 +150,7 @@ editions[, c("games", "city_local_latin", "city_english",
 #> 56 2014 Winter                    Sochi                   Sochi         2747
 #> 57 2016 Summer           Rio de Janeiro          Rio de Janeiro        11182
 #> 58 2018 Winter              PyeongChang             PyeongChang         2793
-#> 59 2020 Summer                    Tokyo                   Tokyo        11319
+#> 59 2020 Summer                    Tokyo                   Tokyo        11318
 #> 60 2022 Winter                  Beijing                 Beijing         2786
 #> 61 2024 Summer                    Paris                   Paris        10763
 #> 62 2026 Winter Milano-Cortina d'Ampezzo Milan-Cortina d'Ampezzo         2807

@@ -13,7 +13,7 @@ library(olympicAthletes)
 
 | Dataset            |    Rows | One row per…                            |
 |--------------------|--------:|-----------------------------------------|
-| `olympic_athletes` | 315,090 | (athlete, Games, event) participation   |
+| `olympic_athletes` | 315,094 | (athlete, Games, event) participation   |
 | `medal_table`      |   1,929 | (Games, NOC) verified medal totals      |
 | `editions`         |      62 | Olympic edition (incl. cancelled Games) |
 
@@ -27,7 +27,7 @@ and edition-level lookups easy without re-aggregating 300k+ rows.
 
 data(olympic_athletes)
 str(olympic_athletes, give.attr = FALSE, vec.len = 2)
-#> 'data.frame':    315090 obs. of  16 variables:
+#> 'data.frame':    315094 obs. of  16 variables:
 #>  $ id              : int  12068 35094 35698 38123 41160 ...
 #>  $ name            : chr  "Arthur Charles Blake" "Angelos Fetsis" ...
 #>  $ sex             : chr  "M" "M" ...
@@ -60,10 +60,10 @@ tail(tab, 10)
 #>   2014      0   4891
 #>   2016  13688      0
 #>   2018      0   5119
-#>   2020  14536      0
-#>   2022      0   5247
-#>   2024  13659      0
-#>   2026      0   5413
+#>   2020  14535      0
+#>   2022      0   5249
+#>   2024  13660      0
+#>   2026      0   5415
 ```
 
 ### A note on team medals

@@ -14,7 +14,7 @@ olympic_athletes
 
 ## Format
 
-A data frame with 315,090 rows and 16 variables:
+A data frame with 315,094 rows and 16 variables:
 
 - id:
 
@@ -168,10 +168,10 @@ table(olympic_athletes$year, olympic_athletes$season)
 #>   2014      0   4891
 #>   2016  13688      0
 #>   2018      0   5119
-#>   2020  14536      0
-#>   2022      0   5247
-#>   2024  13659      0
-#>   2026      0   5413
+#>   2020  14535      0
+#>   2022      0   5249
+#>   2024  13660      0
+#>   2026      0   5415
 
 if (FALSE) { # \dontrun{
   # Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)
