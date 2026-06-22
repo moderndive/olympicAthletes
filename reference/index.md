@@ -32,3 +32,18 @@ the new editions added on top of the rgriff23 source.
 
 - [`editions`](https://moderndive.github.io/olympicAthletes/reference/editions.md)
   : Edition-level metadata for every Olympic Games, 1896-2026
+
+## Convenience subsets
+
+Smaller slices of olympic_athletes for teaching examples that focus on a
+single sport or recent Games without needing to filter().
+
+- [`athletics_athletes`](https://moderndive.github.io/olympicAthletes/reference/athletics_athletes.md)
+  : Olympic athletics (track and field) athlete-event participations,
+  1896-2026
+- [`gymnastics_athletes`](https://moderndive.github.io/olympicAthletes/reference/gymnastics_athletes.md)
+  : Olympic gymnastics athlete-event participations, 1896-2026
+- [`basketball_athletes`](https://moderndive.github.io/olympicAthletes/reference/basketball_athletes.md)
+  : Olympic basketball athlete-event participations, 1896-2026
+- [`recent_olympic_athletes`](https://moderndive.github.io/olympicAthletes/reference/recent_olympic_athletes.md)
+  : Recent Olympic athlete-event participations, 2000-2026

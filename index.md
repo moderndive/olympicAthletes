@@ -23,6 +23,12 @@ data(olympic_athletes)   # ~315,000 athlete-event rows, 1896-2026
 data(medal_table)        # verified medal table for every edition, 1896-2026
 data(editions)           # metadata for every Games, 1896-2026
 
+# Convenience subsets of olympic_athletes (same 16 columns)
+data(athletics_athletes)       # sport == "Athletics"
+data(gymnastics_athletes)      # sport == "Gymnastics"
+data(basketball_athletes)      # sport == "Basketball"
+data(recent_olympic_athletes)  # year >= 2000
+
 ?olympic_athletes
 ```
 
@@ -31,6 +37,10 @@ data(editions)           # metadata for every Games, 1896-2026
 | `olympic_athletes` | 315,094 | One row per (athlete, Games, event). 16 columns. |
 | `medal_table` | 1,929 | One row per (Games, NOC) with Gold/Silver/Bronze counts. |
 | `editions` | 62 | Year, season, host city, dates, participant counts. Includes cancelled Games. |
+| `athletics_athletes` | 43,062 | Subset of `olympic_athletes` where `sport == "Athletics"`. |
+| `gymnastics_athletes` | 29,413 | Subset where `sport == "Gymnastics"`. |
+| `basketball_athletes` | 5,159 | Subset where `sport == "Basketball"`. |
+| `recent_olympic_athletes` | 129,236 | Subset where `year >= 2000` (Sydney 2000 onward). |
 
 `olympic_athletes` extends the original
 [rgriff23/Olympic_history](https://github.com/rgriff23/Olympic_history)

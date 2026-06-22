@@ -2,6 +2,13 @@
 
 ## olympicAthletes 0.4.0
 
+- New convenience datasets: `athletics_athletes`, `gymnastics_athletes`,
+  and `basketball_athletes` (single-sport subsets of
+  `olympic_athletes`), plus `recent_olympic_athletes` (Games since 2000,
+  `year >= 2000`). These let teaching examples focus on one sport or
+  recent Games without a
+  [`filter()`](https://dplyr.tidyverse.org/reference/filter.html).
+  Columns are identical to `olympic_athletes`.
 - `olympic_athletes` bio coverage substantially improved for the five
   olympedia-scraped editions (2018-2026). Team-event and
   multi-athlete-row athletes (Ice Hockey, Curling, Bobsleigh, Football,

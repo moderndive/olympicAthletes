@@ -105,6 +105,12 @@
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">medal_table</span><span class="op">)</span>        <span class="co"># verified medal table for every edition, 1896-2026</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">editions</span><span class="op">)</span>           <span class="co"># metadata for every Games, 1896-2026</span></span>
 <span></span>
+<span><span class="co"># Convenience subsets of olympic_athletes (same 16 columns)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">athletics_athletes</span><span class="op">)</span>       <span class="co"># sport == "Athletics"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">gymnastics_athletes</span><span class="op">)</span>      <span class="co"># sport == "Gymnastics"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">basketball_athletes</span><span class="op">)</span>      <span class="co"># sport == "Basketball"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">recent_olympic_athletes</span><span class="op">)</span>  <span class="co"># year &gt;= 2000</span></span>
+<span></span>
 <span><span class="op">?</span><span class="va">olympic_athletes</span></span></code></pre></div>
 <table class="table">
 <colgroup>
@@ -132,6 +138,26 @@
 <td><code>editions</code></td>
 <td align="right">62</td>
 <td>Year, season, host city, dates, participant counts. Includes cancelled Games.</td>
+</tr>
+<tr>
+<td><code>athletics_athletes</code></td>
+<td align="right">43,062</td>
+<td>Subset of <code>olympic_athletes</code> where <code>sport == "Athletics"</code>.</td>
+</tr>
+<tr>
+<td><code>gymnastics_athletes</code></td>
+<td align="right">29,413</td>
+<td>Subset where <code>sport == "Gymnastics"</code>.</td>
+</tr>
+<tr>
+<td><code>basketball_athletes</code></td>
+<td align="right">5,159</td>
+<td>Subset where <code>sport == "Basketball"</code>.</td>
+</tr>
+<tr>
+<td><code>recent_olympic_athletes</code></td>
+<td align="right">129,236</td>
+<td>Subset where <code>year &gt;= 2000</code> (Sydney 2000 onward).</td>
 </tr>
 </tbody>
 </table>
