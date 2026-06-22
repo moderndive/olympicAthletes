@@ -112,6 +112,16 @@ reference:
   contents:
   - editions
 
+- title: Convenience subsets
+  desc: >
+    Smaller slices of olympic_athletes for teaching examples that focus on a
+    single sport or recent Games without needing to filter().
+  contents:
+  - athletics_athletes
+  - gymnastics_athletes
+  - basketball_athletes
+  - recent_olympic_athletes
+
 articles:
 - title: Articles
   navbar: ~
