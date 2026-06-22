@@ -52,6 +52,6 @@ opening/closing ceremony dates.
 \examples{
 data(editions)
 editions[, c("games", "city_local_latin", "city_english",
-             "participants", "medal_events")]
+              "participants", "medal_events")]
 }
 \keyword{datasets}

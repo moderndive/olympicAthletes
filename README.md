@@ -25,7 +25,7 @@ data(editions)           # metadata for every Games, 1896-2026
 
 | Dataset | Rows | Description |
 |---|---:|---|
-| `olympic_athletes` | 315,090 | One row per (athlete, Games, event). 16 columns. |
+| `olympic_athletes` | 315,094 | One row per (athlete, Games, event). 16 columns. |
 | `medal_table` | 1,929 | One row per (Games, NOC) with Gold/Silver/Bronze counts. |
 | `editions` | 62 | Year, season, host city, dates, participant counts. Includes cancelled Games. |
 
@@ -53,9 +53,12 @@ repository. See `data-raw/DATASET.R` for the reproducible build.
   `medal` and `noc` and divide team-event medals by team size to reproduce
   the IOC medal table — or use the `medal_table` companion dataset which
   uses the IOC convention.
-- **Bio coverage** (`height`/`weight`) ranges from ~80% for older Winter
-  Games to ~25% for Paris 2024 / Milano-Cortina 2026. Olympedia bios for
-  newer or less-prominent athletes are sparse — same pattern as in the
+- **Bio coverage:** as of the v0.4.0 bio refresh, `age` is ~100% complete
+  for all five 2018-2026 editions. `height`/`weight` coverage ranges from
+  ~96%/~93% for 2018 Winter down to ~34%/~29% for Paris 2024 — highest for
+  Winter team sports (Ice Hockey rosters are near-complete on olympedia) and
+  lowest for the largest, most-recent Summer Games, where olympedia simply
+  hasn't published measurements for many athletes — same pattern as in the
   original 1896-2016 source.
 
 ## License

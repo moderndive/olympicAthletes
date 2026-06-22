@@ -6,7 +6,7 @@
 #' dataset (originally scraped from sports-reference.com); rows for
 #' 2018-2026 were scraped from \href{https://www.olympedia.org/}{olympedia.org}.
 #'
-#' @format A data frame with 315,090 rows and 16 variables:
+#' @format A data frame with 315,094 rows and 16 variables:
 #' \describe{
 #'   \item{id}{Integer. Unique athlete ID. Original IDs are 1..135571;
 #'     athletes new to the 2018-2026 editions get IDs starting at

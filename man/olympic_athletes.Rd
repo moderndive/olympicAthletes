@@ -5,7 +5,7 @@
 \alias{olympic_athletes}
 \title{Olympic athlete-event participations, 1896-2026}
 \format{
-A data frame with 315,090 rows and 16 variables:
+A data frame with 315,094 rows and 16 variables:
 \describe{
   \item{id}{Integer. Unique athlete ID. Original IDs are 1..135571;
     athletes new to the 2018-2026 editions get IDs starting at

@@ -1,3 +1,17 @@
+# olympicAthletes 0.4.0
+
+* `olympic_athletes` bio coverage substantially improved for the five
+  olympedia-scraped editions (2018-2026). Team-event and multi-athlete-row
+  athletes (Ice Hockey, Curling, Bobsleigh, Football, Hockey, Rowing,
+  relays, doubles, pairs, …) previously had no `age` and mostly no
+  `height`/`weight`; these bios have now been fetched from olympedia.
+  `age` is now ~100% complete across all five editions, and `height`/
+  `weight` coverage rose accordingly (e.g. 2018 Winter height ~81% -> ~96%,
+  Paris 2024 ~24% -> ~34%). The refresh is purely additive — row count,
+  athlete roster, and medal counts are unchanged.
+* `editions`: Tokyo 2020 `participants` corrected 11,319 -> 11,318 to match
+  olympedia's revised count.
+
 # olympicAthletes 0.3.0
 
 * **Breaking:** all `olympic_athletes` columns are now lowercase

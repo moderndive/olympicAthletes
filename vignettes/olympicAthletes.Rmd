@@ -32,7 +32,7 @@ library(olympicAthletes)
 
 | Dataset            | Rows    | One row per…                            |
 |--------------------|--------:|------------------------------------------|
-| `olympic_athletes` | 315,090 | (athlete, Games, event) participation    |
+| `olympic_athletes` | 315,094 | (athlete, Games, event) participation    |
 | `medal_table`      |   1,929 | (Games, NOC) verified medal totals       |
 | `editions`         |      62 | Olympic edition (incl. cancelled Games)  |
 
