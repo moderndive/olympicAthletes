@@ -1,4 +1,4 @@
-# olympicAthletes <img src="man/figures/logo.png" alt="A hexagonal logo for the package. It uses the gold, silver, and bronze podiums as bars in a bar chart to represent potential statistical analysis to be done for this R data package on modern Olympic athletes." align="right" width=280 />
+# olympicAthletes <img src="man/figures/logo.png" alt="A hexagonal logo for the package. It uses the gold, silver, and bronze podiums as bars in a bar chart to represent potential statistical analysis to be done for this R data package on modern Olympic athletes." align="right" width=280 style="position: relative; z-index: 10;" />
 
 A tidy R data package covering every athlete-event participation in the modern
 Olympic Games, **Athens 1896 through Milano-Cortina 2026** — about 315,000 rows.
@@ -25,6 +25,11 @@ data(athletics_athletes)       # sport == "Athletics"
 data(gymnastics_athletes)      # sport == "Gymnastics"
 data(basketball_athletes)      # sport == "Basketball"
 data(recent_olympic_athletes)  # year >= 2000
+data(olympic_athletes_2024)    # Paris 2024 Summer Games only
+data(olympic_athletes_1960)    # Rome 1960 Summer Games only
+
+# Tidy medal summary for barplot teaching examples (long format)
+data(paris_2024_top_medals)    # top-10 countries x Gold/Silver/Bronze
 
 ?olympic_athletes
 ```
@@ -38,6 +43,9 @@ data(recent_olympic_athletes)  # year >= 2000
 | `gymnastics_athletes` | 29,413 | Subset where `sport == "Gymnastics"`. |
 | `basketball_athletes` | 5,159 | Subset where `sport == "Basketball"`. |
 | `recent_olympic_athletes` | 129,236 | Subset where `year >= 2000` (Sydney 2000 onward). |
+| `olympic_athletes_2024` | 13,660 | Subset where `year == 2024 & season == "Summer"` (Paris 2024). |
+| `olympic_athletes_1960` | 8,119 | Subset where `year == 1960 & season == "Summer"` (Rome 1960). |
+| `paris_2024_top_medals` | 30 | Top-10 countries by total medals at Paris 2024, long format (`country`, `noc`, `medal`, `count`). For barplot examples. |
 
 `olympic_athletes` extends the original
 [rgriff23/Olympic_history](https://github.com/rgriff23/Olympic_history)
@@ -77,9 +85,12 @@ CC BY 4.0. Please cite this package, the rgriff23 source, and Olympedia.
 
 ## Citation
 
+Run `citation("olympicAthletes")` for a citation that always reflects your
+installed package version. It currently renders as:
+
 ```
 Ismay, C. (2026). olympicAthletes: Olympic Athlete Event Data,
-Athens 1896 to Milano-Cortina 2026. R package version 0.3.0.
+Athens 1896 to Milano-Cortina 2026. R package version 0.5.1.
 
 Griffin, R. (2018). Olympic history: longitudinal data scraped from
 www.sports-reference.com. https://github.com/rgriff23/Olympic_history

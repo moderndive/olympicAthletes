@@ -104,6 +104,7 @@ reference:
     (PyeongChang 2018 through Milano-Cortina 2026).
   contents:
   - medal_table
+  - paris_2024_top_medals
 
 - title: Edition metadata
   desc: >
@@ -115,12 +116,14 @@ reference:
 - title: Convenience subsets
   desc: >
     Smaller slices of olympic_athletes for teaching examples that focus on a
-    single sport or recent Games without needing to filter().
+    single sport, a single Games, or recent Games without needing to filter().
   contents:
   - athletics_athletes
   - gymnastics_athletes
   - basketball_athletes
   - recent_olympic_athletes
+  - olympic_athletes_2024
+  - olympic_athletes_1960
 
 articles:
 - title: Articles
