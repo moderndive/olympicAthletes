@@ -165,9 +165,28 @@ athletics_athletes      <- olympic_athletes[olympic_athletes$sport == "Athletics
 gymnastics_athletes     <- olympic_athletes[olympic_athletes$sport == "Gymnastics", ]
 basketball_athletes     <- olympic_athletes[olympic_athletes$sport == "Basketball", ]
 recent_olympic_athletes <- olympic_athletes[olympic_athletes$year >= 2000, ]
+# Single-Games subsets for overplotting-friendly scatterplots and for
+# generational comparisons (Rome 1960 vs Paris 2024, ~a human lifetime apart).
+olympic_athletes_2024   <- olympic_athletes[olympic_athletes$year == 2024 & olympic_athletes$season == "Summer", ]
+olympic_athletes_1960   <- olympic_athletes[olympic_athletes$year == 1960 & olympic_athletes$season == "Summer", ]
 save(athletics_athletes,      file = out("athletics_athletes.rda"),      compress = "xz")
 save(gymnastics_athletes,     file = out("gymnastics_athletes.rda"),     compress = "xz")
 save(basketball_athletes,     file = out("basketball_athletes.rda"),     compress = "xz")
 save(recent_olympic_athletes, file = out("recent_olympic_athletes.rda"), compress = "xz")
+save(olympic_athletes_2024,   file = out("olympic_athletes_2024.rda"),   compress = "xz")
+save(olympic_athletes_1960,   file = out("olympic_athletes_1960.rda"),   compress = "xz")
 
 message("Done. Run devtools::document() to refresh man/ and devtools::check()")
+
+# Top-10 countries by total medals at Paris 2024, long format for barplot
+# examples (stacked / dodged / proportional) without filtering ~90 nations.
+paris_2024_top_medals <- medal_table |>
+  dplyr::filter(games == "2024 Summer") |>
+  dplyr::arrange(dplyr::desc(total), dplyr::desc(gold)) |>
+  utils::head(10) |>
+  dplyr::transmute(country = factor(country, levels = country), noc,
+                   Gold = gold, Silver = silver, Bronze = bronze) |>
+  tidyr::pivot_longer(c(Gold, Silver, Bronze), names_to = "medal", values_to = "count") |>
+  dplyr::mutate(medal = factor(medal, levels = c("Gold", "Silver", "Bronze"))) |>
+  as.data.frame()
+save(paris_2024_top_medals, file = out("paris_2024_top_medals.rda"), compress = "xz")

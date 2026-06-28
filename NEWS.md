@@ -1,3 +1,20 @@
+# olympicAthletes 0.5.1
+
+* New dataset `paris_2024_top_medals`: the ten countries that won the most total
+  medals at the Paris 2024 Summer Games, in long format (one row per
+  country-and-medal-type: `country`, `noc`, `medal`, `count`). A small, tidy
+  dataset built for barplot examples (stacked, dodged, proportional) without
+  filtering the ~90 medal-winning nations in `medal_table`.
+
+# olympicAthletes 0.5.0
+
+* New single-Games convenience datasets: `olympic_athletes_2024` (Paris 2024
+  Summer Games) and `olympic_athletes_1960` (Rome 1960 Summer Games). The 2024
+  subset is small enough to show over-plotting in a `height` vs `weight`
+  scatterplot without the full dataset's scale; paired with the near-complete
+  1960 subset it supports generational comparisons of athlete physiques. Both
+  have columns identical to `olympic_athletes`.
+
 # olympicAthletes 0.4.0
 
 * New convenience datasets: `athletics_athletes`, `gymnastics_athletes`, and

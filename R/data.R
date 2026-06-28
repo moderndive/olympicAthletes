@@ -216,3 +216,79 @@
 #' data(recent_olympic_athletes)
 #' head(recent_olympic_athletes)
 "recent_olympic_athletes"
+
+
+#' Olympic athlete-event participations at the Paris 2024 Summer Games
+#'
+#' The subset of \code{\link{olympic_athletes}} from the Paris 2024 Summer
+#' Games (\code{year == 2024 & season == "Summer"}). A single-Games convenience
+#' dataset: small enough that a \code{height} vs \code{weight} scatterplot shows
+#' over-plotting without the multi-hundred-thousand-row scale of the full data,
+#' and no \code{filter()} is required. Note that bio data (height/weight) is
+#' missing for many recent athletes, so roughly a third of rows have complete
+#' \code{height} and \code{weight}. Columns are identical to
+#' \code{olympic_athletes}.
+#'
+#' @format A data frame with 13,660 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @seealso \code{\link{olympic_athletes_1960}} for the same data a generation
+#'   earlier (Rome 1960), useful for comparing athlete physiques over time.
+#'
+#' @examples
+#' data(olympic_athletes_2024)
+#' head(olympic_athletes_2024)
+"olympic_athletes_2024"
+
+
+#' Olympic athlete-event participations at the Rome 1960 Summer Games
+#'
+#' The subset of \code{\link{olympic_athletes}} from the Rome 1960 Summer Games
+#' (\code{year == 1960 & season == "Summer"}). Paired with
+#' \code{\link{olympic_athletes_2024}}, it supports generational comparisons of
+#' athlete physiques across roughly a human lifetime. Unlike the most recent
+#' Games, the 1960 Games have near-complete height/weight coverage (~94\% of
+#' rows), so it is well suited to body-size comparisons. Columns are identical
+#' to \code{olympic_athletes}.
+#'
+#' @format A data frame with 8,119 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @seealso \code{\link{olympic_athletes_2024}} for the same Games a generation
+#'   later (Paris 2024).
+#'
+#' @examples
+#' data(olympic_athletes_1960)
+#' head(olympic_athletes_1960)
+"olympic_athletes_1960"
+
+
+#' Top-10 countries by medals at the Paris 2024 Summer Olympics
+#'
+#' A small, tidy summary of the ten countries that won the most total medals at
+#' the Paris 2024 Summer Games, in long format with one row per
+#' country-and-medal-type. Built for barplot examples: ten ordered categories
+#' (rather than the ~90 medal-winning nations in \code{\link{medal_table}}) plus
+#' a \code{medal} fill variable, so stacked, dodged, and proportional barplots
+#' all read cleanly without any filtering.
+#'
+#' @format A data frame with 30 rows (10 countries x 3 medal types) and 4
+#'   variables:
+#' \describe{
+#'   \item{country}{Factor. Country/NOC name, levels ordered from the most to
+#'     the fewest total medals (United States first).}
+#'   \item{noc}{Character. Three-letter IOC code (e.g. \code{"USA"}, \code{"CHN"}).}
+#'   \item{medal}{Factor with levels \code{"Gold"}, \code{"Silver"}, \code{"Bronze"}.}
+#'   \item{count}{Integer. Number of that medal type won by that country.}
+#' }
+#'
+#' @source Derived from \code{\link{medal_table}} (games \code{"2024 Summer"}).
+#'
+#' @examples
+#' data(paris_2024_top_medals)
+#' head(paris_2024_top_medals)
+"paris_2024_top_medals"
