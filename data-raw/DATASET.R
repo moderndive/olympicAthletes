@@ -37,6 +37,25 @@ olympic_athletes$weight <- as.numeric(olympic_athletes$weight)
 message("  ", format(nrow(olympic_athletes), big.mark = ","), " rows, ",
         ncol(olympic_athletes), " columns")
 
+# Recover missing NOC/team. Some rows have NA noc AND NA team (country unknown
+# in the source), but the same athlete (id) often appears in another Games with
+# a known country. Fill noc/team from that, but only when the athlete maps to a
+# SINGLE known value across all their rows; athletes who competed for more than
+# one NOC are left NA rather than guessed at.
+.known      <- olympic_athletes[!is.na(olympic_athletes$noc), c("id", "noc", "team")]
+.uniq_one   <- function(x) { u <- unique(x[!is.na(x)]); if (length(u) == 1L) u else NA_character_ }
+.noc_by_id  <- tapply(.known$noc,  .known$id, .uniq_one)
+.team_by_id <- tapply(.known$team, .known$id, .uniq_one)
+.miss_noc   <- is.na(olympic_athletes$noc)
+.miss_team  <- is.na(olympic_athletes$team)
+olympic_athletes$noc[.miss_noc]   <- unname(.noc_by_id[ as.character(olympic_athletes$id[.miss_noc])])
+olympic_athletes$team[.miss_team] <- unname(.team_by_id[as.character(olympic_athletes$id[.miss_team])])
+message("  recovered noc for ",
+        format(sum(.miss_noc & !is.na(olympic_athletes$noc)), big.mark = ","),
+        " rows; ", format(sum(is.na(olympic_athletes$noc)), big.mark = ","),
+        " noc still NA (athletes who never appear with a known country)")
+rm(.known, .uniq_one, .noc_by_id, .team_by_id, .miss_noc, .miss_team)
+
 message("Loading medal_table from data-raw/medal_table_summary.csv ...")
 medal_table <- utils::read.csv(
   here("medal_table_summary.csv"),

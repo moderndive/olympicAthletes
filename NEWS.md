@@ -1,3 +1,11 @@
+# olympicAthletes 0.5.2
+
+* Recovered missing `noc`/`team` (country) values: rows where the country was
+  unknown but the same athlete (`id`) appears in another Games with a known
+  country are now backfilled (unambiguous cases only). Reduces `NA` `noc` from
+  10,094 to 3,907 rows; the rest are athletes who never appear with any known
+  country, or who competed for more than one NOC, and are deliberately left `NA`.
+
 # olympicAthletes 0.5.1
 
 * New dataset `paris_2024_top_medals`: the ten countries that won the most total
