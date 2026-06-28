@@ -24,6 +24,8 @@ Verified per-team-event medal totals for the five new editions
 
 - [`medal_table`](https://moderndive.github.io/olympicAthletes/reference/medal_table.md)
   : Verified medal tables for every Olympic edition, 1896-2026
+- [`paris_2024_top_medals`](https://moderndive.github.io/olympicAthletes/reference/paris_2024_top_medals.md)
+  : Top-10 countries by medals at the Paris 2024 Summer Olympics
 
 ## Edition metadata
 
@@ -36,7 +38,8 @@ the new editions added on top of the rgriff23 source.
 ## Convenience subsets
 
 Smaller slices of olympic_athletes for teaching examples that focus on a
-single sport or recent Games without needing to filter().
+single sport, a single Games, or recent Games without needing to
+filter().
 
 - [`athletics_athletes`](https://moderndive.github.io/olympicAthletes/reference/athletics_athletes.md)
   : Olympic athletics (track and field) athlete-event participations,
@@ -47,3 +50,7 @@ single sport or recent Games without needing to filter().
   : Olympic basketball athlete-event participations, 1896-2026
 - [`recent_olympic_athletes`](https://moderndive.github.io/olympicAthletes/reference/recent_olympic_athletes.md)
   : Recent Olympic athlete-event participations, 2000-2026
+- [`olympic_athletes_2024`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_2024.md)
+  : Olympic athlete-event participations at the Paris 2024 Summer Games
+- [`olympic_athletes_1960`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_1960.md)
+  : Olympic athlete-event participations at the Rome 1960 Summer Games

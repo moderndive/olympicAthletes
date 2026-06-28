@@ -42,7 +42,7 @@
 
     <a class="navbar-brand me-2" href="index.html">olympicAthletes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.5.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,6 +110,11 @@
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">gymnastics_athletes</span><span class="op">)</span>      <span class="co"># sport == "Gymnastics"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">basketball_athletes</span><span class="op">)</span>      <span class="co"># sport == "Basketball"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">recent_olympic_athletes</span><span class="op">)</span>  <span class="co"># year &gt;= 2000</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">olympic_athletes_2024</span><span class="op">)</span>    <span class="co"># Paris 2024 Summer Games only</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">olympic_athletes_1960</span><span class="op">)</span>    <span class="co"># Rome 1960 Summer Games only</span></span>
+<span></span>
+<span><span class="co"># Tidy medal summary for barplot teaching examples (long format)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">paris_2024_top_medals</span><span class="op">)</span>    <span class="co"># top-10 countries x Gold/Silver/Bronze</span></span>
 <span></span>
 <span><span class="op">?</span><span class="va">olympic_athletes</span></span></code></pre></div>
 <table class="table">
@@ -159,6 +164,21 @@
 <td align="right">129,236</td>
 <td>Subset where <code>year &gt;= 2000</code> (Sydney 2000 onward).</td>
 </tr>
+<tr>
+<td><code>olympic_athletes_2024</code></td>
+<td align="right">13,660</td>
+<td>Subset where <code>year == 2024 &amp; season == "Summer"</code> (Paris 2024).</td>
+</tr>
+<tr>
+<td><code>olympic_athletes_1960</code></td>
+<td align="right">8,119</td>
+<td>Subset where <code>year == 1960 &amp; season == "Summer"</code> (Rome 1960).</td>
+</tr>
+<tr>
+<td><code>paris_2024_top_medals</code></td>
+<td align="right">30</td>
+<td>Top-10 countries by total medals at Paris 2024, long format (<code>country</code>, <code>noc</code>, <code>medal</code>, <code>count</code>). For barplot examples.</td>
+</tr>
 </tbody>
 </table>
 <p><code>olympic_athletes</code> extends the original <a href="https://github.com/rgriff23/Olympic_history" class="external-link">rgriff23/Olympic_history</a> dataset. Column names are lowercase snake_case (e.g. <code>noc</code>, <code>medal</code>) rather than the upstream TitleCase, and the host-city column has been split into <code>city_local_latin</code> and <code>city_english</code>. <code>city_local_latin</code> always uses the Latin alphabet — non-Latin-script cities are romanized (<code>"Moskva"</code>, <code>"Tokyo"</code>, <code>"Beijing"</code>, <code>"PyeongChang"</code>), not rendered in their native script.</p>
@@ -186,8 +206,9 @@
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
+<p>Run <code>citation("olympicAthletes")</code> for a citation that always reflects your installed package version. It currently renders as:</p>
 <pre><code>Ismay, C. (2026). olympicAthletes: Olympic Athlete Event Data,
-Athens 1896 to Milano-Cortina 2026. R package version 0.3.0.
+Athens 1896 to Milano-Cortina 2026. R package version 0.5.1.
 
 Griffin, R. (2018). Olympic history: longitudinal data scraped from
 www.sports-reference.com. https://github.com/rgriff23/Olympic_history

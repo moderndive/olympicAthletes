@@ -28,6 +28,11 @@ data(athletics_athletes)       # sport == "Athletics"
 data(gymnastics_athletes)      # sport == "Gymnastics"
 data(basketball_athletes)      # sport == "Basketball"
 data(recent_olympic_athletes)  # year >= 2000
+data(olympic_athletes_2024)    # Paris 2024 Summer Games only
+data(olympic_athletes_1960)    # Rome 1960 Summer Games only
+
+# Tidy medal summary for barplot teaching examples (long format)
+data(paris_2024_top_medals)    # top-10 countries x Gold/Silver/Bronze
 
 ?olympic_athletes
 ```
@@ -41,6 +46,9 @@ data(recent_olympic_athletes)  # year >= 2000
 | `gymnastics_athletes` | 29,413 | Subset where `sport == "Gymnastics"`. |
 | `basketball_athletes` | 5,159 | Subset where `sport == "Basketball"`. |
 | `recent_olympic_athletes` | 129,236 | Subset where `year >= 2000` (Sydney 2000 onward). |
+| `olympic_athletes_2024` | 13,660 | Subset where `year == 2024 & season == "Summer"` (Paris 2024). |
+| `olympic_athletes_1960` | 8,119 | Subset where `year == 1960 & season == "Summer"` (Rome 1960). |
+| `paris_2024_top_medals` | 30 | Top-10 countries by total medals at Paris 2024, long format (`country`, `noc`, `medal`, `count`). For barplot examples. |
 
 `olympic_athletes` extends the original
 [rgriff23/Olympic_history](https://github.com/rgriff23/Olympic_history)
@@ -80,8 +88,11 @@ CC BY 4.0. Please cite this package, the rgriff23 source, and Olympedia.
 
 ## Citation
 
+Run `citation("olympicAthletes")` for a citation that always reflects
+your installed package version. It currently renders as:
+
     Ismay, C. (2026). olympicAthletes: Olympic Athlete Event Data,
-    Athens 1896 to Milano-Cortina 2026. R package version 0.3.0.
+    Athens 1896 to Milano-Cortina 2026. R package version 0.5.1.
 
     Griffin, R. (2018). Olympic history: longitudinal data scraped from
     www.sports-reference.com. https://github.com/rgriff23/Olympic_history
@@ -114,6 +125,8 @@ Verified per-team-event medal totals for the five new editions
 
 - [`medal_table`](https://moderndive.github.io/olympicAthletes/reference/medal_table.md)
   : Verified medal tables for every Olympic edition, 1896-2026
+- [`paris_2024_top_medals`](https://moderndive.github.io/olympicAthletes/reference/paris_2024_top_medals.md)
+  : Top-10 countries by medals at the Paris 2024 Summer Olympics
 
 ## Edition metadata
 
@@ -126,7 +139,8 @@ the new editions added on top of the rgriff23 source.
 ## Convenience subsets
 
 Smaller slices of olympic_athletes for teaching examples that focus on a
-single sport or recent Games without needing to filter().
+single sport, a single Games, or recent Games without needing to
+filter().
 
 - [`athletics_athletes`](https://moderndive.github.io/olympicAthletes/reference/athletics_athletes.md)
   : Olympic athletics (track and field) athlete-event participations,
@@ -137,6 +151,10 @@ single sport or recent Games without needing to filter().
   : Olympic basketball athlete-event participations, 1896-2026
 - [`recent_olympic_athletes`](https://moderndive.github.io/olympicAthletes/reference/recent_olympic_athletes.md)
   : Recent Olympic athlete-event participations, 2000-2026
+- [`olympic_athletes_2024`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_2024.md)
+  : Olympic athlete-event participations at the Paris 2024 Summer Games
+- [`olympic_athletes_1960`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_1960.md)
+  : Olympic athlete-event participations at the Rome 1960 Summer Games
 
 # Articles
 

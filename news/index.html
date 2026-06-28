@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">olympicAthletes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.4.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.5.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +42,14 @@
       <small>Source: <a href="https://github.com/moderndive/olympicAthletes/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.5.1" id="olympicathletes-051">olympicAthletes 0.5.1<a class="anchor" aria-label="anchor" href="#olympicathletes-051"></a></h2>
+<ul><li>New dataset <code>paris_2024_top_medals</code>: the ten countries that won the most total medals at the Paris 2024 Summer Games, in long format (one row per country-and-medal-type: <code>country</code>, <code>noc</code>, <code>medal</code>, <code>count</code>). A small, tidy dataset built for barplot examples (stacked, dodged, proportional) without filtering the ~90 medal-winning nations in <code>medal_table</code>.</li>
+</ul></div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.5.0" id="olympicathletes-050">olympicAthletes 0.5.0<a class="anchor" aria-label="anchor" href="#olympicathletes-050"></a></h2>
+<ul><li>New single-Games convenience datasets: <code>olympic_athletes_2024</code> (Paris 2024 Summer Games) and <code>olympic_athletes_1960</code> (Rome 1960 Summer Games). The 2024 subset is small enough to show over-plotting in a <code>height</code> vs <code>weight</code> scatterplot without the full dataset’s scale; paired with the near-complete 1960 subset it supports generational comparisons of athlete physiques. Both have columns identical to <code>olympic_athletes</code>.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.4.0" id="olympicathletes-040">olympicAthletes 0.4.0<a class="anchor" aria-label="anchor" href="#olympicathletes-040"></a></h2>
 <ul><li>New convenience datasets: <code>athletics_athletes</code>, <code>gymnastics_athletes</code>, and <code>basketball_athletes</code> (single-sport subsets of <code>olympic_athletes</code>), plus <code>recent_olympic_athletes</code> (Games since 2000, <code>year &gt;= 2000</code>). These let teaching examples focus on one sport or recent Games without a <code><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter()</a></code>. Columns are identical to <code>olympic_athletes</code>.</li>
