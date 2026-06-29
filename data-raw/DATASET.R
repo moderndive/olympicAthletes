@@ -183,6 +183,8 @@ message("Building convenience subsets of olympic_athletes ...")
 athletics_athletes      <- olympic_athletes[olympic_athletes$sport == "Athletics", ]
 gymnastics_athletes     <- olympic_athletes[olympic_athletes$sport == "Gymnastics", ]
 basketball_athletes     <- olympic_athletes[olympic_athletes$sport == "Basketball", ]
+volleyball_athletes     <- olympic_athletes[olympic_athletes$sport == "Volleyball", ]
+curling_athletes        <- olympic_athletes[olympic_athletes$sport == "Curling", ]
 recent_olympic_athletes <- olympic_athletes[olympic_athletes$year >= 2000, ]
 # Single-Games subsets for overplotting-friendly scatterplots and for
 # generational comparisons (Rome 1960 vs Paris 2024, ~a human lifetime apart).
@@ -191,6 +193,8 @@ olympic_athletes_1960   <- olympic_athletes[olympic_athletes$year == 1960 & olym
 save(athletics_athletes,      file = out("athletics_athletes.rda"),      compress = "xz")
 save(gymnastics_athletes,     file = out("gymnastics_athletes.rda"),     compress = "xz")
 save(basketball_athletes,     file = out("basketball_athletes.rda"),     compress = "xz")
+save(volleyball_athletes,     file = out("volleyball_athletes.rda"),     compress = "xz")
+save(curling_athletes,        file = out("curling_athletes.rda"),        compress = "xz")
 save(recent_olympic_athletes, file = out("recent_olympic_athletes.rda"), compress = "xz")
 save(olympic_athletes_2024,   file = out("olympic_athletes_2024.rda"),   compress = "xz")
 save(olympic_athletes_1960,   file = out("olympic_athletes_1960.rda"),   compress = "xz")

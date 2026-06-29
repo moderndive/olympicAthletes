@@ -200,6 +200,40 @@
 "basketball_athletes"
 
 
+#' Olympic volleyball athlete-event participations, 1896-2026
+#'
+#' The subset of \code{\link{olympic_athletes}} with \code{sport == "Volleyball"}.
+#' A convenience dataset so examples can focus on a single sport without first
+#' filtering. Columns are identical to \code{olympic_athletes}.
+#'
+#' @format A data frame with 4,792 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(volleyball_athletes)
+#' head(volleyball_athletes)
+"volleyball_athletes"
+
+
+#' Olympic curling athlete-event participations, 1896-2026
+#'
+#' The subset of \code{\link{olympic_athletes}} with \code{sport == "Curling"}.
+#' A convenience dataset so examples can focus on a single sport without first
+#' filtering. Columns are identical to \code{olympic_athletes}.
+#'
+#' @format A data frame with 961 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(curling_athletes)
+#' head(curling_athletes)
+"curling_athletes"
+
+
 #' Recent Olympic athlete-event participations, 2000-2026
 #'
 #' The subset of \code{\link{olympic_athletes}} with \code{year >= 2000}
