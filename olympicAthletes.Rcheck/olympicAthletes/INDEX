@@ -1,0 +1,23 @@
+athletics_athletes      Olympic athletics (track and field)
+                        athlete-event participations, 1896-2026
+basketball_athletes     Olympic basketball athlete-event
+                        participations, 1896-2026
+curling_athletes        Olympic curling athlete-event participations,
+                        1896-2026
+editions                Edition-level metadata for every Olympic Games,
+                        1896-2026
+gymnastics_athletes     Olympic gymnastics athlete-event
+                        participations, 1896-2026
+medal_table             Verified medal tables for every Olympic
+                        edition, 1896-2026
+olympic_athletes        Olympic athlete-event participations, 1896-2026
+olympic_athletes_1960   Olympic athlete-event participations at the
+                        Rome 1960 Summer Games
+olympic_athletes_2000_2026
+                        Olympic athlete-event participations, 2000-2026
+olympic_athletes_2024   Olympic athlete-event participations at the
+                        Paris 2024 Summer Games
+paris_2024_top_medals   Top-10 countries by medals at the Paris 2024
+                        Summer Olympics
+volleyball_athletes     Olympic volleyball athlete-event
+                        participations, 1896-2026

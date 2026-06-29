@@ -1,0 +1,10 @@
+citHeader("To cite the olympicAthletes package in publications, use:")
+
+bibentry(
+  bibtype = "Manual",
+  title   = "{olympicAthletes}: Olympic Athlete Event Data, Athens 1896 to Milano-Cortina 2026",
+  author  = person("Chester", "Ismay"),
+  year    = "2026",
+  note    = paste("R package version", meta$Version),
+  url     = "https://moderndive.github.io/olympicAthletes/"
+)
