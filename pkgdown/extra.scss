@@ -105,6 +105,15 @@ aside .well {
   background: linear-gradient(180deg, rgba($olympic-yellow, 0.05), transparent);
 }
 
+// ---- Home-page logo ---------------------------------------------------------
+// pkgdown defaults the home hero logo to ~100-120px; bump it up here. The
+// max-width keeps it from crowding the title on narrow screens.
+
+img.logo {
+  width: 200px;
+  max-width: 40%;
+}
+
 // ---- Logo glow on hover -----------------------------------------------------
 
 .navbar-brand img {
