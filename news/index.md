@@ -1,5 +1,11 @@
 # Changelog
 
+## olympicAthletes 0.5.4
+
+- Renamed `recent_olympic_athletes` to `olympic_athletes_2000_2026` for
+  a clearer, time-explicit name. The data is unchanged (`year >= 2000`,
+  i.e. the 2000–2026 Games).
+
 ## olympicAthletes 0.5.3
 
 - Add `volleyball_athletes` (4,792 rows) and `curling_athletes` (961

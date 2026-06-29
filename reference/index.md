@@ -52,8 +52,8 @@ filter().
   : Olympic volleyball athlete-event participations, 1896-2026
 - [`curling_athletes`](https://moderndive.github.io/olympicAthletes/reference/curling_athletes.md)
   : Olympic curling athlete-event participations, 1896-2026
-- [`recent_olympic_athletes`](https://moderndive.github.io/olympicAthletes/reference/recent_olympic_athletes.md)
-  : Recent Olympic athlete-event participations, 2000-2026
+- [`olympic_athletes_2000_2026`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_2000_2026.md)
+  : Olympic athlete-event participations, 2000-2026
 - [`olympic_athletes_2024`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_2024.md)
   : Olympic athlete-event participations at the Paris 2024 Summer Games
 - [`olympic_athletes_1960`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_1960.md)
