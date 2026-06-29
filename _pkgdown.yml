@@ -121,6 +121,8 @@ reference:
   - athletics_athletes
   - gymnastics_athletes
   - basketball_athletes
+  - volleyball_athletes
+  - curling_athletes
   - recent_olympic_athletes
   - olympic_athletes_2024
   - olympic_athletes_1960
