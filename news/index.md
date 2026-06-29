@@ -1,5 +1,12 @@
 # Changelog
 
+## olympicAthletes 0.5.3
+
+- Add `volleyball_athletes` (4,792 rows) and `curling_athletes` (961
+  rows) convenience subsets, parallel to the existing
+  `basketball_athletes` / `gymnastics_athletes`, for ModernDive Chapter
+  5+ regression examples.
+
 ## olympicAthletes 0.5.2
 
 - Recovered missing `noc`/`team` (country) values: rows where the

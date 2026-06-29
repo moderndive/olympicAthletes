@@ -149,6 +149,10 @@ filter().
   : Olympic gymnastics athlete-event participations, 1896-2026
 - [`basketball_athletes`](https://moderndive.github.io/olympicAthletes/reference/basketball_athletes.md)
   : Olympic basketball athlete-event participations, 1896-2026
+- [`volleyball_athletes`](https://moderndive.github.io/olympicAthletes/reference/volleyball_athletes.md)
+  : Olympic volleyball athlete-event participations, 1896-2026
+- [`curling_athletes`](https://moderndive.github.io/olympicAthletes/reference/curling_athletes.md)
+  : Olympic curling athlete-event participations, 1896-2026
 - [`recent_olympic_athletes`](https://moderndive.github.io/olympicAthletes/reference/recent_olympic_athletes.md)
   : Recent Olympic athlete-event participations, 2000-2026
 - [`olympic_athletes_2024`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_2024.md)
