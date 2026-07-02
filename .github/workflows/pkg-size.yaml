@@ -21,8 +21,14 @@ jobs:
         with:
           use-public-rspm: true
 
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          extra-packages: any::knitr, any::rmarkdown
+
+      # Build WITH vignettes so the measured size matches what a CRAN
+      # submission would actually weigh.
       - name: Build source tarball
-        run: R CMD build . --no-manual --no-build-vignettes
+        run: R CMD build . --no-manual
 
       - name: Check tarball size against the 5 MB CRAN guideline
         run: |

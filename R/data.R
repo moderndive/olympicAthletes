@@ -234,24 +234,6 @@
 "curling_athletes"
 
 
-#' Olympic athlete-event participations, 2000-2026
-#'
-#' The subset of \code{\link{olympic_athletes}} with \code{year >= 2000}
-#' (Sydney 2000 onward). Smaller and less over-plotted than the full dataset,
-#' which makes it handy for scatterplot examples. Columns are identical to
-#' \code{olympic_athletes}.
-#'
-#' @format A data frame with 129,236 rows and 16 variables; see
-#'   \code{\link{olympic_athletes}} for the full column descriptions.
-#'
-#' @source See \code{\link{olympic_athletes}}.
-#'
-#' @examples
-#' data(olympic_athletes_2000_2026)
-#' head(olympic_athletes_2000_2026)
-"olympic_athletes_2000_2026"
-
-
 #' Olympic athlete-event participations at the Paris 2024 Summer Games
 #'
 #' The subset of \code{\link{olympic_athletes}} from the Paris 2024 Summer
@@ -268,37 +250,13 @@
 #'
 #' @source See \code{\link{olympic_athletes}}.
 #'
-#' @seealso \code{\link{olympic_athletes_1960}} for the same data a generation
-#'   earlier (Rome 1960), useful for comparing athlete physiques over time.
+#' @seealso For the same data a generation earlier (Rome 1960), filter the full
+#'   data: \code{olympic_athletes |> filter(year == 1960, season == "Summer")}.
 #'
 #' @examples
 #' data(olympic_athletes_2024)
 #' head(olympic_athletes_2024)
 "olympic_athletes_2024"
-
-
-#' Olympic athlete-event participations at the Rome 1960 Summer Games
-#'
-#' The subset of \code{\link{olympic_athletes}} from the Rome 1960 Summer Games
-#' (\code{year == 1960 & season == "Summer"}). Paired with
-#' \code{\link{olympic_athletes_2024}}, it supports generational comparisons of
-#' athlete physiques across roughly a human lifetime. Unlike the most recent
-#' Games, the 1960 Games have near-complete height/weight coverage (~94\% of
-#' rows), so it is well suited to body-size comparisons. Columns are identical
-#' to \code{olympic_athletes}.
-#'
-#' @format A data frame with 8,119 rows and 16 variables; see
-#'   \code{\link{olympic_athletes}} for the full column descriptions.
-#'
-#' @source See \code{\link{olympic_athletes}}.
-#'
-#' @seealso \code{\link{olympic_athletes_2024}} for the same Games a generation
-#'   later (Paris 2024).
-#'
-#' @examples
-#' data(olympic_athletes_1960)
-#' head(olympic_athletes_1960)
-"olympic_athletes_1960"
 
 
 #' Top-10 countries by medals at the Paris 2024 Summer Olympics

@@ -29,7 +29,7 @@ data(olympic_athletes_2024)
 head(olympic_athletes_2024)
 }
 \seealso{
-\code{\link{olympic_athletes_1960}} for the same data a generation
-  earlier (Rome 1960), useful for comparing athlete physiques over time.
+For the same data a generation earlier (Rome 1960), filter the full
+  data: \code{olympic_athletes |> filter(year == 1960, season == "Summer")}.
 }
 \keyword{datasets}

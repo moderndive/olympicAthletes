@@ -1,7 +1,7 @@
 Package: olympicAthletes
 Type: Package
 Title: Olympic Athlete Event Data, Athens 1896 to Milano-Cortina 2026
-Version: 0.5.5
+Version: 0.5.6
 Authors@R:
     person("Chester", "Ismay",
            email = "chester.ismay@gmail.com",
