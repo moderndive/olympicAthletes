@@ -58,3 +58,10 @@ filter().
   : Olympic athlete-event participations at the Paris 2024 Summer Games
 - [`olympic_athletes_1960`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_1960.md)
   : Olympic athlete-event participations at the Rome 1960 Summer Games
+- [`usa_summer_medals`](https://moderndive.github.io/olympicAthletes/reference/usa_summer_medals.md)
+  : USA Summer Olympics medal-table rows, 1896-2024
+- [`art_competitions_athletes`](https://moderndive.github.io/olympicAthletes/reference/art_competitions_athletes.md)
+  : Olympic Art Competitions entries, 1912-1948
+- [`team_sport_athletes`](https://moderndive.github.io/olympicAthletes/reference/team_sport_athletes.md)
+  : Olympic team-sport athlete-event participations (Basketball,
+  Volleyball, Curling)

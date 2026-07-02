@@ -1,5 +1,16 @@
 # Changelog
 
+## olympicAthletes 0.5.5
+
+- Add three exercise-support subsets so ModernDive Chapter 2 exercises
+  (which predate dplyr) never need base-R subsetting workarounds:
+  `usa_summer_medals` (30 rows — one per Summer Games the USA attended;
+  note the boycotted 1980 Games have no row),
+  `art_competitions_athletes` (3,578 rows — the 1912-1948 Art
+  Competitions entrants), and `team_sport_athletes` (10,912 rows —
+  Basketball, Volleyball, and Curling combined, for cross-group
+  distribution comparisons).
+
 ## olympicAthletes 0.5.4
 
 - Renamed `recent_olympic_athletes` to `olympic_athletes_2000_2026` for
