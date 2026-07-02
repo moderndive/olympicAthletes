@@ -1,0 +1,46 @@
+# CRAN size gate: fail if the built source tarball exceeds 5 MB.
+#
+# CRAN's Repository Policy asks that source packages stay at or under 5 MB;
+# this data package lives close to that line, so every push/PR builds the
+# tarball and fails loudly if a data addition tips it over. The job also
+# prints a per-file breakdown of data/ so it's obvious what to shrink.
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+name: pkg-size
+
+jobs:
+  pkg-size:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Build source tarball
+        run: R CMD build . --no-manual --no-build-vignettes
+
+      - name: Check tarball size against the 5 MB CRAN guideline
+        run: |
+          TARBALL=$(ls -1 *.tar.gz | head -1)
+          SIZE=$(stat -c%s "$TARBALL")
+          LIMIT=$((5 * 1024 * 1024))
+          echo "Tarball: $TARBALL"
+          echo "Size:    $SIZE bytes ($(echo "scale=2; $SIZE/1048576" | bc) MB)"
+          echo "Limit:   $LIMIT bytes (5.00 MB)"
+          echo
+          echo "data/ breakdown (largest first):"
+          ls -S data/*.rda | while read f; do
+            printf "  %8s  %s\n" "$(du -h "$f" | cut -f1)" "$f"
+          done
+          if [ "$SIZE" -gt "$LIMIT" ]; then
+            echo
+            echo "::error::Built package is $(echo "scale=2; $SIZE/1048576" | bc) MB — over CRAN's 5 MB source-package guideline."
+            exit 1
+          fi
+          echo
+          echo "OK: under the 5 MB guideline."

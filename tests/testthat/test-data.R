@@ -41,3 +41,21 @@ test_that("editions covers every Olympic edition from 1896 to 2026", {
   expect_true(inherits(editions$opening_ceremony, "Date"))
   expect_true(inherits(editions$closing_ceremony, "Date"))
 })
+
+test_that("exercise-support subsets match their parent-data derivations", {
+  data(usa_summer_medals); data(medal_table)
+  expect_identical(colnames(usa_summer_medals), colnames(medal_table))
+  expect_equal(nrow(usa_summer_medals), 30L)
+  expect_true(all(usa_summer_medals$noc == "USA" & usa_summer_medals$season == "Summer"))
+  expect_false(1980 %in% usa_summer_medals$year)  # Moscow boycott: no row at all
+
+  data(art_competitions_athletes); data(olympic_athletes)
+  expect_identical(colnames(art_competitions_athletes), colnames(olympic_athletes))
+  expect_true(all(art_competitions_athletes$sport == "Art Competitions"))
+  expect_equal(range(art_competitions_athletes$year), c(1912L, 1948L))
+
+  data(team_sport_athletes)
+  expect_identical(colnames(team_sport_athletes), colnames(olympic_athletes))
+  expect_setequal(unique(team_sport_athletes$sport),
+                  c("Basketball", "Volleyball", "Curling"))
+})

@@ -213,3 +213,13 @@ paris_2024_top_medals <- medal_table |>
   dplyr::mutate(medal = factor(medal, levels = c("Gold", "Silver", "Bronze"))) |>
   as.data.frame()
 save(paris_2024_top_medals, file = out("paris_2024_top_medals.rda"), compress = "xz")
+
+# Exercise-support subsets added in 0.5.5 so Chapter 2 exercises (which
+# predate dplyr) never need base-R subsetting workarounds like `[` or subset().
+message("Building exercise-support subsets ...")
+usa_summer_medals <- medal_table[medal_table$noc == "USA" & medal_table$season == "Summer", ]
+art_competitions_athletes <- olympic_athletes[olympic_athletes$sport == "Art Competitions", ]
+team_sport_athletes <- olympic_athletes[olympic_athletes$sport %in% c("Basketball", "Volleyball", "Curling"), ]
+save(usa_summer_medals,         file = out("usa_summer_medals.rda"),         compress = "xz")
+save(art_competitions_athletes, file = out("art_competitions_athletes.rda"), compress = "xz")
+save(team_sport_athletes,       file = out("team_sport_athletes.rda"),       compress = "xz")

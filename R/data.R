@@ -326,3 +326,61 @@
 #' data(paris_2024_top_medals)
 #' head(paris_2024_top_medals)
 "paris_2024_top_medals"
+
+
+#' USA Summer Olympics medal-table rows, 1896-2024
+#'
+#' The subset of \code{\link{medal_table}} with \code{noc == "USA"} and
+#' \code{season == "Summer"}: one row per Summer Games the USA attended.
+#' A convenience dataset for time-series plots of one nation's medal haul
+#' without first filtering. Columns are identical to \code{medal_table}.
+#' Note the USA-boycotted 1980 Moscow Games have no row at all.
+#'
+#' @format A data frame with 30 rows and 11 variables; see
+#'   \code{\link{medal_table}} for the full column descriptions.
+#'
+#' @source See \code{\link{medal_table}}.
+#'
+#' @examples
+#' data(usa_summer_medals)
+#' head(usa_summer_medals)
+"usa_summer_medals"
+
+
+#' Olympic Art Competitions entries, 1912-1948
+#'
+#' The subset of \code{\link{olympic_athletes}} with
+#' \code{sport == "Art Competitions"}: the painters, sculptors, writers,
+#' musicians, and architects who won Olympic medals when the arts were medal
+#' events. A convenience dataset for exploring how these entrants differ from
+#' athletic competitors (notably in \code{age}). Columns are identical to
+#' \code{olympic_athletes}.
+#'
+#' @format A data frame with 3,578 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(art_competitions_athletes)
+#' head(art_competitions_athletes)
+"art_competitions_athletes"
+
+
+#' Olympic team-sport athlete-event participations (Basketball, Volleyball, Curling)
+#'
+#' The subset of \code{\link{olympic_athletes}} with \code{sport} in
+#' Basketball, Volleyball, or Curling: three team sports with contrasting
+#' physiques, handy for comparing distributions across groups (boxplots,
+#' violins, facets) without first filtering. Columns are identical to
+#' \code{olympic_athletes}.
+#'
+#' @format A data frame with 10,912 rows and 16 variables; see
+#'   \code{\link{olympic_athletes}} for the full column descriptions.
+#'
+#' @source See \code{\link{olympic_athletes}}.
+#'
+#' @examples
+#' data(team_sport_athletes)
+#' head(team_sport_athletes)
+"team_sport_athletes"
