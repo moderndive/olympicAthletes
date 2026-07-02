@@ -342,3 +342,26 @@
 #' data(team_sport_athletes)
 #' head(team_sport_athletes)
 "team_sport_athletes"
+
+
+#' Athlete-event rows per Olympic season, pre-counted
+#'
+#' A tiny pre-counted table: one row per Olympic season (Summer/Winter) with
+#' the number of athlete-event rows in \code{\link{olympic_athletes}} for that
+#' season. Added so plotting exercises can contrast \code{geom_bar()} (counts
+#' raw rows for you) with \code{geom_col()} (plots pre-counted values) without
+#' introducing base R counting code.
+#'
+#' @format A data frame with 2 rows and 2 variables:
+#' \describe{
+#'   \item{season}{Factor. \code{"Summer"} or \code{"Winter"}.}
+#'   \item{n}{Integer. Number of athlete-event rows in
+#'     \code{\link{olympic_athletes}} for that season.}
+#' }
+#'
+#' @source Derived from \code{\link{olympic_athletes}} (one count per season).
+#'
+#' @examples
+#' data(season_counts)
+#' season_counts
+"season_counts"

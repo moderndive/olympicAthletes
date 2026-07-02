@@ -219,3 +219,10 @@ team_sport_athletes <- olympic_athletes[olympic_athletes$sport %in% c("Basketbal
 save(usa_summer_medals,         file = out("usa_summer_medals.rda"),         compress = "xz")
 save(art_competitions_athletes, file = out("art_competitions_athletes.rda"), compress = "xz")
 save(team_sport_athletes,       file = out("team_sport_athletes.rda"),       compress = "xz")
+
+# Pre-counted athlete-rows per season (added in 0.5.7 for the Ch2
+# geom_bar()-vs-geom_col() exercise, so the exercise can start from a
+# package dataset instead of introducing base R's table()).
+season_counts <- as.data.frame(table(olympic_athletes$season))
+names(season_counts) <- c("season", "n")
+save(season_counts, file = out("season_counts.rda"), compress = "xz")
