@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">olympicAthletes</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.5.5</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.5.6</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +42,13 @@
       <small>Source: <a href="https://github.com/moderndive/olympicAthletes/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="0.5.6" id="olympicathletes-056">olympicAthletes 0.5.6<a class="anchor" aria-label="anchor" href="#olympicathletes-056"></a></h2>
+<ul><li>
+<strong>Removed <code>olympic_athletes_2000_2026</code></strong> (1.4 MB — the second-largest file in the package) to bring the built package back under CRAN’s 5 MB source-package guideline. It was a pure subset of <code>olympic_athletes</code> (<code>year &gt;= 2000</code>); recreate it any time with <code>olympic_athletes |&gt; filter(year &gt;= 2000)</code>. The ModernDive exercises that used it now use <code>team_sport_athletes</code>, <code>athletics_athletes</code>, or an explicit <code><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter()</a></code>.</li>
+<li>
+<strong>Removed <code>olympic_athletes_1960</code></strong> (referenced nowhere in the book, exercises, or teaching materials); recreate with <code>olympic_athletes |&gt; filter(year == 1960, season == "Summer")</code>.</li>
+</ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.5.5" id="olympicathletes-055">olympicAthletes 0.5.5<a class="anchor" aria-label="anchor" href="#olympicathletes-055"></a></h2>
 <ul><li>Add three exercise-support subsets so ModernDive Chapter 2 exercises (which predate dplyr) never need base-R subsetting workarounds: <code>usa_summer_medals</code> (30 rows — one per Summer Games the USA attended; note the boycotted 1980 Games have no row), <code>art_competitions_athletes</code> (3,578 rows — the 1912-1948 Art Competitions entrants), and <code>team_sport_athletes</code> (10,912 rows — Basketball, Volleyball, and Curling combined, for cross-group distribution comparisons).</li>

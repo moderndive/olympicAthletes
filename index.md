@@ -27,9 +27,10 @@ data(editions)           # metadata for every Games, 1896-2026
 data(athletics_athletes)       # sport == "Athletics"
 data(gymnastics_athletes)      # sport == "Gymnastics"
 data(basketball_athletes)      # sport == "Basketball"
-data(olympic_athletes_2000_2026)  # year >= 2000
 data(olympic_athletes_2024)    # Paris 2024 Summer Games only
-data(olympic_athletes_1960)    # Rome 1960 Summer Games only
+data(team_sport_athletes)      # Basketball + Volleyball + Curling
+data(art_competitions_athletes)  # the 1912-1948 Art Competitions entrants
+data(usa_summer_medals)        # medal_table rows: USA at each Summer Games
 
 # Tidy medal summary for barplot teaching examples (long format)
 data(paris_2024_top_medals)    # top-10 countries x Gold/Silver/Bronze
@@ -45,9 +46,10 @@ data(paris_2024_top_medals)    # top-10 countries x Gold/Silver/Bronze
 | `athletics_athletes` | 43,062 | Subset of `olympic_athletes` where `sport == "Athletics"`. |
 | `gymnastics_athletes` | 29,413 | Subset where `sport == "Gymnastics"`. |
 | `basketball_athletes` | 5,159 | Subset where `sport == "Basketball"`. |
-| `olympic_athletes_2000_2026` | 129,236 | Subset where `year >= 2000` (Sydney 2000 onward). |
 | `olympic_athletes_2024` | 13,660 | Subset where `year == 2024 & season == "Summer"` (Paris 2024). |
-| `olympic_athletes_1960` | 8,119 | Subset where `year == 1960 & season == "Summer"` (Rome 1960). |
+| `team_sport_athletes` | 10,912 | Subset where `sport` is Basketball, Volleyball, or Curling. |
+| `art_competitions_athletes` | 3,578 | Subset where `sport == "Art Competitions"` (1912–1948). |
+| `usa_summer_medals` | 30 | `medal_table` rows for the USA at each Summer Games attended. |
 | `paris_2024_top_medals` | 30 | Top-10 countries by total medals at Paris 2024, long format (`country`, `noc`, `medal`, `count`). For barplot examples. |
 
 `olympic_athletes` extends the original

@@ -30,9 +30,8 @@ See
 
 ## See also
 
-[`olympic_athletes_1960`](https://moderndive.github.io/olympicAthletes/reference/olympic_athletes_1960.md)
-for the same data a generation earlier (Rome 1960), useful for comparing
-athlete physiques over time.
+For the same data a generation earlier (Rome 1960), filter the full
+data: `olympic_athletes |> filter(year == 1960, season == "Summer")`.
 
 ## Examples
 

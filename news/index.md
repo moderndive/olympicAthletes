@@ -1,5 +1,19 @@
 # Changelog
 
+## olympicAthletes 0.5.6
+
+- **Removed `olympic_athletes_2000_2026`** (1.4 MB — the second-largest
+  file in the package) to bring the built package back under CRAN’s 5 MB
+  source-package guideline. It was a pure subset of `olympic_athletes`
+  (`year >= 2000`); recreate it any time with
+  `olympic_athletes |> filter(year >= 2000)`. The ModernDive exercises
+  that used it now use `team_sport_athletes`, `athletics_athletes`, or
+  an explicit
+  [`filter()`](https://dplyr.tidyverse.org/reference/filter.html).
+- **Removed `olympic_athletes_1960`** (referenced nowhere in the book,
+  exercises, or teaching materials); recreate with
+  `olympic_athletes |> filter(year == 1960, season == "Summer")`.
+
 ## olympicAthletes 0.5.5
 
 - Add three exercise-support subsets so ModernDive Chapter 2 exercises
