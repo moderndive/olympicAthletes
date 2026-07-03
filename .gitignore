@@ -5,5 +5,6 @@
 .positai
 docs
 inst/doc
-.DS_StoreolympicAthletes.Rcheck/
+.DS_Store
+olympicAthletes.Rcheck/
 *.tar.gz
