@@ -61,3 +61,5 @@ filter().
 - [`team_sport_athletes`](https://moderndive.github.io/olympicAthletes/reference/team_sport_athletes.md)
   : Olympic team-sport athlete-event participations (Basketball,
   Volleyball, Curling)
+- [`season_counts`](https://moderndive.github.io/olympicAthletes/reference/season_counts.md)
+  : Athlete-event rows per Olympic season, pre-counted
