@@ -1,7 +1,7 @@
 Package: olympicAthletes
 Type: Package
 Title: Olympic Athlete Event Data, Athens 1896 to Milano-Cortina 2026
-Version: 0.5.7
+Version: 0.5.8
 Authors@R:
     person("Chester", "Ismay",
            email = "chester.ismay@gmail.com",
@@ -9,11 +9,13 @@ Authors@R:
 Description: A tidy, long-format dataset of every athlete-event participation
     in the modern Olympic Games, spanning Athens 1896 through Milano-Cortina
     2026 (about 315,000 rows). Extends the rgriff23 'Olympic_history' dataset
-    (1896-2016) with five additional editions scraped from olympedia.org:
+    (1896-2016) with five additional editions scraped from Olympedia
+    (<https://www.olympedia.org>):
     PyeongChang 2018, Tokyo 2020, Beijing 2022, Paris 2024, and
     Milano-Cortina 2026. Companion datasets cover edition-level metadata
     and verified medal tables for every edition from 1896 to 2026.
 License: CC BY 4.0 + file LICENSE
+Language: en-US
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: xz

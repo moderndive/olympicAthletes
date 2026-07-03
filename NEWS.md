@@ -1,3 +1,23 @@
+# olympicAthletes 0.5.8
+
+- **CRAN preparation.** No data changes — every dataset is retained. Brought the
+  source tarball back under CRAN's 5 MB limit (5.13 MB -> 4.80 MB) by resizing
+  the oversized `man/figures/logo.png` (885x1024, 512 KB -> 480 px, 184 KB); the
+  full-resolution master is kept at the repo-root `hex.png`.
+- Added `Language: en-US` and an `inst/WORDLIST` so `spelling::spell_check_package()`
+  runs clean (the flagged words were all proper nouns and British spellings, not
+  typos).
+- Wrapped the Olympedia URL in `DESCRIPTION` with angle brackets and added a
+  `cran-comments.md` for submission.
+- `R CMD check --as-cran` now reports 0 errors, 0 warnings, and only the routine
+  new-submission / CC-BY-license NOTE.
+
+# olympicAthletes 0.5.7
+
+- Add `season_counts` (2 rows): athlete-event row counts per Olympic season,
+  pre-counted so plotting exercises can contrast `geom_bar()` (counts raw rows)
+  with `geom_col()` (plots pre-counted values) without base-R counting code.
+
 # olympicAthletes 0.5.6
 
 - **Removed `olympic_athletes_2000_2026`** (1.4 MB — the second-largest file in
