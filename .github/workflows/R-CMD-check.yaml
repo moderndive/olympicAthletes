@@ -1,5 +1,7 @@
 # Workflow derived from https://github.com/r-lib/actions/tree/v2/examples
 # Runs R CMD check across Windows, macOS, and Linux (incl. R-devel and oldrel).
+# The Windows R-devel job mirrors what win-builder-devel exercises, so CRAN's
+# Windows/R-devel platform is covered here without a win-builder submission.
 # Action versions match pkgdown.yaml so the node-guard workflow stays green.
 on:
   push:
@@ -22,6 +24,7 @@ jobs:
       matrix:
         config:
           - {os: windows-latest, r: 'release'}
+          - {os: windows-latest, r: 'devel',   http-user-agent: 'release'}
           - {os: macos-latest,   r: 'release'}
           - {os: ubuntu-latest,  r: 'devel', http-user-agent: 'release'}
           - {os: ubuntu-latest,  r: 'release'}
