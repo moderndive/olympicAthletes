@@ -1,5 +1,14 @@
 # olympicAthletes 0.5.9
 
+- Replace the `\dontrun{}` block in the `olympic_athletes` example with
+  `@examplesIf`, so the dplyr/tidyr example runs whenever those Suggests
+  packages are installed (per CRAN policy on runnable examples).
+- `citation("olympicAthletes")` now returns all three entries the README
+  promises: the package plus its two upstream data sources (the rgriff23
+  'Olympic_history' dataset and Olympedia).
+- Refresh the README and vignette dataset listings to cover all 14 shipped
+  datasets (`volleyball_athletes`, `curling_athletes`, and `season_counts`
+  were missing).
 - Fix the PDF manual build on CRAN's win-builder (R-devel): the `editions` and
   `olympic_athletes` docs cited native-script host-city names (Cyrillic, CJK,
   and Hangul examples such as the native forms of Moskva, Tokyo, Beijing, and

@@ -59,15 +59,14 @@
 #' head(olympic_athletes)
 #' table(olympic_athletes$year, olympic_athletes$season)
 #'
-#' \dontrun{
-#'   # Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)
-#'   library(dplyr)
-#'   olympic_athletes |>
-#'     filter(year == 2024, !is.na(medal)) |>
-#'     count(noc, medal) |>
-#'     tidyr::pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
-#'     arrange(desc(Gold + Silver + Bronze))
-#' }
+#' @examplesIf requireNamespace("dplyr", quietly = TRUE) && requireNamespace("tidyr", quietly = TRUE)
+#' # Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)
+#' library(dplyr)
+#' olympic_athletes |>
+#'   filter(year == 2024, !is.na(medal)) |>
+#'   count(noc, medal) |>
+#'   tidyr::pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
+#'   arrange(desc(Gold + Silver + Bronze))
 "olympic_athletes"
 
 

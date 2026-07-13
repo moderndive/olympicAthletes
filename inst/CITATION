@@ -1,4 +1,4 @@
-citHeader("To cite the olympicAthletes package in publications, use:")
+citHeader("To cite the olympicAthletes package in publications, please cite the package and its two upstream data sources:")
 
 bibentry(
   bibtype = "Manual",
@@ -7,4 +7,20 @@ bibentry(
   year    = "2026",
   note    = paste("R package version", meta$Version),
   url     = "https://moderndive.github.io/olympicAthletes/"
+)
+
+bibentry(
+  bibtype = "Misc",
+  title   = "Olympic history: longitudinal data scraped from sports-reference.com",
+  author  = person("Randi", "Griffin"),
+  year    = "2018",
+  url     = "https://github.com/rgriff23/Olympic_history"
+)
+
+bibentry(
+  bibtype = "Misc",
+  title   = "Olympedia",
+  author  = person("OlyMADMen"),
+  year    = "2026",
+  url     = "https://www.olympedia.org/"
 )
