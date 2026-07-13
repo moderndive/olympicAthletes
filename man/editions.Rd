@@ -12,13 +12,12 @@ A data frame with 62 rows and 15 variables:
   \item{year}{Integer.}
   \item{season}{Character. \code{"Summer"} or \code{"Winter"}.}
   \item{city_local_latin}{Character. Host city in the local-language
-    form rendered in the Latin alphabet — i.e. native Latin-script
+    form rendered in the Latin alphabet, i.e. native Latin-script
     names retain their diacritics (\code{"Athína"}, \code{"München"},
     \code{"Montréal"}, \code{"Ciudad de México"}), and non-Latin-script
     names use a standard romanization rather than the city's native
-    script (\code{"Moskva"} not \code{"Москва"}, \code{"Tokyo"} not
-    \code{"東京"}, \code{"Beijing"} not \code{"北京"},
-    \code{"PyeongChang"} not \code{"평창"}). The column is therefore
+    script (\code{"Moskva"}, \code{"Tokyo"}, \code{"Beijing"},
+    \code{"PyeongChang"}). The column is therefore
     \emph{always} ASCII-or-Latin-1 and never contains the city's
     native non-Latin alphabet.}
   \item{city_english}{Character. Common English name of the host city

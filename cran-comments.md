@@ -23,6 +23,9 @@ datasets are teaching subsets used by the exercises in the associated
 ## Test environments
 
 * local macOS, R 4.5.3
+* win-builder, R-devel
+* GitHub Actions: windows-latest (release), macOS-latest (release),
+  ubuntu-latest (devel, release, oldrel-1)
 
 ## Downstream dependencies
 
