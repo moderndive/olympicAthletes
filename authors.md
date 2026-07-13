@@ -21,3 +21,22 @@ Ismay C (2026). *olympicAthletes: Olympic Athlete Event Data, Athens
       note = {R package version 0.5.9},
       url = {https://moderndive.github.io/olympicAthletes/},
     }
+
+Griffin R (2018). “Olympic history: longitudinal data scraped from
+sports-reference.com.” <https://github.com/rgriff23/Olympic_history>.
+
+    @Misc{,
+      title = {Olympic history: longitudinal data scraped from sports-reference.com},
+      author = {Randi Griffin},
+      year = {2018},
+      url = {https://github.com/rgriff23/Olympic_history},
+    }
+
+OlyMADMen (2026). “Olympedia.” <https://www.olympedia.org/>.
+
+    @Misc{,
+      title = {Olympedia},
+      author = {{OlyMADMen}},
+      year = {2026},
+      url = {https://www.olympedia.org/},
+    }

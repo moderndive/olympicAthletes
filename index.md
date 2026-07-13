@@ -27,13 +27,16 @@ data(editions)           # metadata for every Games, 1896-2026
 data(athletics_athletes)       # sport == "Athletics"
 data(gymnastics_athletes)      # sport == "Gymnastics"
 data(basketball_athletes)      # sport == "Basketball"
+data(volleyball_athletes)      # sport == "Volleyball"
+data(curling_athletes)         # sport == "Curling"
 data(olympic_athletes_2024)    # Paris 2024 Summer Games only
 data(team_sport_athletes)      # Basketball + Volleyball + Curling
 data(art_competitions_athletes)  # the 1912-1948 Art Competitions entrants
 data(usa_summer_medals)        # medal_table rows: USA at each Summer Games
 
-# Tidy medal summary for barplot teaching examples (long format)
-data(paris_2024_top_medals)    # top-10 countries x Gold/Silver/Bronze
+# Pre-counted summaries for plotting examples
+data(paris_2024_top_medals)    # top-10 countries x Gold/Silver/Bronze (long format)
+data(season_counts)            # athlete-event rows per season (2 rows)
 
 ?olympic_athletes
 ```
@@ -46,11 +49,14 @@ data(paris_2024_top_medals)    # top-10 countries x Gold/Silver/Bronze
 | `athletics_athletes` | 43,062 | Subset of `olympic_athletes` where `sport == "Athletics"`. |
 | `gymnastics_athletes` | 29,413 | Subset where `sport == "Gymnastics"`. |
 | `basketball_athletes` | 5,159 | Subset where `sport == "Basketball"`. |
+| `volleyball_athletes` | 4,792 | Subset where `sport == "Volleyball"`. |
+| `curling_athletes` | 961 | Subset where `sport == "Curling"`. |
 | `olympic_athletes_2024` | 13,660 | Subset where `year == 2024 & season == "Summer"` (Paris 2024). |
 | `team_sport_athletes` | 10,912 | Subset where `sport` is Basketball, Volleyball, or Curling. |
 | `art_competitions_athletes` | 3,578 | Subset where `sport == "Art Competitions"` (1912–1948). |
 | `usa_summer_medals` | 30 | `medal_table` rows for the USA at each Summer Games attended. |
 | `paris_2024_top_medals` | 30 | Top-10 countries by total medals at Paris 2024, long format (`country`, `noc`, `medal`, `count`). For barplot examples. |
+| `season_counts` | 2 | Athlete-event rows per season (Summer/Winter), pre-counted for `geom_col()` examples. |
 
 `olympic_athletes` extends the original
 [rgriff23/Olympic_history](https://github.com/rgriff23/Olympic_history)
@@ -90,13 +96,15 @@ CC BY 4.0. Please cite this package, the rgriff23 source, and Olympedia.
 
 ## Citation
 
-Run `citation("olympicAthletes")` for a citation that always reflects
-your installed package version. It currently renders as:
+Run `citation("olympicAthletes")` for citations that always reflect your
+installed package version. It renders three entries — the package itself
+plus its two upstream data sources:
 
-    Ismay, C. (2026). olympicAthletes: Olympic Athlete Event Data,
-    Athens 1896 to Milano-Cortina 2026. R package version 0.5.1.
+    Ismay C (2026). olympicAthletes: Olympic Athlete Event Data, Athens
+    1896 to Milano-Cortina 2026. R package version 0.5.9,
+    <https://moderndive.github.io/olympicAthletes/>.
 
-    Griffin, R. (2018). Olympic history: longitudinal data scraped from
-    www.sports-reference.com. https://github.com/rgriff23/Olympic_history
+    Griffin R (2018). "Olympic history: longitudinal data scraped from
+    sports-reference.com." <https://github.com/rgriff23/Olympic_history>.
 
-    OlyMADMen. Olympedia. https://www.olympedia.org/
+    OlyMADMen (2026). "Olympedia." <https://www.olympedia.org/>.

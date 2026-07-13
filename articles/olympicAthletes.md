@@ -1,15 +1,18 @@
 # Getting started with olympicAthletes
 
-`olympicAthletes` ships three datasets covering every modern Olympic
-Games from **Athens 1896** through **Milano-Cortina 2026**. This
-vignette walks through each one and shows a few representative analyses.
+`olympicAthletes` covers every modern Olympic Games from **Athens 1896**
+through **Milano-Cortina 2026**. Three core datasets carry all the
+information; the rest of the package is convenience subsets of them
+(single sports, single Games, pre-counted summaries) built for teaching
+examples. This vignette walks through the three core datasets and shows
+a few representative analyses.
 
 ``` r
 
 library(olympicAthletes)
 ```
 
-## The three datasets at a glance
+## The three core datasets at a glance
 
 | Dataset            |    Rows | One row per…                            |
 |--------------------|--------:|-----------------------------------------|
@@ -19,7 +22,11 @@ library(olympicAthletes)
 
 `olympic_athletes` is the headline long-format table. `medal_table` and
 `editions` are companion tables that make per-team-event medal counting
-and edition-level lookups easy without re-aggregating 300k+ rows.
+and edition-level lookups easy without re-aggregating 300k+ rows. The
+convenience subsets (e.g. `athletics_athletes`, `olympic_athletes_2024`,
+`usa_summer_medals`) are documented in
+[`help(package = "olympicAthletes")`](https://moderndive.github.io/olympicAthletes/reference)
+and keep the same columns as their parent dataset.
 
 ## `olympic_athletes`: athlete-event participations
 

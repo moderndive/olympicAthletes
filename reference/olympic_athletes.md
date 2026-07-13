@@ -172,13 +172,33 @@ table(olympic_athletes$year, olympic_athletes$season)
 #>   2024  13660      0
 #>   2026      0   5415
 
-if (FALSE) { # \dontrun{
-  # Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)
-  library(dplyr)
-  olympic_athletes |>
-    filter(year == 2024, !is.na(medal)) |>
-    count(noc, medal) |>
-    tidyr::pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
-    arrange(desc(Gold + Silver + Bronze))
-} # }
+# Top medal-winning NOCs at Paris 2024 (one row per athlete-medal)
+library(dplyr)
+#> 
+#> Attaching package: ‘dplyr’
+#> The following objects are masked from ‘package:stats’:
+#> 
+#>     filter, lag
+#> The following objects are masked from ‘package:base’:
+#> 
+#>     intersect, setdiff, setequal, union
+olympic_athletes |>
+  filter(year == 2024, !is.na(medal)) |>
+  count(noc, medal) |>
+  tidyr::pivot_wider(names_from = medal, values_from = n, values_fill = 0) |>
+  arrange(desc(Gold + Silver + Bronze))
+#> # A tibble: 92 × 4
+#>    noc   Bronze  Gold Silver
+#>    <chr>  <int> <int>  <int>
+#>  1 USA       73    76     46
+#>  2 FRA       16    40     85
+#>  3 CHN       20    24     38
+#>  4 GER       25     7     44
+#>  5 NED       23    43      3
+#>  6 AUS       22    14     29
+#>  7 ESP       20    38      3
+#>  8 BRA       21     2     29
+#>  9 DEN       19    18      1
+#> 10 ITA       12    20      6
+#> # ℹ 82 more rows
 ```

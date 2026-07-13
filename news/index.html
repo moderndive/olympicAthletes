@@ -44,7 +44,11 @@
 
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.5.9" id="olympicathletes-059">olympicAthletes 0.5.9<a class="anchor" aria-label="anchor" href="#olympicathletes-059"></a></h2>
-<ul><li>Fix the PDF manual build on CRAN’s win-builder (R-devel): the <code>editions</code> and <code>olympic_athletes</code> docs cited native-script host-city names (Cyrillic, CJK, and Hangul examples such as the native forms of Moskva, Tokyo, Beijing, and PyeongChang) that pdflatex cannot typeset. The docs now list only the romanized forms; Latin-1 diacritics (e.g. “Athína”, “München”) are retained.</li>
+<ul><li>Replace the <code>\dontrun{}</code> block in the <code>olympic_athletes</code> example with <code>@examplesIf</code>, so the dplyr/tidyr example runs whenever those Suggests packages are installed (per CRAN policy on runnable examples).</li>
+<li>
+<code>citation("olympicAthletes")</code> now returns all three entries the README promises: the package plus its two upstream data sources (the rgriff23 ‘Olympic_history’ dataset and Olympedia).</li>
+<li>Refresh the README and vignette dataset listings to cover all 14 shipped datasets (<code>volleyball_athletes</code>, <code>curling_athletes</code>, and <code>season_counts</code> were missing).</li>
+<li>Fix the PDF manual build on CRAN’s win-builder (R-devel): the <code>editions</code> and <code>olympic_athletes</code> docs cited native-script host-city names (Cyrillic, CJK, and Hangul examples such as the native forms of Moskva, Tokyo, Beijing, and PyeongChang) that pdflatex cannot typeset. The docs now list only the romanized forms; Latin-1 diacritics (e.g. “Athína”, “München”) are retained.</li>
 </ul></div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.5.8" id="olympicathletes-058">olympicAthletes 0.5.8<a class="anchor" aria-label="anchor" href="#olympicathletes-058"></a></h2>

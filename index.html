@@ -109,13 +109,16 @@
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">athletics_athletes</span><span class="op">)</span>       <span class="co"># sport == "Athletics"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">gymnastics_athletes</span><span class="op">)</span>      <span class="co"># sport == "Gymnastics"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">basketball_athletes</span><span class="op">)</span>      <span class="co"># sport == "Basketball"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">volleyball_athletes</span><span class="op">)</span>      <span class="co"># sport == "Volleyball"</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">curling_athletes</span><span class="op">)</span>         <span class="co"># sport == "Curling"</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">olympic_athletes_2024</span><span class="op">)</span>    <span class="co"># Paris 2024 Summer Games only</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">team_sport_athletes</span><span class="op">)</span>      <span class="co"># Basketball + Volleyball + Curling</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">art_competitions_athletes</span><span class="op">)</span>  <span class="co"># the 1912-1948 Art Competitions entrants</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">usa_summer_medals</span><span class="op">)</span>        <span class="co"># medal_table rows: USA at each Summer Games</span></span>
 <span></span>
-<span><span class="co"># Tidy medal summary for barplot teaching examples (long format)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">paris_2024_top_medals</span><span class="op">)</span>    <span class="co"># top-10 countries x Gold/Silver/Bronze</span></span>
+<span><span class="co"># Pre-counted summaries for plotting examples</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">paris_2024_top_medals</span><span class="op">)</span>    <span class="co"># top-10 countries x Gold/Silver/Bronze (long format)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">season_counts</span><span class="op">)</span>            <span class="co"># athlete-event rows per season (2 rows)</span></span>
 <span></span>
 <span><span class="op">?</span><span class="va">olympic_athletes</span></span></code></pre></div>
 <table class="table">
@@ -161,6 +164,16 @@
 <td>Subset where <code>sport == "Basketball"</code>.</td>
 </tr>
 <tr>
+<td><code>volleyball_athletes</code></td>
+<td align="right">4,792</td>
+<td>Subset where <code>sport == "Volleyball"</code>.</td>
+</tr>
+<tr>
+<td><code>curling_athletes</code></td>
+<td align="right">961</td>
+<td>Subset where <code>sport == "Curling"</code>.</td>
+</tr>
+<tr>
 <td><code>olympic_athletes_2024</code></td>
 <td align="right">13,660</td>
 <td>Subset where <code>year == 2024 &amp; season == "Summer"</code> (Paris 2024).</td>
@@ -185,6 +198,11 @@
 <td><code>paris_2024_top_medals</code></td>
 <td align="right">30</td>
 <td>Top-10 countries by total medals at Paris 2024, long format (<code>country</code>, <code>noc</code>, <code>medal</code>, <code>count</code>). For barplot examples.</td>
+</tr>
+<tr>
+<td><code>season_counts</code></td>
+<td align="right">2</td>
+<td>Athlete-event rows per season (Summer/Winter), pre-counted for <code>geom_col()</code> examples.</td>
 </tr>
 </tbody>
 </table>
@@ -213,14 +231,15 @@
 <div class="section level2">
 <h2 id="citation">Citation<a class="anchor" aria-label="anchor" href="#citation"></a>
 </h2>
-<p>Run <code>citation("olympicAthletes")</code> for a citation that always reflects your installed package version. It currently renders as:</p>
-<pre><code>Ismay, C. (2026). olympicAthletes: Olympic Athlete Event Data,
-Athens 1896 to Milano-Cortina 2026. R package version 0.5.1.
+<p>Run <code>citation("olympicAthletes")</code> for citations that always reflect your installed package version. It renders three entries — the package itself plus its two upstream data sources:</p>
+<pre><code>Ismay C (2026). olympicAthletes: Olympic Athlete Event Data, Athens
+1896 to Milano-Cortina 2026. R package version 0.5.9,
+&lt;https://moderndive.github.io/olympicAthletes/&gt;.
 
-Griffin, R. (2018). Olympic history: longitudinal data scraped from
-www.sports-reference.com. https://github.com/rgriff23/Olympic_history
+Griffin R (2018). "Olympic history: longitudinal data scraped from
+sports-reference.com." &lt;https://github.com/rgriff23/Olympic_history&gt;.
 
-OlyMADMen. Olympedia. https://www.olympedia.org/</code></pre>
+OlyMADMen (2026). "Olympedia." &lt;https://www.olympedia.org/&gt;.</code></pre>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
