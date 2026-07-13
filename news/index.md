@@ -1,5 +1,14 @@
 # Changelog
 
+## olympicAthletes 0.5.9
+
+- Fix the PDF manual build on CRAN’s win-builder (R-devel): the
+  `editions` and `olympic_athletes` docs cited native-script host-city
+  names (Cyrillic, CJK, and Hangul examples such as the native forms of
+  Moskva, Tokyo, Beijing, and PyeongChang) that pdflatex cannot typeset.
+  The docs now list only the romanized forms; Latin-1 diacritics
+  (e.g. “Athína”, “München”) are retained.
+
 ## olympicAthletes 0.5.8
 
 - **CRAN preparation.** No data changes — every dataset is retained.

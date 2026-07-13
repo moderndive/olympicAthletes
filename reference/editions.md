@@ -33,13 +33,12 @@ A data frame with 62 rows and 15 variables:
 - city_local_latin:
 
   Character. Host city in the local-language form rendered in the Latin
-  alphabet — i.e. native Latin-script names retain their diacritics
+  alphabet, i.e. native Latin-script names retain their diacritics
   (`"Athína"`, `"München"`, `"Montréal"`, `"Ciudad de México"`), and
   non-Latin-script names use a standard romanization rather than the
-  city's native script (`"Moskva"` not `"Москва"`, `"Tokyo"` not
-  `"東京"`, `"Beijing"` not `"北京"`, `"PyeongChang"` not `"평창"`). The
-  column is therefore *always* ASCII-or-Latin-1 and never contains the
-  city's native non-Latin alphabet.
+  city's native script (`"Moskva"`, `"Tokyo"`, `"Beijing"`,
+  `"PyeongChang"`). The column is therefore *always* ASCII-or-Latin-1
+  and never contains the city's native non-Latin alphabet.
 
 - city_english:
 
