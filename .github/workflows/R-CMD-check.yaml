@@ -41,7 +41,10 @@ jobs:
       - uses: r-lib/actions/setup-tinytex@v2
 
       - name: Install LaTeX packages needed for the PDF manual
-        run: tlmgr install inconsolata
+        # inconsolata: R manual code font; courier/times/helvetic: psnfss
+        # base-35 fonts Rd.sty uses (\url renders in Courier — missing
+        # courier broke pdflatex with "Font T1/pcr ... not loadable").
+        run: tlmgr install inconsolata courier times helvetic
 
       - uses: r-lib/actions/setup-r@v2
         with:
