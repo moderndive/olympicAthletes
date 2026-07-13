@@ -12,6 +12,11 @@ Checked with `R CMD check --as-cran` on R 4.5.3.
   accompanying `LICENSE` file records the copyright holder and the two upstream
   data sources (the rgriff23 'Olympic_history' dataset and Olympedia).
 
+* The words flagged as possibly misspelled in DESCRIPTION (Cortina, Milano,
+  Olympedia, PyeongChang, rgriff) are proper nouns: Olympic host cities, the
+  Olympedia data source, and the GitHub username of the upstream dataset's
+  author.
+
 ## Package size
 
 The source tarball is ~4.8 MB, under CRAN's 5 MB guideline. The bulk is the
