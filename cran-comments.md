@@ -1,16 +1,21 @@
+## Resubmission
+
+This is a resubmission. In response to Konstanze Lauseker's review:
+
+* The `LICENSE` file has been removed and `DESCRIPTION` now declares
+  `License: CC BY 4.0` with no `+ file LICENSE` reference. The package adds no
+  restrictions beyond CC BY 4.0. The upstream data-source attribution that the
+  file carried (the rgriff23 'Olympic_history' dataset and Olympedia) is already
+  recorded in the README, in `citation("olympicAthletes")`, and in the `@source`
+  field of each dataset's help page.
+
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
 
-Checked with `R CMD check --as-cran` on R 4.5.3.
+Checked with `R CMD check --as-cran` on R 4.6.1.
 
 * This is a new submission.
-
-* The remaining NOTE reports the license as "CC BY 4.0 + file LICENSE". This is
-  intentional: `olympicAthletes` is a data package, and the data is released
-  under the Creative Commons Attribution 4.0 International License. The
-  accompanying `LICENSE` file records the copyright holder and the two upstream
-  data sources (the rgriff23 'Olympic_history' dataset and Olympedia).
 
 * The words flagged as possibly misspelled in DESCRIPTION (Cortina, Milano,
   Olympedia, PyeongChang, rgriff) are proper nouns: Olympic host cities, the
@@ -27,7 +32,7 @@ datasets are teaching subsets used by the exercises in the associated
 
 ## Test environments
 
-* local macOS, R 4.5.3
+* local macOS, R 4.6.1
 * win-builder, R-devel
 * GitHub Actions: windows-latest (release), macOS-latest (release),
   ubuntu-latest (devel, release, oldrel-1)

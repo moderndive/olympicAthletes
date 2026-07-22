@@ -1,3 +1,12 @@
+# olympicAthletes 0.5.10
+
+- CRAN resubmission: the license is now declared as plain `CC BY 4.0` and the
+  `LICENSE` file has been removed. The package adds no restrictions beyond
+  CC BY 4.0, so per CRAN the file is unnecessary. The upstream data-source
+  attribution it carried is already recorded in the README, in
+  `citation("olympicAthletes")`, and in the `@source` fields of each dataset's
+  help page.
+
 # olympicAthletes 0.5.9
 
 - Replace the `\dontrun{}` block in the `olympic_athletes` example with
