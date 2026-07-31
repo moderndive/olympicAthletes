@@ -6,17 +6,9 @@ about 315,000 rows.
 
 ## Installation
 
-Install the released version from CRAN:
-
 ``` r
 
-install.packages("olympicAthletes")
-```
-
-Or the development version from GitHub:
-
-``` r
-
+# from GitHub:
 # install.packages("remotes")
 remotes::install_github("moderndive/olympicAthletes")
 ```
