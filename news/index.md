@@ -2,6 +2,8 @@
 
 ## olympicAthletes 0.5.10
 
+CRAN release: 2026-07-31
+
 - CRAN resubmission: the license is now declared as plain `CC BY 4.0`
   and the `LICENSE` file has been removed. The package adds no
   restrictions beyond CC BY 4.0, so per CRAN the file is unnecessary.
