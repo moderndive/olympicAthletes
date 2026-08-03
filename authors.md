@@ -8,7 +8,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/moderndive/olympicAthletes/blob/v0.5.10/inst/CITATION)
+[`inst/CITATION`](https://github.com/moderndive/olympicAthletes/blob/main/inst/CITATION)
 
 Ismay C (2026). *olympicAthletes: Olympic Athlete Event Data, Athens
 1896 to Milano-Cortina 2026*. R package version 0.5.10,
