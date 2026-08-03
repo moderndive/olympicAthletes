@@ -1,0 +1,13 @@
+# Keep GitHub Actions up to date so deprecations (e.g. Node runtime bumps)
+# are surfaced as PRs automatically instead of as warnings on every run.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "ci"
+    labels:
+      - "dependencies"
+      - "github-actions"
