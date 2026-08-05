@@ -1,8 +1,9 @@
 # olympicAthletes <img src="man/figures/logo.png" alt="A hexagonal logo for the package. It uses the gold, silver, and bronze podiums as bars in a bar chart to represent potential statistical analysis to be done for this R data package on modern Olympic athletes." align="right" width=150 />
 
 <!-- badges: start -->
-[![CRAN status](https://www.r-pkg.org/badges/version/olympicAthletes)](https://CRAN.R-project.org/package=olympicAthletes)
 [![R-CMD-check](https://github.com/moderndive/olympicAthletes/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/moderndive/olympicAthletes/actions/workflows/R-CMD-check.yaml)
+[![CRAN status](https://www.r-pkg.org/badges/version/olympicAthletes)](https://CRAN.R-project.org/package=olympicAthletes)
+[![CRAN downloads](https://cranlogs.r-pkg.org/badges/grand-total/olympicAthletes)](https://CRAN.R-project.org/package=olympicAthletes)
 <!-- badges: end -->
 
 A tidy R data package covering every athlete-event participation in the modern
